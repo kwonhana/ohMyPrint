@@ -2,7 +2,7 @@
   --main-navy: #041e3a;
   --main-blue: #345e8c;
   --main-pink: #ed51a4;
-  --color-bg: #efefef;
+  --bg: #efefef;
   --sub-pink: #e8aad1;
   --sub-blue: #5886ba;
   --sub-skyblue: #a0cae0;
@@ -112,10 +112,21 @@ body {
 }
 
 .hidden {
-  display: hidden !important;
+  display: none !important;
 }
 
 main {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-blue);
+  border-radius: 25px;
 }
