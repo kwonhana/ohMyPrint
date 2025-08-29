@@ -115,9 +115,12 @@ body {
   display: none !important;
 }
 
-main {
-  margin-top: 100px;
-  margin-bottom: 100px;
+body:has(.top-banner) main {
+  margin-top: 240px;
+}
+
+body:not(:has(.top-banner)) main {
+  margin-top: 160px;
 }
 
 ::-webkit-scrollbar {
