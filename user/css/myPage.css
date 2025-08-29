@@ -1,0 +1,121 @@
+.myPage-wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .inner {
+    width: 1440px;
+    margin: 0 auto;
+
+    .title-wrap {
+      display: flex;
+      justify-content: center;
+
+      h2 {
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--text-black);
+      }
+    }
+
+    .mypage-top {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      .user-level-wrap {
+        width: 450px;
+        height: 180px;
+        background: var(--main-navy);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        color: #fff;
+      }
+
+      .shopping-info-wrap {
+        width: 600px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .order-list-wrap {
+          display: flex;
+          padding: 16px 0;
+          gap: 12px;
+
+          li {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border1);
+            padding-bottom: 8px;
+
+            &::after {
+              font-size: 12px;
+              color: var(--text-gray);
+            }
+
+            &.payment::after {
+              content: '입금확인중';
+            }
+
+            &.confirmed::after {
+              content: '입금확인';
+            }
+
+            &.processing::after {
+              content: '주문처리완료';
+            }
+
+            &.shipping::after {
+              content: '배송중';
+            }
+
+            &.delivered::after {
+              content: '배송완료';
+            }
+          }
+        }
+
+        .dashboard-wrap {
+          display: flex;
+          justify-content: center;
+
+          li {
+            color: var(--main-pink);
+            padding-right: 10px;
+
+            &::before {
+              font-size: 12px;
+              color: var(--text-gray);
+              margin-right: 8px;
+              padding-left: 10px;
+              border-left: 1px solid var(--border2);
+            }
+
+            &.coupons::before {
+              content: 'coupon';
+              border: none;
+            }
+
+            &.mileage::before {
+              content: 'Mileage';
+            }
+
+            &.posts::before {
+              content: 'Post';
+            }
+          }
+        }
+      }
+    }
+  }
+}
