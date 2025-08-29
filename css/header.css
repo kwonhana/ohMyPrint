@@ -55,14 +55,14 @@ header {
   background-color: #fff;
 
   .inner {
-    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 16px 50px;
     max-width: 1980px;
     margin: 0 auto;
 
+    /* 햄버거 및 로고 */
     .header-left {
       display: flex;
       align-items: center;
@@ -207,10 +207,38 @@ header {
     }
 
     .user-wrap {
-      .search-wrap:hover .search-container {
-        height: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 10px;
+
+      .search-wrap {
+        line-height: 30px;
+
+        .search {
+          display: flex;
+          margin-right: 8px;
+
+          &:hover path {
+            stroke: var(--main-pink);
+          }
+        }
+
+        &:hover .search-container {
+          height: 100%;
+        }
       }
 
+      li:last-child {
+        &::before {
+          content: '|';
+          color: var(--border3);
+          margin-right: 10px;
+          font-weight: 200;
+        }
+      }
+
+      /* 검색창 */
       .search-container {
         width: 100%;
         height: 0%;
@@ -286,41 +314,18 @@ header {
           }
 
           span {
+            &::before {
+              content: '#';
+              color: var(--text-gray);
+              margin-right: 2px;
+              font-size: 14px;
+            }
             &:empty {
               display: none;
             }
           }
         }
       }
-    }
-  }
-}
-
-.user-wrap {
-  display: flex;
-  justify-content: end;
-  gap: 10px;
-
-  li a {
-    line-height: 30px;
-  }
-
-  li:last-child {
-    &::before {
-      content: '|';
-      color: var(--border3);
-      margin-right: 10px;
-      font-weight: 200;
-    }
-  }
-
-  .search {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-
-    &:hover path {
-      stroke: var(--main-pink) !important;
     }
   }
 }

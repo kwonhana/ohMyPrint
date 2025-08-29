@@ -116,11 +116,11 @@ body {
 }
 
 body:has(.top-banner) main {
-  margin-top: 240px;
+  margin-top: 160px;
 }
 
 body:not(:has(.top-banner)) main {
-  margin-top: 160px;
+  margin-top: 120px;
 }
 
 ::-webkit-scrollbar {

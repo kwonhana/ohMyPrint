@@ -1,19 +1,16 @@
-const topBanner = document.querySelector('.top-banner')
-const bannerBtn = topBanner.querySelector('.closeBtn')
+const topBanner = document.querySelector('.top-banner');
+const bannerBtn = topBanner.querySelector('.closeBtn');
 
-bannerBtn.addEventListener('click', ()=>{
-  topBanner.remove()
-})
+bannerBtn.addEventListener('click', () => {
+  topBanner.remove();
+});
 
-const header1 = document.querySelector('.header1')
-const header2 = document.querySelector('.header2')
+const gnb = document.querySelector('.gnb');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 150) {
-    header1.classList.add('hidden')
-    header2.classList.remove('hidden')
+    gnb.classList.remove('hidden');
   } else {
-    header1.classList.remove('hidden')
-    header2.classList.add('hidden')
+    gnb.classList.add('hidden');
   }
-})
+});
