@@ -2,8 +2,19 @@ html {
   font-size: 16px;
 }
 
+body:has(.top-banner) .header2 {
+  top: 50px;
+}
+
+body:not(:has(.top-banner)) .header2 {
+  top: 0px;
+}
+
 .top-banner {
   background-color: var(--main-navy);
+  position: fixed;
+  top: 0;
+  width: 100%;
   .inner {
     height: 50px;
     width: 1440px;
