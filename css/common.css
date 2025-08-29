@@ -114,3 +114,7 @@ body {
 .hidden {
   display: hidden !important;
 }
+
+main {
+  margin-top: 50px;
+}
