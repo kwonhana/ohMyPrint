@@ -1,0 +1,62 @@
+.write-section {
+  border: 1px solid red;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .top-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 30px;
+
+    .back-btn {
+      width: 36px;
+      height: 36px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  fieldset {
+    border: none;
+
+    .list {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid pink;
+      padding: 12px 0;
+
+      label {
+        width: 210px;
+
+        .required {
+          &::before {
+            content: '*';
+            color: var(--main-pink);
+          }
+        }
+      }
+
+      .input-wrap {
+        display: flex;
+        gap: 10px;
+      }
+
+      input {
+        background: var(--bg);
+        border: none;
+        outline: none;
+        padding: 16px 30px;
+        border-radius: 4px;
+
+        &::placeholder {
+          color: var(--border2);
+        }
+      }
+    }
+  }
+}
