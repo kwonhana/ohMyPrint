@@ -136,3 +136,16 @@ body:not(:has(.top-banner)) main {
   background-color: var(--main-blue);
   border-radius: 25px;
 }
+
+/* 화면엔 안 보이지만, 문서 구조엔 존재, 스크린 리더가 읽을 수 있음 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
