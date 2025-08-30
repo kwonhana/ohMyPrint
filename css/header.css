@@ -128,7 +128,8 @@ header {
                   content: '';
                   width: 24px;
                   height: 24px;
-                  background: url('../images/snb-arrow.png');
+                  background-image: url('../images/sub-arrow.svg');
+                  transform: rotate(180deg);
                   display: inline-block;
                 }
               }
