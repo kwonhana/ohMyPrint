@@ -477,7 +477,7 @@ main {
       }
     }
 
-    &.reivew-item-wrap {
+    &.Review-item-wrap {
       .inner .item-grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
