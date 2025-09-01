@@ -197,12 +197,17 @@ header {
 
     .gnb {
       display: flex;
-
       li {
         &::after {
           content: '|';
           color: var(--border3);
           padding: 0 8px;
+        }
+      }
+
+      :last-child {
+        &::after {
+          content: '';
         }
       }
     }

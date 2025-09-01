@@ -59,22 +59,33 @@
                   placeholder="직접입력"
                   required />
               </div>
-              <ul class="domain-wrap drop-menu">
-                <li class="gmail">gmail.com</li>
-                <li class="naver">naver.com</li>
-                <li class="nate">nate.com</li>
-              </ul>
+
+              <div class="domain-wrap drop-menu-wrap">
+                <div
+                  class="dropdown-toggle"
+                  tabindex="0"
+                  role="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false">
+                  도메인 선택
+                </div>
+                <ul id="email-domain-list" role="listbox" hidden>
+                  <li role="option" data-value="gmail.com">gmail.com</li>
+                  <li role="option" data-value="naver.com">naver.com</li>
+                  <li role="option" data-value="daum.net">daum.net</li>
+                </ul>
+              </div>
             </div>
             <div class="phone-box list">
               <label class="font20b" for="phone">
                 연락처
                 <span class="required"></span>
               </label>
-              <ul class="carrier-wrap drop-menu">
+              <div class="carrier-wrap drop-menu-wrap">
                 <li class="skt">SKT</li>
                 <li class="kt">KT</li>
                 <li class="lg">LG U+</li>
-              </ul>
+              </div>
               <input
                 type="number"
                 name="phone"

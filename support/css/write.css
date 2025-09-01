@@ -1,5 +1,4 @@
 .write-section {
-  border: 1px solid red;
   max-width: 1000px;
   margin: 0 auto;
 
@@ -44,6 +43,7 @@
       .input-wrap {
         display: flex;
         gap: 10px;
+        align-items: center;
       }
 
       input {
@@ -55,6 +55,14 @@
 
         &::placeholder {
           color: var(--border2);
+        }
+      }
+
+      .drop-menu-wrap {
+        border: 1px solid blue;
+
+        > input {
+          width: fit-content;
         }
       }
     }
