@@ -131,6 +131,7 @@ body:not(:has(.top-banner)) main {
   height: 12px;
   width: 8px;
   background-color: var(--bg);
+  border-radius: 25px;
 }
 
 ::-webkit-scrollbar-thumb {
