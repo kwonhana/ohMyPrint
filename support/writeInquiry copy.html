@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="./css/write.css" />
-    <title>견적문의 - 초원</title>
+    <title>문의하기 - 영서</title>
   </head>
   <body>
     <!-- 탑베너 -->
@@ -109,7 +109,150 @@
         </ul>
       </div>
     </header>
-    <h1>견적문의</h1>
+    <main>
+      <!-- aria-labelledby="writeTitle" 입력 이유, 
+        시각장애인 리더기에 해당 writeTitle ID를 가진 입력값을 알려준다. 
+        아래의 경우 "이 섹션의 제목은 문의하기 섹션이야" 라고 나옴. -->
+      <section aria-labelledby="writeTitle" class="write-section">
+        <div class="top-wrap">
+          <a href="#" class="back-btn">
+            <img src="../images/sub-arrow.svg" alt="" />
+          </a>
+          <h1 id="writeTitle" class="font28b">문의하기</h1>
+        </div>
+
+        <form>
+          <!-- 디자인상 legend가 없지만, 시각 장애인을 위하여 
+          문의 정보 입력 그룹 시작 이라는 안내를 할 수 있다 -->
+          <fieldset>
+            <legend class="sr-only">문의 정보 입력</legend>
+
+            <div class="name-box list">
+              <label class="font20b" for="name">
+                이름
+                <span class="required"></span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="font14b"
+                placeholder="이름을 입력해주세요."
+                required />
+              <!-- required 필수 입력 빈칸 작성 후 submit 클릭 시 브라우저에서 자동 인식 -->
+            </div>
+            <div class="email-box list">
+              <label class="font20b" for="email">
+                이메일
+                <span class="required"></span>
+              </label>
+              <div class="input-wrap">
+                <input type="text" id="email" name="email" class="font14b" required />
+                @
+                <input
+                  type="text"
+                  id="email-domain"
+                  name="email-domain"
+                  placeholder="직접입력"
+                  required />
+              </div>
+
+              <div class="domain-wrap drop-menu-wrap">
+                <!-- 'aria-haspopup' 드롭다운 리스트를 나타내는 스크린 리더의 기능을 역할 -->
+                <!-- 'aria-expanded' 사용자가 클릭하면 true 가 toggle -->
+                <div
+                  class="email-dropdown-toggle dropdown-toggle"
+                  tabindex="0"
+                  role="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-controls="email-domain-list">
+                  도메인 선택
+                </div>
+                <ul id="email-domain-list" role="listbox" hidden>
+                  <li role="option" data-value="gmail.com">gmail.com</li>
+                  <li role="option" data-value="naver.com">naver.com</li>
+                  <li role="option" data-value="daum.net">daum.net</li>
+                </ul>
+              </div>
+            </div>
+            <div class="phone-box list">
+              <label class="font20b" for="phone">
+                연락처
+                <span class="required"></span>
+              </label>
+
+              <div
+                class="carrier-dropdown-toggle dropdown-toggle"
+                tabindex="0"
+                role="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="carrier-domain-list">
+                통신사
+              </div>
+              <ul id="carrier-domain-list" role="listbox" hidden>
+                <li role="option" data-value="SKT">SKT</li>
+                <li role="option" data-value="KT">KT</li>
+                <li role="option" data-value="LG U+">LG U+</li>
+              </ul>
+              <input type="number" name="phone" id="phone" class="font14b" required />
+              <!-- <div class="input-wrap phone-input">
+                <input type="number" placeholder="010" disabled class="font14b" />
+                -
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  maxlength="4"
+                  class="font14b"
+                  required />
+                -
+                <input type="number" name="phone2" maxlength="4" class="font14b" required />
+              </div> -->
+            </div>
+            <div class="subject-box list">
+              <label class="font20b" for="subject">
+                제목
+                <span class="required"></span>
+              </label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="제목을 입력해주세요"
+                class="font14b"
+                required />
+            </div>
+            <div class="message-box list">
+              <label class="font20b" for="message">
+                내용
+                <span class="required"></span>
+              </label>
+              <textarea
+                class="font14b"
+                id="message"
+                placeholder="내용을 입력해주세요"
+                required></textarea>
+            </div>
+            <div class="atta-box list">
+              <label class="font20b" for="atta">첨부파일</label>
+              <input type="file" id="atta" name="atta" class="font14b" />
+            </div>
+            <div class="password-box list">
+              <label class="font20b" for="password">
+                비밀번호
+                <span class="required"></span>
+              </label>
+              <input type="password" name="password" id="password" class="font14b" required />
+            </div>
+            <div class="terms-ckbox"></div>
+            <div class="privacy-ckbox"></div>
+            <button>문의하기</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
     <footer>
       <div class="inner">
         <div class="left-container">
