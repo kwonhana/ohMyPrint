@@ -203,6 +203,10 @@ header {
           color: var(--border3);
           padding: 0 8px;
         }
+
+        &:hover {
+          color: var(--main-pink);
+        }
       }
 
       :last-child {

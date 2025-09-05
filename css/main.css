@@ -340,7 +340,7 @@ main {
         flex-direction: column;
         color: #fff;
 
-        .title {
+        .banner-title {
           margin-bottom: 10px;
           font-family: 'YFavorite';
           font-size: 44px;
