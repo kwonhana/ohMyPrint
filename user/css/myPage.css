@@ -59,7 +59,7 @@
             padding-bottom: 8px;
 
             &::after {
-              font-size: 12px;
+              font-size: 1.2rem;
               color: var(--text-gray);
             }
 
@@ -94,7 +94,7 @@
             padding-right: 10px;
 
             &::before {
-              font-size: 12px;
+              font-size: 1.2rem;
               color: var(--text-gray);
               margin-right: 8px;
               padding-left: 10px;
