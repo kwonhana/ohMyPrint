@@ -1,0 +1,39 @@
+.privacy-policy {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background: #ffffffea;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .wrap {
+    border: 1px solid blue;
+    width: 70%;
+    border-radius: 30px;
+    overflow: hidden;
+    height: fit-content;
+
+    .inner {
+      overflow-y: scroll;
+      overscroll-behavior: contain;
+      max-height: 80%;
+      padding: 30px;
+      background-color: #d9d9d9;
+      border: 1px solid red;
+
+      h3 {
+        margin-bottom: 3px;
+      }
+      ul {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
