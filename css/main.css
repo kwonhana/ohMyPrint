@@ -1,7 +1,7 @@
 main {
   /* 공통  */
   .section-title {
-    font-size: 30px;
+    font-size: 3rem;
   }
 
   /* 섹션타이틀 더보기 버튼 */
@@ -50,12 +50,52 @@ main {
         justify-content: space-between;
         > li {
           padding-bottom: 10px;
+
+          .default-wrap::before {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text-white);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 0 10px;
+            position: absolute;
+            z-index: 10;
+            bottom: 30px;
+            right: 30px;
+            padding: 4px 8px;
+            border-radius: 4px;
+          }
+
+          &.nav-print .default-wrap::before {
+            content: '베스트 상품 [맞춤 실사출력]';
+          }
+          &.nav-card .default-wrap::before {
+            content: '베스트 상품 [프리미엄 명함]';
+          }
+          &.nav-signboard .default-wrap::before {
+            content: '베스트 상품 [프리미엄 간판]';
+          }
+          &.nav-prize .default-wrap::before {
+            content: '베스트 상품 [프리미엄 상패]';
+          }
+          &.nav-banner .default-wrap::before {
+            content: '베스트 상품 [프리미엄 현수막]';
+          }
+          &.nav-promotion .default-wrap::before {
+            content: '베스트 상품 [프리미엄 흥보용품]';
+          }
+          &.nav-coupon .default-wrap::before {
+            content: '베스트 상품 [프리미엄 쿠폰]';
+          }
+          &.nav-catalouge .default-wrap::before {
+            content: '베스트 상품 [프리미엄 카탈로그]';
+          }
         }
         > .font20b {
           display: flex;
           color: var(--text-black);
         }
       }
+
       .tab-grid-container {
         position: absolute;
         display: none;
@@ -77,11 +117,11 @@ main {
       }
       /* 프리미엄명함 폰트사이즈 조정 */
       .hover-wrap1 > span:first-child {
-        font-size: 28px;
+        font-size: 2.8rem;
       }
       /* 더 보러가기 언더라인 */
       .hover-wrap1 > span:last-child {
-        font-size: 14px;
+        font-size: 1.4rem;
         text-decoration: underline;
         margin-top: 16px;
       }
@@ -182,99 +222,6 @@ main {
     transition: 0.3s;
   }
 
-  /* box1 하단 text */
-  .nav-print .default-wrap::before {
-    content: '베스트 상품[맞춤 실사출력]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-white);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0 10px;
-    position: absolute;
-    z-index: 10;
-    bottom: 30px;
-    right: 30px;
-  }
-
-  .nav-card .default-wrap::before {
-    content: '베스트 상품[프리미엄 명함]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-white);
-    padding: 0 10px;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-  }
-
-  .nav-signboard .default-wrap::before {
-    content: '베스트 상품[프리미엄 명함]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-white);
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-  }
-  .nav-prize .default-wrap::before {
-    content: '베스트 상품[프리미엄 명함]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-white);
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-  }
-  .nav-banner .default-wrap::before {
-    content: '베스트 상품[프리미엄 명함]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-white);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0 10px;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-  }
-  .nav-promotion .default-wrap::before {
-    content: '베스트 상품[프리미엄 명함]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-white);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0 10px;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-  }
-
-  .nav-coupon .default-wrap::before {
-    content: '베스트 상품[프리미엄 명함]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-white);
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-  }
-
-  .nav-catalouge .default-wrap::before {
-    content: '베스트 상품[프리미엄 명함]';
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-black);
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-  }
-
   /* 카드베너 */
   /* 오영서 */
   .banner-section {
@@ -340,16 +287,16 @@ main {
         flex-direction: column;
         color: #fff;
 
-        .title {
+        .banner-title {
           margin-bottom: 10px;
           font-family: 'YFavorite';
-          font-size: 44px;
+          font-size: 4.4rem;
           font-weight: 700;
         }
 
         .middle {
           padding-bottom: 60px;
-          font-size: 24px;
+          font-size: 2.4rem;
         }
       }
     }
@@ -483,14 +430,14 @@ main {
     }
 
     .line-banner-text-1 {
-      font-size: 2rem;
+      font-size: 3.2rem;
       font-weight: var(--fw-bold);
       color: var(--text-white);
       margin-bottom: 8px;
     }
 
     .line-banner-text-2 {
-      font-size: 1.25rem;
+      font-size: 2rem;
       font-weight: var(--fw-bold);
       color: #fff100;
       margin-bottom: 2px;
@@ -498,7 +445,7 @@ main {
 
     .line-banner-text-3 {
       margin-bottom: 8px;
-      font-size: 0.875rem;
+      font-size: 1.4rem;
       font-weight: var(--fw-regular);
       color: var(--text-white);
     }
@@ -509,7 +456,7 @@ main {
       align-items: center;
       width: 90px;
       height: 19px;
-      font-size: 0.75rem;
+      font-size: 1.2rem;
       font-weight: var(--fw-regular);
       color: var(--text-white);
       background-color: var(--text-black);
@@ -536,7 +483,7 @@ main {
 
     .youtube-title .title-left span {
       color: var(--main-pink);
-      font-size: 30px;
+      font-size: 3rem;
       font-weight: 700;
     }
 
@@ -561,7 +508,7 @@ main {
       transition: transform 0.3s ease;
 
       p {
-        font-size: 20px;
+        font-size: 2rem;
       }
     }
     .youtube-content .youtube-list iframe {
@@ -574,7 +521,7 @@ main {
       text-align: center;
       margin-top: 10px;
       font-weight: var(--fw-bold);
-      font-size: 16px;
+      font-size: 1.6rem;
     }
 
     iframe {
@@ -691,13 +638,13 @@ main {
     .review-text {
       text-align: left;
       line-height: 1.8;
-      font-size: 24px;
+      font-size: 2.4rem;
     }
 
     .review-sub {
       text-align: left;
       line-height: 1.6;
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     .review-id {
