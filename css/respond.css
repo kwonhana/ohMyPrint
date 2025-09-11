@@ -1,0 +1,170 @@
+@media (maxs-width: 1440px) {
+  .inner {
+    width: 1000px;
+    border: 1px solid red;
+  }
+}
+
+/* main {
+  .section-title {}
+
+  .title {
+    .title-left {}
+    .more-btn {
+      a {}
+    }
+    .more-btn:hover a {}
+  }
+
+  .tab-banner-wrap {
+    .inner {
+      .tab-nav {
+        > li {
+          .default-wrap::before {}
+          &.nav-print .default-wrap::before {}
+          &.nav-card .default-wrap::before {}
+          &.nav-signboard .default-wrap::before {}
+          &.nav-prize .default-wrap::before {}
+          &.nav-banner .default-wrap::before {}
+          &.nav-promotion .default-wrap::before {}
+          &.nav-coupon .default-wrap::before {}
+          &.nav-catalouge .default-wrap::before {}
+        }
+        > .font20b {}
+      }
+      .tab-grid-container {
+        div {}
+      }
+      .box2 img {}
+      .hover-wrap1 > span:first-child {}
+      .hover-wrap1 > span:last-child {}
+    }
+  }
+
+  .tab-grid-container .box1 {}
+  .tab-grid-container .box1 img {}
+  .tab-grid-container .box1 .hover-wrap1 {}
+
+  .box2 {}
+  .hover-wrap2 {}
+
+  .tab-nav > li > a {}
+  .tab-nav > li:hover > a {}
+  .tab-nav li:last-child > .tab-grid-container {}
+  .tab-nav li:hover > .tab-grid-container {}
+  .tab-grid-container .box1:hover .hover-wrap1 {}
+  .tab-grid-container .box1:hover .default-wrap::before {}
+  .tab-grid-container .box2:hover img {}
+  .tab-grid-container .box2:hover .hover-wrap2 {}
+
+  .banner-section {
+    .inner {}
+
+    .banner-left,
+    .banner-right {
+      .img-box {}
+      a {}
+
+      &.banner-left {
+        .img-box {}
+        .item p {
+          &.middle {}
+        }
+      }
+      &.banner-left:hover {}
+      &.banner-right {
+        .img-box {}
+      }
+      &.banner-right:hover {}
+
+      .item {
+        .banner-title {}
+        .middle {}
+      }
+    }
+  }
+
+  .item-container {
+    .inner {
+      .card-wrap {
+        .card {
+          .img-box {
+            img {}
+          }
+          .item-title {
+            .badge-wrap {
+              span {
+                &.best::after {}
+                &.new::after {}
+                &.md::after {}
+                &.soldout::after {}
+              }
+            }
+            .card-title {}
+            .price {
+              strong {}
+            }
+          }
+        }
+      }
+    }
+    .new-item,
+    .best-item {}
+  }
+
+  .line-banner-wrap {
+    .line-banner-left {}
+    .line-banner-left > img {}
+    .line-banner-left > img:hover {}
+    .line-banner-text-1 {}
+    .line-banner-text-2 {}
+    .line-banner-text-3 {}
+    .line-banner-text-4 a {}
+  }
+
+  .youtube-wrap-inner {
+    .youtube-title {
+      .title-left span {}
+    }
+
+    .youtube-content {
+      .youtube-list {}
+      .youtube-list.active-center {
+        p {}
+      }
+      .youtube-list iframe {}
+      p {}
+    }
+
+    iframe {}
+
+    .btn {}
+    .arrow-btn-left {}
+    .arrow-btn-right {}
+    .btn > a {}
+    .arrow-btn-left > a::after {}
+    .arrow-btn-right > a::after {}
+    .arrow-btn-left > a:hover,
+    .arrow-btn-right > a:hover {}
+  }
+
+  .best-review-wrap {
+    > .best-review-inner {}
+
+    .best-review-title {}
+    .review-wrap {
+      .review {
+        &:first-child {}
+      }
+    }
+
+    .review > img {}
+    .text-box {}
+    .review-main {}
+    .review:hover .text-box {}
+    .review-text {}
+    .review-sub {}
+    .review-id {}
+    .review-id::before {}
+  }
+} */

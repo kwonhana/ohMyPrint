@@ -311,6 +311,7 @@ main {
     .inner {
       width: 1440px;
       margin: 0 auto;
+      background-color: #555;
 
       .card-wrap {
         display: flex;
@@ -495,6 +496,7 @@ main {
       flex-shrink: 0;
       gap: 40px;
       overflow: hidden;
+      margin: 0 auto;
     }
 
     .youtube-content .youtube-list {
