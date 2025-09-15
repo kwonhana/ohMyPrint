@@ -338,6 +338,11 @@ header {
 }
 
 @media (max-width: 1440px) {
+  .top-banner {
+    .inner {
+      width: calc(100% - 4rem);
+    }
+  }
   header {
     .header-inner {
       padding: 16px 20px;

@@ -48,6 +48,7 @@ main {
         max-width: 708px;
         display: flex;
         justify-content: space-between;
+
         > li {
           padding-bottom: 10px;
 
@@ -56,12 +57,11 @@ main {
             font-weight: 400;
             color: var(--text-white);
             background: rgba(0, 0, 0, 0.6);
-            padding: 0 10px;
+            padding: 4px 8px;
             position: absolute;
             z-index: 10;
             bottom: 30px;
             right: 30px;
-            padding: 4px 8px;
             border-radius: 4px;
           }
 
@@ -90,9 +90,25 @@ main {
             content: '베스트 상품 [프리미엄 카탈로그]';
           }
         }
+
+        > li > a,
         > .font20b {
           display: flex;
+          padding: 10px 16px;
           color: var(--text-black);
+        }
+
+        > li:hover > a {
+          color: var(--main-pink);
+        }
+
+        li:hover > .tab-grid-container {
+          display: grid;
+          z-index: 80;
+        }
+
+        li:last-child > .tab-grid-container {
+          display: grid;
         }
       }
 
@@ -106,120 +122,111 @@ main {
         gap: 10px;
         left: 0;
         top: 100%;
-        div {
+
+        .box1,
+        .box2 {
           border-radius: 8px;
           overflow: hidden;
         }
+
+        .box1 {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          position: relative;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+          }
+
+          .hover-wrap1 {
+            width: 100%;
+            height: 100%;
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            gap: 5px;
+            transition: 0.3s;
+
+            > span:first-child {
+              font-size: 2.8rem;
+            }
+
+            > span:last-child {
+              font-size: 1.4rem;
+              text-decoration: underline;
+              margin-top: 16px;
+            }
+          }
+
+          &:hover {
+            .hover-wrap1 {
+              opacity: 1;
+              transition: 0.3s;
+            }
+
+            .default-wrap::before {
+              display: none;
+            }
+          }
+        }
+
+        .box2 {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+          }
+
+          .hover-wrap2 {
+            width: 100%;
+            height: 100%;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: 0.3s;
+
+            span.font20b {
+              font-size: 2rem;
+              font-weight: bold;
+            }
+          }
+
+          &:hover {
+            img {
+              scale: 1.1;
+              filter: contrast(105%);
+            }
+
+            .hover-wrap2 {
+              opacity: 1;
+            }
+          }
+        }
       }
-      .box2 img {
-        height: 100%;
-        object-fit: cover;
-      }
-      /* 프리미엄명함 폰트사이즈 조정 */
-      .hover-wrap1 > span:first-child {
-        font-size: 2.8rem;
-      }
-      /* 더 보러가기 언더라인 */
-      .hover-wrap1 > span:last-child {
-        font-size: 1.4rem;
-        text-decoration: underline;
-        margin-top: 16px;
+
+      .mobile-grid {
+        display: NONE;
       }
     }
-  }
-  /* box1 공통사항 */
-  /* 그리드 */
-  .tab-grid-container .box1 {
-    grid-column: 1/3;
-    grid-row: 1/3;
-    height: 700px;
-    position: relative;
-  }
-  /* box1 이미지 관련 */
-  .tab-grid-container .box1 img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    position: relative;
-  }
-  /* box1 호버 이미지 */
-  .tab-grid-container .box1 .hover-wrap1 {
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    gap: 5px;
-    transition: 0.3s;
-  }
-
-  /* box2  hover 관련  */
-  .box2 {
-    position: relative;
-  }
-  .hover-wrap2 {
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  /* end */
-  .tab-nav > li > a {
-    display: inline-block;
-    padding: 10px 16px;
-  }
-
-  /* 카테고리 tab hover시에 색상변경 */
-  .tab-nav > li:hover > a {
-    color: var(--main-pink);
-  }
-
-  /* 실사출력 grid는 기본표시 */
-  .tab-nav li:last-child > .tab-grid-container {
-    display: grid;
-  }
-
-  /* 해당 카테고리 hover시 grid 변경 */
-  .tab-nav li:hover > .tab-grid-container {
-    display: grid;
-    z-index: 80;
-  }
-  /* .box1:hover -> black 배경 opacity:1 */
-  .tab-grid-container .box1:hover .hover-wrap1 {
-    opacity: 1;
-    transition: 0.3s;
-  }
-
-  /* 베스트상품[프리미엄 상품] hover시에 숨기기 */
-  .tab-grid-container .box1:hover .default-wrap::before {
-    display: none;
-  }
-
-  /* .box2:hover시에 스케일 변경, 색상 대조105% */
-  .tab-grid-container .box2:hover img {
-    scale: 1.1;
-    transition: 0.5s;
-    filter: contrast(105%);
-  }
-
-  .tab-grid-container .box2:hover .hover-wrap2 {
-    opacity: 1;
-    transition: 0.3s;
   }
 
   /* 카드베너 */
@@ -311,7 +318,6 @@ main {
     .inner {
       width: 1440px;
       margin: 0 auto;
-      background-color: #555;
 
       .card-wrap {
         display: flex;

@@ -1,170 +1,308 @@
-@media (maxs-width: 1440px) {
-  .inner {
-    width: 1000px;
-    border: 1px solid red;
+@media (max-width: 1440px) {
+  main {
+    /* background-color: rgb(231, 231, 0); */
+
+    .inner {
+      width: calc(100% - 4rem) !important;
+    }
+
+    /* 탭배너 */
+    .tab-banner-wrap {
+      margin-bottom: 50%;
+
+      .inner {
+        .tab-grid-container {
+          width: 100%;
+          height: auto;
+
+          .box1 a .default-wrap {
+            height: 100%;
+
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    /* 베너섹션 */
+    .banner-section {
+      padding-top: 50px;
+
+      .banner-left,
+      .banner-right {
+        a {
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          gap: 0rem;
+        }
+
+        .item {
+          width: 100%;
+          .banner-title {
+            font-size: 4em;
+          }
+        }
+
+        &.banner-left .img-box {
+          aspect-ratio: 245/266;
+          height: 28rem;
+        }
+
+        &.banner-right {
+          a {
+            flex-direction: row-reverse;
+          }
+          .img-box {
+            aspect-ratio: 1/1;
+            height: 28rem;
+            transform: rotate(0deg);
+            width: auto;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-/* main {
-  .section-title {}
-
-  .title {
-    .title-left {}
-    .more-btn {
-      a {}
-    }
-    .more-btn:hover a {}
-  }
-
-  .tab-banner-wrap {
-    .inner {
-      .tab-nav {
-        > li {
-          .default-wrap::before {}
-          &.nav-print .default-wrap::before {}
-          &.nav-card .default-wrap::before {}
-          &.nav-signboard .default-wrap::before {}
-          &.nav-prize .default-wrap::before {}
-          &.nav-banner .default-wrap::before {}
-          &.nav-promotion .default-wrap::before {}
-          &.nav-coupon .default-wrap::before {}
-          &.nav-catalouge .default-wrap::before {}
-        }
-        > .font20b {}
-      }
-      .tab-grid-container {
-        div {}
-      }
-      .box2 img {}
-      .hover-wrap1 > span:first-child {}
-      .hover-wrap1 > span:last-child {}
-    }
-  }
-
-  .tab-grid-container .box1 {}
-  .tab-grid-container .box1 img {}
-  .tab-grid-container .box1 .hover-wrap1 {}
-
-  .box2 {}
-  .hover-wrap2 {}
-
-  .tab-nav > li > a {}
-  .tab-nav > li:hover > a {}
-  .tab-nav li:last-child > .tab-grid-container {}
-  .tab-nav li:hover > .tab-grid-container {}
-  .tab-grid-container .box1:hover .hover-wrap1 {}
-  .tab-grid-container .box1:hover .default-wrap::before {}
-  .tab-grid-container .box2:hover img {}
-  .tab-grid-container .box2:hover .hover-wrap2 {}
-
-  .banner-section {
-    .inner {}
-
+@media (max-width: 1250px) {
+  main .banner-section {
     .banner-left,
     .banner-right {
-      .img-box {}
-      a {}
-
       &.banner-left {
-        .img-box {}
-        .item p {
-          &.middle {}
+        .img-box {
+          height: 18rem;
         }
       }
-      &.banner-left:hover {}
       &.banner-right {
-        .img-box {}
+        .img-box {
+          height: 18rem;
+          bottom: -16px;
+        }
       }
-      &.banner-right:hover {}
 
       .item {
-        .banner-title {}
-        .middle {}
+        .banner-title {
+          font-size: 3.6rem;
+        }
+        .middle {
+          font-size: 2rem;
+        }
       }
     }
   }
+}
 
-  .item-container {
-    .inner {
-      .card-wrap {
-        .card {
-          .img-box {
-            img {}
+@media (max-width: 1020px) {
+  main {
+    .banner-section {
+      .banner-left,
+      .banner-right {
+        .item {
+          .banner-title {
+            font-size: 2em;
           }
-          .item-title {
-            .badge-wrap {
-              span {
-                &.best::after {}
-                &.new::after {}
-                &.md::after {}
-                &.soldout::after {}
-              }
-            }
-            .card-title {}
-            .price {
-              strong {}
-            }
+          .middle {
+            padding-bottom: 4rem;
+            font-size: 1.6rem;
+          }
+
+          .last {
+            font-size: 1.4rem;
           }
         }
       }
     }
-    .new-item,
-    .best-item {}
   }
+}
 
-  .line-banner-wrap {
-    .line-banner-left {}
-    .line-banner-left > img {}
-    .line-banner-left > img:hover {}
-    .line-banner-text-1 {}
-    .line-banner-text-2 {}
-    .line-banner-text-3 {}
-    .line-banner-text-4 a {}
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
   }
-
-  .youtube-wrap-inner {
-    .youtube-title {
-      .title-left span {}
+  main {
+    .item-container {
+      margin: 5rem 0;
+      padding: 0;
     }
+    .title {
+      margin-bottom: 3rem;
 
-    .youtube-content {
-      .youtube-list {}
-      .youtube-list.active-center {
-        p {}
-      }
-      .youtube-list iframe {}
-      p {}
-    }
-
-    iframe {}
-
-    .btn {}
-    .arrow-btn-left {}
-    .arrow-btn-right {}
-    .btn > a {}
-    .arrow-btn-left > a::after {}
-    .arrow-btn-right > a::after {}
-    .arrow-btn-left > a:hover,
-    .arrow-btn-right > a:hover {}
-  }
-
-  .best-review-wrap {
-    > .best-review-inner {}
-
-    .best-review-title {}
-    .review-wrap {
-      .review {
-        &:first-child {}
+      .title-left {
+        .section-title {
+          font-size: 2.4rem;
+        }
+        .font16 {
+          font-size: 1.4rem;
+        }
       }
     }
 
-    .review > img {}
-    .text-box {}
-    .review-main {}
-    .review:hover .text-box {}
-    .review-text {}
-    .review-sub {}
-    .review-id {}
-    .review-id::before {}
+    .tab-banner-wrap {
+      margin-bottom: 0;
+      .inner {
+        .tab-nav,
+        .tab-grid-container {
+          display: none !important;
+        }
+
+        .mobile-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 2fr);
+          gap: 1rem;
+
+          .img-box {
+            display: none;
+            border-radius: 8px;
+            overflow: hidden;
+
+            &.show {
+              display: block;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .banner-section {
+      .inner {
+        flex-direction: column;
+      }
+      .banner-left,
+      .banner-right {
+        a {
+          align-items: end;
+          padding: 0;
+        }
+        &.banner-left {
+          .img-box {
+            position: static;
+            width: 40%;
+            min-width: 25%;
+            max-height: 130px;
+            display: flex;
+            align-items: end;
+          }
+        }
+
+        &.banner-right {
+          .img-box {
+            position: static;
+            width: 40%;
+            min-width: 25%;
+            max-height: 130px;
+            display: flex;
+            align-items: end;
+          }
+        }
+
+        .item {
+          padding: 4rem;
+          .banner-title {
+            font-size: 3.6rem;
+          }
+          .middle {
+            padding-bottom: 4rem;
+            font-size: 2rem;
+          }
+
+          .last {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    .line-banner-wrap {
+      height: max-content;
+      justify-content: center;
+      gap: 1rem;
+
+      .line-banner-left {
+        width: 40%;
+        height: 100%;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .line-banner-right {
+        padding: 1rem 0;
+        .line-banner-text-1 {
+          font-size: 2rem;
+        }
+
+        .line-banner-text-2 {
+          font-size: 1.6rem;
+        }
+
+        .line-banner-text-3 {
+          font-size: 1.2rem;
+        }
+
+        .line-banner-text-4 a {
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
-} */
+}
+
+@media (max-width: 480px) {
+  main .banner-section {
+    .banner-left,
+    .banner-right {
+      .item {
+        padding: 2rem;
+        .banner-title {
+          font-size: 2.8rem;
+        }
+
+        .middle {
+          font-size: 2rem;
+        }
+
+        .last {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+main .item-container .inner .card-wrap .card {
+  width: 48%;
+
+  a {
+    .item-title {
+      margin-top: 10px;
+
+      .badge-wrap {
+        gap: 4px;
+
+        .font14 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .card-title {
+        margin: 1.2rem 0;
+      }
+    }
+  }
+}
