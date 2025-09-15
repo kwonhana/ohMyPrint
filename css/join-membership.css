@@ -348,3 +348,11 @@ legend {
 .agree-section {
   margin-top: 25px;
 }
+
+/* select-box */
+select {
+  appearance: none;
+  background: url(../images/selectbox-arrow-down.svg) no-repeat;
+  background-position: right 20px center;
+  cursor: pointer;
+}
