@@ -45,7 +45,7 @@ input {
   height: 20px;
 }
 .keep-box > span:last-of-type {
-  color: var(--border1: );
+  color: var(--border1);
 }
 
 .custom-checkbox {
@@ -71,12 +71,12 @@ input[type='checkbox'] {
   background: var(--main-pink);
   color: var(--text-white);
   text-align: center;
-  a {
-    display: inline-block;
-    /* border: 1px solid black; */
-    width: 100%;
-    line-height: 40px;
-  }
+}
+.log-in-btn > a {
+  display: inline-block;
+  /* border: 1px solid black; */
+  width: 100%;
+  line-height: 40px;
 }
 .log-in-btn:hover {
   background: #c22779;
@@ -95,7 +95,7 @@ input[type='checkbox'] {
   gap: 24px;
   position: absolute;
   bottom: 25px;
-  a {
-    color: var(--text-gray);
-  }
+}
+.user-data > a {
+  color: var(--text-gray);
 }
