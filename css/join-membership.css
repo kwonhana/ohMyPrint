@@ -1,0 +1,350 @@
+.user-data-wrap {
+  height: 1240px;
+  border: 1px solid black;
+}
+
+.user-inner {
+  max-width: 800px;
+  background-color: rgba(255, 0, 0, 0.2);
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-form-wrap > form {
+  width: 800px;
+}
+
+/* fieldset 초기화 */
+fieldset {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgba(33, 33, 33, 0.28);
+  font-weight: 400;
+}
+
+legend {
+  display: none;
+}
+
+/* 페이지 타이틀 '회원가입' 가운데 정렬 */
+.user-inner > .user-title {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* 각각의 타이틀 flex 양 사이드 정렬 */
+.label-tag,
+.birth-tag {
+  max-width: 800px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* 타이틀 이름 관련 / 타이틀에 이름주어서 간격 강제 조정 */
+.label-tag .font20b,
+.gender-tag .font20b {
+  width: 200px;
+  color: #000;
+}
+
+/* title 오른쪽 별 */
+.label-tag > .font20b::after {
+  content: '*';
+  color: var(--main-pink);
+  font-weight: 400;
+}
+
+/* data 입력칸 박스 디자인 */
+.databox {
+  background-color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  padding: 15px 0 15px 30px;
+  color: var(--border1);
+  width: 470px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 110px;
+}
+
+/* 중복확인 버튼 */
+.check-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 50px;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  color: var(--border2);
+  cursor: pointer;
+}
+.check-box:hover {
+  border-color: var(--main-blue);
+  color: var(--main-blue);
+}
+
+/* ---------- 이메일 ---------- */
+.data-box-wrap {
+  display: flex;
+  gap: 10px;
+  width: 470px;
+  margin-right: 110px;
+  position: relative;
+}
+.data-box-wrap::after {
+  content: '@';
+  position: absolute;
+  right: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+/* 이메일 박스 */
+.databox1,
+.databox3 {
+  padding-left: 30px;
+  background-color: var(--bg);
+  border: none;
+  width: 145px;
+  height: 50px;
+  border-radius: 4px;
+}
+.databox1 {
+  margin-right: 24px;
+}
+
+.databox2 {
+  width: 136px;
+  height: 50px;
+  background-color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  padding: 0 8px;
+  color: var(--text-gray);
+}
+
+/* 연락처 */
+.telecom-wrap,
+.first-num {
+  border: none;
+  border-radius: 4px;
+  height: 50px;
+  padding: 0 8px;
+  color: var(--text-gray);
+}
+.telecom-wrap {
+  width: 123px;
+  background-color: var(--bg);
+}
+.first-num {
+  width: 86px;
+  background-color: var(--bg);
+  text-align: center;
+}
+.second-num,
+.third-num {
+  width: 116px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 0 8px;
+  border: none;
+  background-color: var(--bg);
+  color: var(--text-gray);
+}
+
+.select-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 470px;
+  margin-right: 110px;
+}
+
+/* 주소 버튼 */
+.label-tag .address-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 470px;
+  height: 50px;
+  margin-right: 110px;
+  border-radius: 4px;
+  background-color: var(--main-blue);
+  color: var(--text-white);
+}
+.label-tag .address-btn a {
+  width: 100%;
+  text-align: center;
+}
+.address-btn:hover {
+  background-color: #1c354f;
+}
+
+/* 성별 라디오 */
+.radio-wrap input[type='radio'] {
+  display: none;
+}
+.custom-radio {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border: 2px solid var(--bg);
+  background: var(--bg);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+}
+.gender-tag {
+  color: var(--border1);
+  margin: 10px 0 30px;
+}
+.gender-tag .font20b {
+  display: inline-block;
+  width: 220px;
+}
+.gender-tag label:first-of-type {
+  margin-right: 10px;
+}
+.radio-wrap input[type='radio']:checked + .custom-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  background: var(--main-blue);
+  border-radius: 50%;
+}
+
+/* 생년월일 */
+.year,
+.month,
+.day {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--bg);
+  color: var(--border1);
+  width: 150px;
+  height: 50px;
+  padding-left: 20px;
+}
+.day {
+  margin-right: 110px;
+}
+.birth-tag .font20b {
+  width: 210px;
+  color: #000;
+}
+
+/* 약관 영역 */
+.user-agree-wrap > p {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.text-box {
+  margin: 10px auto 0;
+  height: 100px;
+  width: 780px;
+  max-height: 220px;
+  padding: 8px;
+  border: 1px solid var(--border3);
+  border-radius: 4px;
+  overflow-y: auto;
+  background: white;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+.text-box .container {
+  margin: 8px;
+}
+.text-box::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--bg);
+}
+.text-box::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: var(--main-blue);
+  border-radius: 4px;
+}
+
+/* 버튼 */
+.end-btn {
+  width: 480px;
+  height: 50px;
+  margin: 20px auto 0;
+  background: var(--main-blue);
+  border-radius: 4px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}
+.end-btn a {
+  width: 100%;
+}
+.end-btn:hover {
+  background: #1c354f;
+}
+
+/* 스크린리더 전용 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* 체크박스 */
+.agree-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.agree-label input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: var(--bg);
+  background-size: 16px 16px;
+  margin-left: 10px;
+}
+.agree-label input[type='checkbox']:checked + .custom-checkbox {
+  background-image: url('../images/check-pink.png');
+}
+
+.pink {
+  color: var(--main-pink);
+}
+
+.agree-section {
+  margin-top: 25px;
+}
