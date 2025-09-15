@@ -75,16 +75,16 @@ main {
             content: '베스트 상품 [프리미엄 간판]';
           }
           &.nav-prize .default-wrap::before {
-            content: '베스트 상품 [프리미엄 상패]';
+            content: '베스트 상품 [크리스탈 상패]';
           }
           &.nav-banner .default-wrap::before {
             content: '베스트 상품 [프리미엄 현수막]';
           }
           &.nav-promotion .default-wrap::before {
-            content: '베스트 상품 [프리미엄 흥보용품]';
+            content: '베스트 상품 [화이트 크래프트지 봉투]';
           }
           &.nav-coupon .default-wrap::before {
-            content: '베스트 상품 [프리미엄 쿠폰]';
+            content: '베스트 상품 [고급지 쿠폰]';
           }
           &.nav-catalouge .default-wrap::before {
             content: '베스트 상품 [프리미엄 카탈로그]';
