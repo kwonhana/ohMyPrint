@@ -120,7 +120,7 @@
 }
 
 .item-main-badge > ul > li:first-child {
-  background: var(--color-bg);
+  background: var(--bg);
   color: var(--main-navy);
   border: 2px solid var(--main-navy);
 }
