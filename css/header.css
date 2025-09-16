@@ -336,3 +336,117 @@ header {
     }
   }
 }
+
+@media (max-width: 1440px) {
+  .top-banner {
+    .inner {
+      width: calc(100% - 4rem);
+    }
+  }
+  header {
+    .header-inner {
+      padding: 16px 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    /* background-color: #999; */
+    .header-inner {
+      .header-left {
+        .ham-btn {
+          &:hover .snb {
+            display: block;
+          }
+
+          .ham-nav-wrap {
+            width: 600px;
+            max-width: 60%;
+            min-width: 400px;
+            height: 100vh;
+            top: 0px;
+            left: 0px;
+            border-radius: 0 8px 8px 0;
+            border: none;
+
+            .snb-list-wrap {
+              max-height: calc(100vh - 36rem);
+              overscroll-behavior: contain;
+            }
+
+            .snb-banner {
+              width: 100%;
+              height: auto;
+              border-radius: 8px;
+              margin-bottom: 30px;
+              overflow: hidden;
+              aspect-ratio: 1/ 0.24;
+
+              &:hover {
+                filter: hue-rotate(20deg);
+              }
+            }
+          }
+        }
+
+        h1.sub-logo {
+          width: 160px;
+          height: auto;
+        }
+      }
+
+      .gnb {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .header-inner {
+      .header-left {
+        .ham-btn {
+          > a img {
+            width: 3rem;
+          }
+          &:hover .snb {
+            display: block;
+          }
+
+          .ham-nav-wrap {
+            width: 100vw;
+            height: 100vh;
+          }
+        }
+
+        h1.sub-logo {
+          width: 120px;
+        }
+      }
+
+      & .user-wrap {
+        .search-container {
+          .inner {
+            height: 100vh;
+            padding-bottom: 16rem;
+          }
+
+          .search-input-wrap {
+            max-width: 80%;
+
+            input {
+              width: 300px;
+            }
+          }
+        }
+
+        li:nth-child(2),
+        li:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
