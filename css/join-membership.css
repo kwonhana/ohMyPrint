@@ -43,6 +43,14 @@ legend {
 }
 
 /* 각각의 타이틀 flex 양 사이드 정렬 */
+
+.pw-check-label {
+  max-width: 800px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
 .label-tag,
 .birth-tag {
   max-width: 800px;
@@ -55,15 +63,29 @@ legend {
 /* 타이틀 이름 관련 / 타이틀에 이름주어서 간격 강제 조정 */
 .label-tag .font20b,
 .gender-tag .font20b {
+  position: relative;
   width: 200px;
   color: #000;
 }
 
 /* title 오른쪽 별 */
-.label-tag > .font20b::after {
-  content: '*';
+.essential {
+  position: absolute;
+  font-size: 20px;
   color: var(--main-pink);
+  margin-left: 4px;
   font-weight: 400;
+  display: inline-block;
+}
+
+.uPass-comment-check,
+.uPass-comment {
+  display: none;
+  /* border: 1px solid black; */
+  width: 470px;
+  margin-left: 220px;
+  margin-bottom: 20px;
+  color: var(--main-pink);
 }
 
 /* data 입력칸 박스 디자인 */
@@ -137,7 +159,7 @@ legend {
   background-color: var(--bg);
   border: none;
   border-radius: 4px;
-  padding: 0 8px;
+  padding: 0 20px;
   color: var(--text-gray);
 }
 
@@ -147,7 +169,7 @@ legend {
   border: none;
   border-radius: 4px;
   height: 50px;
-  padding: 0 8px;
+  padding: 0 20px;
   color: var(--text-gray);
 }
 .telecom-wrap {
@@ -298,6 +320,7 @@ legend {
   color: white;
 }
 .end-btn a {
+  position: relative;
   width: 100%;
 }
 .end-btn:hover {
@@ -355,4 +378,16 @@ select {
   background: url(../images/selectbox-arrow-down.svg) no-repeat;
   background-position: right 20px center;
   cursor: pointer;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  right: 50%;
+  top: -10px;
+  transform: translate(50%);
+  align-items: center;
+  width: 480px;
+  height: 40px;
 }
