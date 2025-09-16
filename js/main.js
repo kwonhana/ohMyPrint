@@ -12,7 +12,7 @@ const imgGridWrap = () => {
   grid.innerHTML = '';
 
   // 처음 8개만 show 붙여서 다시 추가
-  items.slice(0, 6).forEach((item) => {
+  items.slice(0, 9).forEach((item) => {
     item.classList.add('show');
     grid.appendChild(item);
   });

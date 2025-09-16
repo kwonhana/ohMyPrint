@@ -352,7 +352,7 @@ header {
 
 @media (max-width: 1024px) {
   header {
-    background-color: #999;
+    /* background-color: #999; */
     .header-inner {
       .header-left {
         .ham-btn {
