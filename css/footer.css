@@ -105,3 +105,82 @@ footer {
     }
   }
 }
+
+@media (max-width: 1440px) {
+  footer {
+    .inner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 1000px;
+      gap: 4rem;
+
+      .left-container {
+        .footer-logo {
+          margin: 2rem auto;
+        }
+
+        address {
+          align-items: center;
+
+          .company-info {
+            span {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .right-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1.6rem;
+
+        .info-box .cs-box .font20b {
+          font-size: 1.6rem;
+        }
+
+        .font14 {
+          display: none;
+        }
+
+        .info-box {
+          display: none;
+        }
+      }
+    }
+
+    .copy-wrap {
+      .inner {
+        width: 1000px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer {
+    .inner {
+      width: 100%;
+    }
+
+    .copy-wrap {
+      .inner {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  footer .inner .left-container address .company-info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  footer .copy-wrap .inner {
+    gap: 20px;
+  }
+}

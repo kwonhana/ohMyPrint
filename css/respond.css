@@ -1,0 +1,420 @@
+@media (max-width: 1440px) {
+  main {
+    /* background-color: rgb(231, 231, 0); */
+
+    .inner {
+      width: calc(100% - 4rem) !important;
+    }
+
+    /* 탭배너 */
+    .tab-banner-wrap {
+      margin-bottom: 50%;
+
+      .inner {
+        .tab-grid-container {
+          width: 100%;
+          height: auto;
+
+          .box1 a .default-wrap {
+            height: 100%;
+
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    /* 카드베너섹션 */
+    .banner-section {
+      padding-top: 50px;
+
+      .banner-left,
+      .banner-right {
+        a {
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          gap: 0rem;
+        }
+
+        .item {
+          width: 100%;
+          .banner-title {
+            font-size: 4em;
+          }
+        }
+
+        &.banner-left .img-box {
+          aspect-ratio: 245/266;
+          height: 28rem;
+        }
+
+        &.banner-right {
+          a {
+            flex-direction: row-reverse;
+          }
+          .img-box {
+            aspect-ratio: 1/1;
+            height: 28rem;
+            transform: rotate(0deg);
+            width: auto;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    /* 유튜브 섹션 */
+    .youtube-wrap-inner {
+      .youtube-title {
+        width: calc(100% - 4rem);
+      }
+    }
+
+    /* 리뷰섹션 */
+    .best-review-wrap {
+      > .best-review-inner {
+        width: calc(100% - 4rem);
+      }
+
+      .review-sub {
+        font-size: 1.6rem;
+      }
+
+      .review-id {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  /* 카드베너섹션 */
+  main .banner-section {
+    .banner-left,
+    .banner-right {
+      &.banner-left {
+        .img-box {
+          height: 18rem;
+        }
+      }
+      &.banner-right {
+        .img-box {
+          height: 18rem;
+          bottom: -16px;
+        }
+      }
+
+      .item {
+        .banner-title {
+          font-size: 3.6rem;
+        }
+        .middle {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  main {
+    .title {
+      margin-bottom: 2rem;
+    }
+
+    /* 카드베너섹션 */
+    .banner-section {
+      .banner-left,
+      .banner-right {
+        .item {
+          .banner-title {
+            font-size: 2em;
+          }
+          .middle {
+            padding-bottom: 4rem;
+            font-size: 1.6rem;
+          }
+
+          .last {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    /* 유튜브 섹션 */
+    .youtube-wrap-inner {
+      padding-left: 20px;
+
+      .youtube-title {
+        margin: 0 0 2rem 0;
+      }
+
+      .youtube-content {
+        overflow: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+        justify-content: start;
+        gap: 20px;
+
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+
+        .youtube-list {
+          flex: 0 0 45%;
+
+          &.active-center {
+            flex: 0 0 45%;
+          }
+        }
+      }
+      .btn {
+        display: none;
+      }
+    }
+
+    .best-review-wrap {
+      .review-wrap {
+        grid-template-columns: repeat(2, 1fr);
+
+        .review {
+          aspect-ratio: 2/1;
+
+          img {
+            transform: translateY(-24%);
+            width: 100%;
+          }
+        }
+
+        .review:nth-child(1) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  main {
+    .title {
+      margin-bottom: 3rem;
+
+      .title-left {
+        .section-title {
+          font-size: 2.4rem;
+        }
+        .font16 {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    /* 탭배너 */
+    .tab-banner-wrap {
+      margin-bottom: 0;
+      .inner {
+        .tab-nav,
+        .tab-grid-container {
+          display: none !important;
+        }
+
+        .mobile-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 2fr);
+          gap: 1rem;
+
+          .img-box {
+            display: none;
+            border-radius: 8px;
+            overflow: hidden;
+
+            &.show {
+              display: block;
+            }
+            /* 
+            &:nth-child(1) {
+              grid-row: 1/3;
+              grid-column: 1/3;
+            } */
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    /* 카드베너 */
+    .banner-section {
+      padding-top: 5rem;
+      .inner {
+        flex-direction: column;
+      }
+      .banner-left,
+      .banner-right {
+        a {
+          align-items: end;
+          padding: 0;
+        }
+        &.banner-left {
+          .img-box {
+            position: static;
+            width: 40%;
+            min-width: 25%;
+            max-height: 130px;
+            display: flex;
+            align-items: end;
+          }
+        }
+
+        &.banner-right {
+          .img-box {
+            position: static;
+            width: 40%;
+            min-width: 25%;
+            max-height: 130px;
+            display: flex;
+            align-items: end;
+          }
+        }
+
+        .item {
+          padding: 4rem;
+          .banner-title {
+            font-size: 3.6rem;
+          }
+          .middle {
+            padding-bottom: 4rem;
+            font-size: 2rem;
+          }
+
+          .last {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    /* 아이템섹션 */
+    .item-container {
+      margin: 5rem 0 0 0;
+      padding: 0 0 5rem 0;
+    }
+
+    /* 라인베너 */
+    .line-banner-wrap {
+      height: max-content;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 5rem;
+
+      .line-banner-left {
+        width: 40%;
+        height: 100%;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .line-banner-right {
+        padding: 1rem 0;
+        .line-banner-text-1 {
+          font-size: 2rem;
+        }
+
+        .line-banner-text-2 {
+          font-size: 1.6rem;
+        }
+
+        .line-banner-text-3 {
+          font-size: 1.2rem;
+        }
+
+        .line-banner-text-4 a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    /* 유튜브베너 */
+    .youtube-wrap-inner {
+      margin-top: 5rem;
+
+      .youtube-title {
+        .title-left {
+          gap: 6px;
+          span {
+            font-size: 2.4em;
+          }
+        }
+      }
+
+      .youtube-content p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  /* 카드베너 */
+  main .banner-section {
+    .banner-left,
+    .banner-right {
+      .item {
+        padding: 2rem;
+        .banner-title {
+          font-size: 2.8rem;
+        }
+
+        .middle {
+          font-size: 2rem;
+        }
+
+        .last {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  /* 아이템섹션 */
+  main .item-container .inner .card-wrap .card {
+    width: 48%;
+    a {
+      .item-title {
+        margin-top: 10px;
+
+        .badge-wrap {
+          gap: 4px;
+
+          .font14 {
+            font-size: 1.2rem;
+          }
+        }
+
+        .card-title {
+          margin: 1.2rem 0;
+        }
+      }
+    }
+  }
+}
