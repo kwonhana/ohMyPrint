@@ -111,48 +111,58 @@
         </ul>
       </div>
     </header>
-    <div class="review-wrap">
-      <a href="#" class="back-btn font20b">리뷰작성</a>
-      <form action="#" method="post" class="review-form" enctype="multipart/form-data">
-        <div class="form-review font14">
-          <label for="review-item" class="font20">상품명</label>
-          <p>일반명함</p>
-        </div>
-        <div class="form-review font14 grade">
-          <label for="review-grade" class="font20">별점</label>
-          <div class="review-grade-wrap">
-            <a href=""> <p class="star-icon"></p> </a>
-            <a href=""> <p class="star-icon"></p> </a>
-            <a href=""> <p class="star-icon"></p> </a>
-            <a href=""> <p class="star-icon"></p> </a>
-            <a href=""><p class="star-icon"></p></a>
+    <main>
+      <div class="review-wrap">
+        <form action="#" method="post" class="review-form" enctype="multipart/form-data">
+          <a href="#" class="back-btn font28b">리뷰작성</a>
+          <div class="form-review font14">
+            <label for="review-item" class="font20b">상품명</label>
+            <p class="review-item-title font20b">일반명함</p>
           </div>
-        </div>
-        <div class="form-review font14">
-          <label for="review-title" class="font20">리뷰제목</label>
-          <input
-            type="text"
-            id="review-title"
-            name="review-title"
-            required
-            placeholder="리뷰 제목을 써주세요."
-          />
-        </div>
-        <div class="form-review font14">
-          <label for="review-content" class="font20">리뷰내용</label>
-          <textarea
-            id="review-content"
-            name="review-content"
-            required
-            placeholder="리뷰 내용을 작성해주세요."
-          ></textarea>
-        </div>
-        <div class="form-review font14">
-          <label for="review-upload" class="font20">첨부파일</label>
-          <input type="file" id="review-upload" name="review-upload" />
-        </div>
-      </form>
-      <a href="#" class="write-btn font20b">리뷰작성</a>
-    </div>
+          <div class="form-review font14 grade">
+            <label for="review-grade" class="font20b">별점</label>
+            <div class="review-grade-wrap">
+              <a href="#void"> <p class="star-icon"></p> </a>
+              <a href="#void"> <p class="star-icon"></p> </a>
+              <a href="#void"> <p class="star-icon"></p> </a>
+              <a href="#void"> <p class="star-icon"></p> </a>
+              <a href="#void"><p class="star-icon"></p></a>
+            </div>
+          </div>
+          <div class="form-review font14">
+            <label for="review-title" class="font20b">리뷰제목</label>
+            <input
+              type="text"
+              id="review-title"
+              name="review-title"
+              required
+              placeholder="리뷰 제목을 써주세요."
+            />
+          </div>
+          <div class="form-review font14">
+            <label for="review-content" class="font20b">리뷰내용</label>
+            <textarea
+              id="review-content"
+              name="review-content"
+              required
+              placeholder="리뷰 내용을 작성해주세요."
+            ></textarea>
+          </div>
+          <div class="form-review font14">
+            <label for="review-upload" class="font20b">첨부파일</label>
+            <input type="file" id="review-upload" name="review-upload" />
+          </div>
+        </form>
+        <a href="#" class="write-btn font20b">리뷰작성</a>
+      </div>
+    </main>
+    <script>
+      let starIcon = document.querySelectorAll('.star-icon');
+      starIcon.forEach((star) => {
+        star.addEventListener('click', function () {
+          this.classList.toggle('active');
+        });
+      });
+    </script>
   </body>
 </html>

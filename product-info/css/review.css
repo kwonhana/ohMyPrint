@@ -4,22 +4,34 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 70vh;
   margin-top: 200px;
 }
 
 .back-btn {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
 .back-btn::before {
   content: '';
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   background: url(/images/sub-arrow.svg) no-repeat center;
+}
+
+.review-item-title {
+  color: var(--text-black);
 }
 
 .review-form {
   max-width: 1000px;
   margin-top: 80px;
+}
+
+.review-form label {
+  color: var(--text-black);
 }
 
 .review-form input {
@@ -73,6 +85,10 @@
   width: 42px;
   height: 42px;
   background: url(/product-info/images/icon-review-grade.png) no-repeat;
+
+  &.active {
+    background: url(/product-info/images/icon-review-grade-yellow.png) no-repeat;
+  }
 }
 
 .write-btn {
