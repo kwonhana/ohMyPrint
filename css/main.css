@@ -359,7 +359,7 @@ main {
                 border-radius: 4px;
 
                 &::after {
-                  padding: 4px 8px;
+                  padding: 2px 4px;
                   border-radius: 4px;
                   display: flex;
                   justify-content: center;
@@ -370,6 +370,7 @@ main {
                   content: 'BEST';
                   background: var(--sub-blue);
                   color: #fff;
+                  border: 1px solid var(--sub-blue);
                 }
 
                 &.new::after {
@@ -388,6 +389,7 @@ main {
                   content: '품절';
                   background-color: var(--main-navy);
                   color: #fff;
+                  border: 1px solid var(--main-navy);
                 }
               }
             }

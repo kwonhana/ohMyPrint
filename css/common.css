@@ -33,6 +33,14 @@
     format('woff');
 }
 
+@font-face {
+  font-family: 'YFavorite';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/YOnepickTTF-Bold.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
 html {
   font-size: 10px;
 }
