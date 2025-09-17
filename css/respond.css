@@ -150,7 +150,7 @@
 
     /* 유튜브 섹션 */
     .youtube-wrap-inner {
-      padding-left: 20px;
+      margin-left: 0px;
 
       .youtube-title {
         margin: 0 0 2rem 0;
@@ -172,6 +172,10 @@
 
           &.active-center {
             flex: 0 0 45%;
+
+            p {
+              font-size: 1.6rem;
+            }
           }
         }
       }
