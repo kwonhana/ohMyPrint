@@ -385,11 +385,10 @@
 
     .best-review-wrap {
       .box {
-        overflow: hidden;
-        -webkit-overflow-scrolling: touch;
-
+        overflow: auto;
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE 10+ */
+        -webkit-overflow-scrolling: touch;
 
         &::-webkit-scrollbar {
           display: none; /* Chrome, Safari, Opera */
@@ -401,7 +400,7 @@
           .review {
             display: flex;
             flex: 0 0 80%;
-            aspect-ratio: 3/1;
+            aspect-ratio: 2.6/1;
             &:nth-child(2),
             &:nth-child(3) {
               flex-direction: row-reverse;
