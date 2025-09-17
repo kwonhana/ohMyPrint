@@ -352,48 +352,50 @@ main {
 
             .badge-wrap {
               display: flex;
-              gap: 10px;
+              gap: 8px;
 
               span {
                 padding: 4px 0;
                 border-radius: 4px;
 
+                &::after {
+                  padding: 2px 4px;
+                  border-radius: 4px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+
                 &.best::after {
                   content: 'BEST';
                   background: var(--sub-blue);
-                  padding: 2px 8px;
-                  border-radius: 4px;
                   color: #fff;
+                  border: 1px solid var(--sub-blue);
                 }
 
                 &.new::after {
                   content: 'NEW';
-                  padding: 2px 8px;
-                  border-radius: 4px;
                   border: 1px solid var(--main-pink);
                   color: var(--main-pink);
                 }
 
                 &.md::after {
                   content: 'MD추천';
-                  padding: 2px 8px;
-                  border-radius: 4px;
                   border: 1px solid var(--text-black);
                   color: var(--text-black);
                 }
 
                 &.soldout::after {
                   content: '품절';
-                  padding: 2px 8px;
-                  border-radius: 4px;
                   background-color: var(--main-navy);
                   color: #fff;
+                  border: 1px solid var(--main-navy);
                 }
               }
             }
 
             .card-title {
-              margin: 17.5px 0;
+              margin: 8px 0 16px;
             }
 
             .price {
