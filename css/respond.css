@@ -374,6 +374,12 @@
         font-weight: 500;
         margin-top: 8px;
       }
+
+      .youtube-content .youtube-list.active-center p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 8px;
+      }
     }
   }
 }
@@ -420,5 +426,9 @@
         }
       }
     }
+  }
+
+  main .youtube-wrap-inner .youtube-content {
+    gap: 10px;
   }
 }
