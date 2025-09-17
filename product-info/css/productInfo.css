@@ -1,7 +1,3 @@
-.item-main-wrap {
-  margin-top: 200px;
-}
-
 .item-main-wrap > .inner {
   max-width: 1440px;
   margin: 0 auto;
@@ -381,10 +377,25 @@ h2 {
   gap: 10px;
   text-align: center;
 
-  p {
+  /* p {
     color: var(--text-black);
     margin: 50px 0 32px;
-  }
+  } */
+}
+
+.guide-90x50 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36rem;
+  height: 20rem;
+}
+
+.guide-90x50-img {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px;
 }
 
 /* item-buyinfo 유의사항 */
