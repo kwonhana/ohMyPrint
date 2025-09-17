@@ -141,6 +141,22 @@ body:not(:has(.top-banner)) main {
   margin-bottom: 100px;
 }
 
+@media (max-width: 1024px) {
+  body:has(.top-banner) header .header-inner .header-left .ham-btn .ham-nav-wrap .snb-list-wrap {
+    max-height: calc(100vh - 40rem);
+  }
+
+  body:not(:has(.top-banner))
+    header
+    .header-inner
+    .header-left
+    .ham-btn
+    .ham-nav-wrap
+    .snb-list-wrap {
+    max-height: calc(100vh - 40rem);
+  }
+}
+
 @media (max-width: 768px) {
   body:has(.top-banner) main {
     margin-top: 120px;
