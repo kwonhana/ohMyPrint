@@ -388,19 +388,19 @@
         overflow: auto;
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE 10+ */
-        -webkit-overflow-scrolling: touch;
 
         &::-webkit-scrollbar {
           display: none; /* Chrome, Safari, Opera */
         }
 
         .review-wrap {
+          -webkit-overflow-scrolling: touch;
           grid-template-columns: repeat(2, 1fr);
           width: 180%;
           .review {
             display: flex;
             flex: 0 0 80%;
-            aspect-ratio: 2.6/1;
+            aspect-ratio: 2.4/1;
             &:nth-child(2),
             &:nth-child(3) {
               flex-direction: row-reverse;
