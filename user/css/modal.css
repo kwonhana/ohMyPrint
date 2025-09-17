@@ -1,4 +1,5 @@
-.privacy-policy {
+.privacy-policy,
+.terms-of-service {
   position: fixed;
   top: 0px;
   width: 100%;
@@ -31,11 +32,33 @@
 
       background: inherit;
 
+      h2 {
+        font-size: 2.4rem;
+      }
+
       h3 {
-        margin-bottom: 3px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 6px;
+        line-height: 2;
       }
       ul {
         margin-bottom: 20px;
+        li {
+          font-size: 1.6rem;
+          text-indent: 16px;
+          line-height: 2;
+
+          &::before {
+            content: '-';
+            margin-right: 2px;
+          }
+        }
       }
     }
   }
