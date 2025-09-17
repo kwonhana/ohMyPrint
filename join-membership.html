@@ -5,252 +5,404 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/join-membership.css">
   <script defer src="./js/join-membership.js" defer></script>
 </head>
 
 <body>
-  <div class="user-data-wrap">
-    <div class="user-inner">
-      <div class="user-form-wrap">
-        <form method="get" action="./join-membership-end.html">
-          <h3 class="font28">회원가입</h3>
-          <fieldset class="user-account-data-wrap">
-            <legend class="font28 user-account sr-only">계정정보</legend>
-            <p class="label-tag">
-              <label for="uID" class="font20b">아이디<span class="essential">*</span></label>
-              <input type="text" id="uID" class="uID databox" name="uId" placeholder="아이디를 입력해주세요." required>
-              <span class="check-box font16b"><a href="#void">중복확인</a></span>
-            </p>
-            <p class="label-tag">
-              <label for="uPass" class="font20b">비밀번호<span class="essential">*</span></label>
-              <input type="password" id="uPass" class="uPass databox font14b" placeholder="비밀번호를 입력해주세요." required>
-            </p>
-            <p class="pw-check-label">
-              <label for="uPass-check" class="font20b">비밀번호 확인<span class="essential">*</span></label>
-              <input class="databox" name="uPass-check" id="uPass-check" type="password"
-                placeholder="비밀번호를 다시 한번 입력해주세요." required>
-            </p>
-            <p class="uPass-comment font14">· 비밀번호가 일치하지 않습니다.</p>
-            <p class="uPass-comment-check font14">· 비밀번호가 일치합니다.</p>
-          </fieldset>
-          <fieldset class="u-data">
-            <legend>개인정보</legend>
-            <p class="label-tag">
-              <label for="uName" class="font20b">이름<span class="essential">*</span></label>
-              <input class="databox" name="uName" id="uName" type="text" placeholder="이름을 입력해주세요." required>
-            </p>
-            <p class="label-tag">
-              <span class="font20b">이메일<span class="essential">*</span></span>
-              <span class="data-box-wrap" id="data-box-wrap">
-                <input class="databox1 font14" type="text" name="mail-first" required>
-                <input class="databox3 font14" type="text" name="mail-second" required>
-                <select class="databox2 font14" name="mail-select" id="mail-select">
-                  <option>직접입력</option>
-                  <option data-name="@naver.com" value="Naver">네이버</option>
-                  <option data-name="@google.com" value="Google">구글</option>
-                  <option data-name="@hanmail.net" value="Daum">다음</option>
-                </select>
-              </span>
-              <span class="check-box font16b"><a href="#void">중복확인</a></span>
-            </p>
-            <p class="label-tag">
-              <span class="font20b">연락처<span class="essential">*</span></span>
-              <span class="select-wrap">
-                <select class="telecom-wrap font14" name="telecom" id="telecom-select">
-                  <option class="telecom">통신사</option>
-                  <option class="skt" value="skt">SKT</option>
-                  <option class="kt" value="kt">KT</option>
-                  <option class="lg" value="lg">LG</option>
-                </select>
-                <input class="first-num font14" type="text" value="010" readonly>
-                <input class="second-num font14" type="text" name="tel-middle" maxlength="4" required>
-                <input class="third-num font14" type="text" name="tel-end" maxlength="4" required>
-              </span>
-              <span class="check-box font16b"><a href="#void">본인인증</a></span>
-            </p>
-            <p class="label-tag">
-              <span class="font20b">주소<span class="essential">*</span></span>
-              <span id="user-Address" class="address-btn"><a href="#void" class="font16">주소검색</a></span>
-            </p>
-            <p class="gender-tag">
-              <span class="font20b">성별</span>
-              <label class="radio-wrap" for="wonman">
-                <input type="radio" name="gender" id="wonman">
-                <span class="custom-radio font16"></span><span class="font16">여자</span>
-              </label>
-              <label class="radio-wrap" for="man">
-                <input type="radio" name="gender" id="man">
-                <span class="custom-radio font16"></span><span class="font16">남자</span>
-              </label>
-            </p>
-            <p class="birth-tag">
-              <span class="font20b">생년월일</span>
-              <select class="year font14" name="year" id="year">
-                <option value="2025년">2025 년</option>
-                <option value="2024년">2024 년</option>
-                <option value="2023년">2023 년</option>
-                <option value="2022년">2022 년</option>
-              </select>
-
-              <select class="month font14" name="month" id="month">
-                <option value="1월">1 월</option>
-                <option value="2월">2 월</option>
-                <option value="3월">3 월</option>
-                <option value="4월">4 월</option>
-                <option value="5월">5 월</option>
-                <option value="6월">6 월</option>
-                <option value="7월">7 월</option>
-                <option value="8월">8 월</option>
-                <option value="9월">9 월</option>
-                <option value="10월">10 월</option>
-                <option value="11월">11 월</option>
-                <option value="12월">12 월</option>
-              </select>
-
-              <select class="day font14" name="day" id="day">
-                <option value="1일">1 일</option>
-                <option value="2일">2 일</option>
-                <option value="3일">3 일</option>
-                <option value="4일">4 일</option>
-                <option value="5일">5 일</option>
-                <option value="6일">6 일</option>
-                <option value="7일">7 일</option>
-                <option value="8일">8 일</option>
-                <option value="9일">9 일</option>
-                <option value="10일">10 일</option>
-                <option value="11일">11 일</option>
-                <option value="12일">12 일</option>
-                <option value="13일">13 일</option>
-                <option value="14일">14 일</option>
-                <option value="15일">15 일</option>
-                <option value="16일">16 일</option>
-                <option value="17일">17 일</option>
-                <option value="18일">18 일</option>
-                <option value="19일">19 일</option>
-                <option value="20일">20 일</option>
-                <option value="21일">21 일</option>
-                <option value="22일">22 일</option>
-                <option value="23일">23 일</option>
-                <option value="24일">24 일</option>
-                <option value="25일">25 일</option>
-                <option value="26일">26 일</option>
-                <option value="27일">27 일</option>
-                <option value="28일">28 일</option>
-                <option value="29일">29 일</option>
-                <option value="30일">30 일</option>
-                <option value="31일">31 일</option>
-              </select>
-            </p>
-          </fieldset>
-          <fieldset class="agree-section user-agree-wrap user-usage-wrap">
-            <legend class="sr-only">이용약관 동의 (필수)</legend>
-
-            <label for="agree-terms" class="agree-label">
-              <input type="checkbox" id="agree-terms" name="agree_terms">
-              <span class="custom-checkbox" aria-hidden="true"></span>
-              <strong class="font18">이용약관동의</strong>
-              <span class="pink font14">(필수)</span>
-            </label>
-
-            <div class="text-box" id="terms-usage" tabindex="0">
-              <p class="sr-only">이용약관 전문</p>
-              <p class="container">
-                제1조 (목적) 본 약관은 [사이트명] (이하 "회사")가 제공하는 모든 서비스(이하 "서비스")의 이용 조건 및 절차, 이용자와 회사의 권리·의무 및 책임사항, 기타 필요한 사항을
-                규정함을
-                목적으로 합니다.
-                <br>
-                제2조 (용어의 정의)
-                "회원"이라 함은 본 약관에 동의하고 회사와 서비스 이용 계약을 체결한 자를 말합니다.
-                "아이디(ID)"는 회원 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인한 문자·숫자의 조합입니다.
-                "비밀번호"는 회원의 개인정보 보호와 안전한 서비스 이용을 위해 회원이 설정한 문자·숫자의 조합입니다.
-                <br>
-                제3조 (약관의 효력 및 변경)
-                본 약관은 서비스 화면에 게시하거나 기타의 방법으로 공지함으로써 효력이 발생합니다.
-                회사는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있으며, 변경 시 적용일자 및 변경 사유를 공지합니다.
-                <br>
-                제4조 (회원가입)
-                회원가입은 이용자가 약관의 내용에 동의하고, 회사가 정한 가입 양식을 작성하여 가입을 신청한 후 회사가 이를 승낙함으로써 완료됩니다.
-                회사는 다음 각 호에 해당하는 경우 가입 신청을 거부할 수 있습니다.
-                허위 정보를 기재한 경우
-                타인의 명의를 도용한 경우
-                사회의 안녕질서 또는 미풍양속을 저해할 우려가 있는 경우
-                제5조 (서비스 이용)
-                회사는 회원에게 안정적으로 서비스를 제공합니다.
-                서비스의 내용, 이용 방법, 제공 시간은 회사의 사정에 따라 변경될 수 있습니다.
-                <br>
-                제6조 (개인정보 보호) 회사는 회원의 개인정보를 보호하기 위하여 관련 법령이 정하는 바를 준수하며, 개인정보 처리방침에 따라 개인정보를 수집·이용·보관·처리합니다.
-                <br>
-                제7조 (이용자의 의무)
-                회원은 다음 행위를 하여서는 안 됩니다.
-                타인의 개인정보 도용
-                서비스의 운영을 방해하는 행위
-                법령 및 약관을 위반하는 행위
-                회원은 본인의 계정 및 비밀번호를 안전하게 관리할 책임이 있습니다.
-                <br>
-                제8조 (서비스의 중단) 회사는 정기 점검, 서버 교체, 서비스 개선 등을 위하여 서비스 제공을 일시적으로 중단할 수 있습니다.
-                <br>
-                제9조 (계약 해지 및 이용 제한) 회원이 서비스 이용 계약을 해지하고자 하는 경우, 고객센터를 통해 해지 신청을 할 수 있습니다. 회사는 회원이 약관을 위반한 경우 사전 통보 없이
-                이용을
-                제한하거나 계약을 해지할 수 있습니다.
-                제10조 (면책 조항)
-                회사는 천재지변, 불가항력으로 인해 서비스를 제공할 수 없는 경우 책임이 면제됩니다.
-                회원의 귀책 사유로 인한 서비스 이용 장애에 대하여 회사는 책임을 지지 않습니다.
-              </p>
-            </div>
-          </fieldset>
-          <!-- 개인정보 수집 및 이용 동의 -->
-          <fieldset class="agree-section user-agree-wrap user-data-agree-wrap">
-            <legend class="sr-only">개인정보 수집 및 이용 동의 (필수)</legend>
-
-            <label for="agree-privacy" class="agree-label">
-              <input type="checkbox" id="agree-privacy" name="agree_privacy" value="Y" required>
-              <span class="custom-checkbox" aria-hidden="true"></span>
-              <strong class="font18">개인정보 수집 및 이용 동의</strong>
-              <span class="pink font14">(필수)</span>
-            </label>
-
-            <div class="text-box" id="terms-privacy" tabindex="0">
-              <p class="sr-only">개인정보 수집 및 이용 동의 전문</p>
-              <p class="container">
-                개인정보 수집 및 이용 동의
-                <br>
-                [필수] 개인정보 수집 및 이용 동의
-                <br>
-                1. 수집하는 개인정보 항목
-                회원가입 시: 이름, 아이디, 비밀번호, 이메일 주소, 휴대전화 번호
-                서비스 이용 과정에서 자동 수집되는 정보: 접속 IP, 쿠키, 서비스 이용 기록, 기기 정보 등
-                <br>
-                2. 개인정보 수집·이용 목적
-                회원가입 및 본인 확인
-                서비스 제공 및 계약 이행
-                고객 문의 응대 및 불만 처리
-                서비스 관련 공지 및 고지사항 전달
-                서비스 품질 개선 및 맞춤형 서비스 제공
-                법령 및 약관 위반 행위에 대한 대응
-                <br>
-                3. 개인정보 보유·이용 기간
-                회원 탈퇴 시까지 보관 후 지체 없이 파기
-                단, 관계 법령에 따라 보관이 필요한 경우 해당 기간 동안 보관
-                계약 또는 청약 철회 등에 관한 기록: 5년
-                대금 결제 및 재화 등의 공급에 관한 기록: 5년
-                소비자의 불만 또는 분쟁 처리에 관한 기록: 3년
-                접속 로그 기록: 3개월
-                <br>
-                4. 동의 거부 권리 및 불이익 안내 이용자는 개인정보 수집 및 이용에 동의하지 않을 권리가 있습니다. 단, 필수 항목에 동의하지 않을 경우 회원가입 및 서비스 이용이 제한될 수
-                있습니다.
-              </p>
-            </div>
-          </fieldset>
-          <div class="end-btn-wrap font16">
-            <button type="submit" class="end-btn">회원가입 (visibility)</button>
-          </div>
-        </form>
-      </div>
+  <!-- 탑베너 -->
+  <div class="top-banner">
+    <div class="inner">
+      <p class="font16b">Welcome 신규회원 3000포인트 증정 !!</p>
+      <a href="#void" class="closeBtn"></a>
     </div>
   </div>
+  <!-- 헤더 -->
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="ham-btn">
+          <a href="#void">
+            <img src="/images/ham-btn.svg" alt="햄버거버튼" />
+          </a>
+          <div class="ham-nav-wrap snb">
+            <div class="close-btn"><button class="btn"></button></div>
+            <ul class="snb-list-wrap">
+              <li><a class="font20" href="#void">실사출력</a></li>
+              <li><a class="font20" href="#void">명함</a></li>
+              <li><a class="font20" href="#void">간판</a></li>
+              <li><a class="font20" href="#void">상패</a></li>
+              <li><a class="font20" href="#void">현수막</a></li>
+              <li><a class="font20" href="#void">흥보용품</a></li>
+              <li><a class="font20" href="#void">쿠폰</a></li>
+              <li><a class="font20" href="#void">쿠폰2</a></li>
+              <li><a class="font20" href="#void">쿠폰3</a></li>
+              <li><a class="font20" href="#void">쿠폰3</a></li>
+              <li><a class="font20" href="#void">쿠폰3</a></li>
+              <li><a class="font20" href="#void">쿠폰3</a></li>
+            </ul>
+            <div class="snb-banner">
+              <a href="">
+                <img src="/images/sub-banner.png" alt="햄버거 네비 베너" />
+              </a>
+            </div>
+            <div class="bottom-btn">
+              <div class="info font16b"><a href="./support/notice.html">공지사항</a></div>
+              <div class="info font16b"><a href="#void">문의사항</a></div>
+            </div>
+          </div>
+        </div>
+        <h1 class="sub-logo">
+          <a href="/index.html"><img src="/images/sub-logo.png" alt="서브로고" /></a>
+        </h1>
+      </div>
+
+      <ul class="gnb hidden">
+        <li class="font16"><a href="#void">실사출력</a></li>
+        <li class="font16"><a href="#void">명함</a></li>
+        <li class="font16"><a href="#void">간판</a></li>
+        <li class="font16"><a href="#void">상패</a></li>
+        <li class="font16"><a href="#void">현수막</a></li>
+        <li class="font16"><a href="#void">흥보용품</a></li>
+        <li class="font16"><a href="#void">쿠폰</a></li>
+        <li class="font16"><a href="#void">카탈로그</a></li>
+        <li class="font16"><a href="#void">견적문의</a></li>
+      </ul>
+
+      <ul class="user-wrap">
+        <li class="search-wrap">
+          <a href="" class="search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25" fill="none">
+              <path
+                d="M16.9284 17.5396L20.4016 20.8996M11.4016 7.69961C13.3898 7.69961 15.0016 9.31138 15.0016 11.2996M19.2816 11.9396C19.2816 16.2695 15.7715 19.7796 11.4416 19.7796C7.11165 19.7796 3.60156 16.2695 3.60156 11.9396C3.60156 7.6097 7.11165 4.09961 11.4416 4.09961C15.7715 4.09961 19.2816 7.6097 19.2816 11.9396Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </a>
+          <div class="search-container">
+            <div class="inner">
+              <div class="search-input-wrap">
+                <input type="text" placeholder="필요한 상품을 검색해 보세요" />
+                <button class="search-icon"></button>
+              </div>
+              <div class="keyword-wrap">
+                <b class="title font16b">인기검색어 :</b>
+                <span class="font14b">단체티</span>
+                <span class="font14b">고급명함</span>
+                <span class="font14b">투명명함</span>
+                <span class="font14b"></span>
+                <span class="font14b">LED간판</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="" class="font16">로그인</a></li>
+        <li><a href="./support/all.html" class="font16">고객지원</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="user-data-wrap">
+      <div class="user-inner">
+        <div class="user-form-wrap">
+          <form method="get" action="./join-membership-end.html">
+            <h3 class="font28">회원가입</h3>
+            <fieldset class="user-account-data-wrap">
+              <legend class="font28 user-account sr-only">계정정보</legend>
+              <p class="label-tag">
+                <label for="uID" class="font20b">아이디<span class="essential">*</span></label>
+                <input type="text" id="uID" class="uID databox" name="uId" placeholder="아이디를 입력해주세요." required>
+                <span class="check-box font16b"><a href="#void">중복확인</a></span>
+              </p>
+              <p class="label-tag">
+                <label for="uPass" class="font20b">비밀번호<span class="essential">*</span></label>
+                <input type="password" id="uPass" class="uPass databox font14b" placeholder="비밀번호를 입력해주세요." required>
+              </p>
+              <p class="pw-check-label">
+                <label for="uPass-check" class="font20b">비밀번호 확인<span class="essential">*</span></label>
+                <input class="databox" name="uPass-check" id="uPass-check" type="password"
+                  placeholder="비밀번호를 다시 한번 입력해주세요." required>
+              </p>
+              <p class="uPass-comment font14">비밀번호가 일치하지 않습니다.</p>
+              <p class="uPass-comment-check font14">비밀번호가 일치합니다.</p>
+            </fieldset>
+            <fieldset class="u-data">
+              <legend>개인정보</legend>
+              <p class="label-tag">
+                <label for="uName" class="font20b">이름<span class="essential">*</span></label>
+                <input class="databox" name="uName" id="uName" type="text" placeholder="이름을 입력해주세요." required>
+              </p>
+              <p class="label-tag">
+                <span class="font20b">이메일<span class="essential">*</span></span>
+                <span class="data-box-wrap" id="data-box-wrap">
+                  <input class="databox1 font14" type="text" name="mail-first" required>
+                  <input class="databox3 font14" type="text" name="mail-second" required>
+                  <select class="databox2 font14" name="mail-select" id="mail-select">
+                    <option>직접입력</option>
+                    <option data-name="@naver.com" value="Naver">네이버</option>
+                    <option data-name="@google.com" value="Google">구글</option>
+                    <option data-name="@hanmail.net" value="Daum">다음</option>
+                  </select>
+                </span>
+                <span class="check-box font16b"><a href="#void">중복확인</a></span>
+              </p>
+              <p class="label-tag">
+                <span class="font20b">연락처<span class="essential">*</span></span>
+                <span class="select-wrap">
+                  <select class="telecom-wrap font14" name="telecom" id="telecom-select">
+                    <option class="telecom">통신사</option>
+                    <option class="skt" value="skt">SKT</option>
+                    <option class="kt" value="kt">KT</option>
+                    <option class="lg" value="lg">LG</option>
+                  </select>
+                  <input class="first-num font14" type="text" value="010" readonly>
+                  <input class="second-num font14" type="text" name="tel-middle" maxlength="4" required>
+                  <input class="third-num font14" type="text" name="tel-end" maxlength="4" required>
+                </span>
+                <span class="check-box font16b"><a href="#void">본인인증</a></span>
+              </p>
+              <p class="label-tag">
+                <span class="font20b">주소<span class="essential">*</span></span>
+                <span id="user-Address" class="address-btn"><a href="#void" class="font16">주소검색</a></span>
+              </p>
+              <p class="gender-tag">
+                <span class="font20b">성별</span>
+                <label class="radio-wrap" for="wonman">
+                  <input type="radio" name="gender" id="wonman">
+                  <span class="custom-radio font16"></span><span class="font16">여자</span>
+                </label>
+                <label class="radio-wrap" for="man">
+                  <input type="radio" name="gender" id="man">
+                  <span class="custom-radio font16"></span><span class="font16">남자</span>
+                </label>
+              </p>
+              <p class="birth-tag">
+                <span class="font20b">생년월일</span>
+                <select class="year font14" name="year" id="year">
+                  <option value="2025년">2025 년</option>
+                  <option value="2024년">2024 년</option>
+                  <option value="2023년">2023 년</option>
+                  <option value="2022년">2022 년</option>
+                </select>
+
+                <select class="month font14" name="month" id="month">
+                  <option value="1월">1 월</option>
+                  <option value="2월">2 월</option>
+                  <option value="3월">3 월</option>
+                  <option value="4월">4 월</option>
+                  <option value="5월">5 월</option>
+                  <option value="6월">6 월</option>
+                  <option value="7월">7 월</option>
+                  <option value="8월">8 월</option>
+                  <option value="9월">9 월</option>
+                  <option value="10월">10 월</option>
+                  <option value="11월">11 월</option>
+                  <option value="12월">12 월</option>
+                </select>
+
+                <select class="day font14" name="day" id="day">
+                  <option value="1일">1 일</option>
+                  <option value="2일">2 일</option>
+                  <option value="3일">3 일</option>
+                  <option value="4일">4 일</option>
+                  <option value="5일">5 일</option>
+                  <option value="6일">6 일</option>
+                  <option value="7일">7 일</option>
+                  <option value="8일">8 일</option>
+                  <option value="9일">9 일</option>
+                  <option value="10일">10 일</option>
+                  <option value="11일">11 일</option>
+                  <option value="12일">12 일</option>
+                  <option value="13일">13 일</option>
+                  <option value="14일">14 일</option>
+                  <option value="15일">15 일</option>
+                  <option value="16일">16 일</option>
+                  <option value="17일">17 일</option>
+                  <option value="18일">18 일</option>
+                  <option value="19일">19 일</option>
+                  <option value="20일">20 일</option>
+                  <option value="21일">21 일</option>
+                  <option value="22일">22 일</option>
+                  <option value="23일">23 일</option>
+                  <option value="24일">24 일</option>
+                  <option value="25일">25 일</option>
+                  <option value="26일">26 일</option>
+                  <option value="27일">27 일</option>
+                  <option value="28일">28 일</option>
+                  <option value="29일">29 일</option>
+                  <option value="30일">30 일</option>
+                  <option value="31일">31 일</option>
+                </select>
+              </p>
+            </fieldset>
+            <fieldset class="agree-section user-agree-wrap user-usage-wrap">
+              <legend class="sr-only">이용약관 동의 (필수)</legend>
+
+              <label for="agree-terms" class="agree-label">
+                <input type="checkbox" id="agree-terms" name="agree_terms">
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <strong class="font18">이용약관동의</strong>
+                <span class="pink font14">(필수)</span>
+              </label>
+
+              <div class="text-box" id="terms-usage" tabindex="0">
+                <p class="sr-only">이용약관 전문</p>
+                <p class="container">
+                  제1조 (목적) 본 약관은 [사이트명] (이하 "회사")가 제공하는 모든 서비스(이하 "서비스")의 이용 조건 및 절차, 이용자와 회사의 권리·의무 및 책임사항, 기타 필요한 사항을
+                  규정함을
+                  목적으로 합니다.
+                  <br>
+                  제2조 (용어의 정의)
+                  "회원"이라 함은 본 약관에 동의하고 회사와 서비스 이용 계약을 체결한 자를 말합니다.
+                  "아이디(ID)"는 회원 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인한 문자·숫자의 조합입니다.
+                  "비밀번호"는 회원의 개인정보 보호와 안전한 서비스 이용을 위해 회원이 설정한 문자·숫자의 조합입니다.
+                  <br>
+                  제3조 (약관의 효력 및 변경)
+                  본 약관은 서비스 화면에 게시하거나 기타의 방법으로 공지함으로써 효력이 발생합니다.
+                  회사는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있으며, 변경 시 적용일자 및 변경 사유를 공지합니다.
+                  <br>
+                  제4조 (회원가입)
+                  회원가입은 이용자가 약관의 내용에 동의하고, 회사가 정한 가입 양식을 작성하여 가입을 신청한 후 회사가 이를 승낙함으로써 완료됩니다.
+                  회사는 다음 각 호에 해당하는 경우 가입 신청을 거부할 수 있습니다.
+                  허위 정보를 기재한 경우
+                  타인의 명의를 도용한 경우
+                  사회의 안녕질서 또는 미풍양속을 저해할 우려가 있는 경우
+                  제5조 (서비스 이용)
+                  회사는 회원에게 안정적으로 서비스를 제공합니다.
+                  서비스의 내용, 이용 방법, 제공 시간은 회사의 사정에 따라 변경될 수 있습니다.
+                  <br>
+                  제6조 (개인정보 보호) 회사는 회원의 개인정보를 보호하기 위하여 관련 법령이 정하는 바를 준수하며, 개인정보 처리방침에 따라 개인정보를 수집·이용·보관·처리합니다.
+                  <br>
+                  제7조 (이용자의 의무)
+                  회원은 다음 행위를 하여서는 안 됩니다.
+                  타인의 개인정보 도용
+                  서비스의 운영을 방해하는 행위
+                  법령 및 약관을 위반하는 행위
+                  회원은 본인의 계정 및 비밀번호를 안전하게 관리할 책임이 있습니다.
+                  <br>
+                  제8조 (서비스의 중단) 회사는 정기 점검, 서버 교체, 서비스 개선 등을 위하여 서비스 제공을 일시적으로 중단할 수 있습니다.
+                  <br>
+                  제9조 (계약 해지 및 이용 제한) 회원이 서비스 이용 계약을 해지하고자 하는 경우, 고객센터를 통해 해지 신청을 할 수 있습니다. 회사는 회원이 약관을 위반한 경우 사전 통보 없이
+                  이용을
+                  제한하거나 계약을 해지할 수 있습니다.
+                  제10조 (면책 조항)
+                  회사는 천재지변, 불가항력으로 인해 서비스를 제공할 수 없는 경우 책임이 면제됩니다.
+                  회원의 귀책 사유로 인한 서비스 이용 장애에 대하여 회사는 책임을 지지 않습니다.
+                </p>
+              </div>
+            </fieldset>
+            <!-- 개인정보 수집 및 이용 동의 -->
+            <fieldset class="agree-section user-agree-wrap user-data-agree-wrap">
+              <legend class="sr-only">개인정보 수집 및 이용 동의 (필수)</legend>
+
+              <label for="agree-privacy" class="agree-label">
+                <input type="checkbox" id="agree-privacy" name="agree_privacy" value="Y" required>
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <strong class="font18">개인정보 수집 및 이용 동의</strong>
+                <span class="pink font14">(필수)</span>
+              </label>
+
+              <div class="text-box" id="terms-privacy" tabindex="0">
+                <p class="sr-only">개인정보 수집 및 이용 동의 전문</p>
+                <p class="container">
+                  개인정보 수집 및 이용 동의
+                  <br>
+                  [필수] 개인정보 수집 및 이용 동의
+                  <br>
+                  1. 수집하는 개인정보 항목
+                  회원가입 시: 이름, 아이디, 비밀번호, 이메일 주소, 휴대전화 번호
+                  서비스 이용 과정에서 자동 수집되는 정보: 접속 IP, 쿠키, 서비스 이용 기록, 기기 정보 등
+                  <br>
+                  2. 개인정보 수집·이용 목적
+                  회원가입 및 본인 확인
+                  서비스 제공 및 계약 이행
+                  고객 문의 응대 및 불만 처리
+                  서비스 관련 공지 및 고지사항 전달
+                  서비스 품질 개선 및 맞춤형 서비스 제공
+                  법령 및 약관 위반 행위에 대한 대응
+                  <br>
+                  3. 개인정보 보유·이용 기간
+                  회원 탈퇴 시까지 보관 후 지체 없이 파기
+                  단, 관계 법령에 따라 보관이 필요한 경우 해당 기간 동안 보관
+                  계약 또는 청약 철회 등에 관한 기록: 5년
+                  대금 결제 및 재화 등의 공급에 관한 기록: 5년
+                  소비자의 불만 또는 분쟁 처리에 관한 기록: 3년
+                  접속 로그 기록: 3개월
+                  <br>
+                  4. 동의 거부 권리 및 불이익 안내 이용자는 개인정보 수집 및 이용에 동의하지 않을 권리가 있습니다. 단, 필수 항목에 동의하지 않을 경우 회원가입 및 서비스 이용이 제한될 수
+                  있습니다.
+                </p>
+              </div>
+            </fieldset>
+            <div class="end-btn-wrap font16">
+              <button type="submit" class="end-btn">회원가입 (visibility)</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- 푸터 -->
+  <footer>
+    <div class="inner">
+      <div class="left-container">
+        <h2 class="footer-logo">
+          <img src="/images/footer-logo.png" alt="푸터로고" />
+        </h2>
+        <address>
+          <p class="font14 company-info">
+            <span>회사명: (주) 오마이프린트</span>
+            <span>대표명:xxx</span>
+            <span>사업자 등록번호:123-45-6789</span>
+          </p>
+          <p class="font14">주소: 경기도 경기도 경기도 경기도 경기도</p>
+          <p class="font14">개인정보관리 책임자: xxx</p>
+          <p class="font14">통신판매업신고번호: 2020-xxxx-0505</p>
+        </address>
+      </div>
+      <div class="right-container">
+        <ul class="info-box">
+          <li class="font20b title"><a href="./support/notice.html">공지사항</a></li>
+          <li class="font14">
+            <a href="#void">개인정보처리방침 변경 안내(25년 3월 24일자로 시행)</a>
+          </li>
+          <li class="font14">
+            <a href="#void">개인정보처리방침 변경 안내(25년 3월 24일자로 시행)</a>
+          </li>
+          <li class="font14">
+            <a href="#void">개인정보처리방침 변경 안내(25년 3월 24일자로 시행)</a>
+          </li>
+        </ul>
+        <ul class="cs-box">
+          <li class="font20b title">
+            <a href="./support/all.html">고객만족센터: 000-0000-0000</a>
+          </li>
+          <li class="font14">점심시간: 오후 13:00~오후 14:00</li>
+          <li class="font14">영업시간: 평일 오전 09:00~오후 18:00</li>
+          <li class="font14">휴무안내: 토/일/공휴일 및 대체 공휴일</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy-wrap">
+      <div class="inner">
+        <ul>
+          <li>
+            <a href="#void">이용약관</a>
+          </li>
+          <li>
+            <a href="#void">개인정보 취급방침</a>
+          </li>
+          <li>
+            <a href="#void">이용안내</a>
+          </li>
+        </ul>
+        <p>COPYRIGHT © 2025 오마이프린트. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
