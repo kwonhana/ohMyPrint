@@ -15,13 +15,13 @@
   <div class="user-data-wrap">
     <div class="user-inner">
       <div class="user-form-wrap">
-        <form method="post" action="./">
+        <form method="get" action="./join-membership-end.html">
           <h3 class="font28">회원가입</h3>
           <fieldset class="user-account-data-wrap">
             <legend class="font28 user-account sr-only">계정정보</legend>
-            <p class="required label-tag">
+            <p class="label-tag">
               <label for="uID" class="font20b">아이디<span class="essential">*</span></label>
-              <input type="text" id="uID" class="uID databox" placeholder="아이디를 입력해주세요." required>
+              <input type="text" id="uID" class="uID databox" name="uId" placeholder="아이디를 입력해주세요." required>
               <span class="check-box font16b"><a href="#void">중복확인</a></span>
             </p>
             <p class="label-tag">
@@ -45,8 +45,8 @@
             <p class="label-tag">
               <span class="font20b">이메일<span class="essential">*</span></span>
               <span class="data-box-wrap" id="data-box-wrap">
-                <input class="databox1 font14" type="text" required>
-                <input class="databox3 font14" type="text" required>
+                <input class="databox1 font14" type="text" name="mail-first" required>
+                <input class="databox3 font14" type="text" name="mail-second" required>
                 <select class="databox2 font14" name="mail-select" id="mail-select">
                   <option>직접입력</option>
                   <option data-name="@naver.com" value="Naver">네이버</option>
@@ -66,8 +66,8 @@
                   <option class="lg" value="lg">LG</option>
                 </select>
                 <input class="first-num font14" type="text" value="010" readonly>
-                <input class="second-num font14" type="text" maxlength="4" required>
-                <input class="third-num font14" type="text" maxlength="4" required>
+                <input class="second-num font14" type="text" name="tel-middle" maxlength="4" required>
+                <input class="third-num font14" type="text" name="tel-end" maxlength="4" required>
               </span>
               <span class="check-box font16b"><a href="#void">본인인증</a></span>
             </p>
@@ -244,12 +244,8 @@
               </p>
             </div>
           </fieldset>
-          <div class="end-btn-wrap">
-            <!-- input -> submit으로 설정해야한다. -->
-            <p class="end-btn font16">
-              회원가입 (visibility)
-              <button class="end" type="submit"></button>
-            </p>
+          <div class="end-btn-wrap font16">
+            <button type="submit" class="end-btn">회원가입 (visibility)</button>
           </div>
         </form>
       </div>

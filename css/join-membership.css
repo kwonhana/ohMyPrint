@@ -309,22 +309,31 @@ legend {
 }
 
 /* 버튼 */
-.end-btn {
+.end-btn-wrap {
+  position: relative;
   width: 480px;
   height: 50px;
-  margin: 20px auto 0;
+  margin: 46px auto 0;
+}
+
+button[type='submit']:hover {
+  background: #1c354f;
+}
+
+button[type='submit'] {
+  border: 0px;
+  color: white;
   background: var(--main-blue);
   border-radius: 4px;
-  text-align: center;
-  line-height: 50px;
-  color: white;
-}
-.end-btn a {
-  position: relative;
-  width: 100%;
-}
-.end-btn:hover {
-  background: #1c354f;
+  cursor: pointer;
+  /* opacity: 0; */
+  position: absolute;
+  right: 50%;
+  top: -10px;
+  transform: translate(50%);
+  align-items: center;
+  width: 480px;
+  height: 60px;
 }
 
 /* 스크린리더 전용 */
@@ -378,19 +387,4 @@ select {
   background: url(../images/selectbox-arrow-down.svg) no-repeat;
   background-position: right 20px center;
   cursor: pointer;
-}
-
-.end-btn {
-  position: relative;
-}
-button[type='submit'] {
-  cursor: pointer;
-  opacity: 0;
-  position: absolute;
-  right: 50%;
-  top: -10px;
-  transform: translate(50%);
-  align-items: center;
-  width: 480px;
-  height: 60px;
 }
