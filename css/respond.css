@@ -381,6 +381,34 @@
         margin-top: 8px;
       }
     }
+
+    .best-review-wrap {
+      .review-wrap {
+        grid-template-columns: repeat(1, 1fr);
+
+        .review {
+          display: flex;
+          &:nth-child(2n) {
+            flex-direction: row-reverse;
+          }
+
+          img {
+            transform: translateY(-0%);
+            width: 100%;
+          }
+        }
+
+        .review:nth-child(1) {
+          display: none;
+        }
+      }
+      .text-box {
+        position: static;
+        padding: 4%;
+        overflow: auto;
+        gap: 4px;
+      }
+    }
   }
 }
 
