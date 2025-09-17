@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../js/header.js" defer></script>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
@@ -11,106 +10,12 @@
     <link rel="stylesheet" href="./user/css/modal.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/respond.css" />
-    <script src="./js/main.js" defer></script>
+    <script src="../js/include.js" defer></script>
+    <script src="../js/header.js" defer></script>
     <title>오마이프린트 메인</title>
   </head>
   <body>
-    <div class="top-banner">
-      <div class="inner">
-        <p class="font16b">Welcome 신규회원 3000포인트 증정 !!</p>
-        <a href="#void" class="closeBtn"></a>
-      </div>
-    </div>
-    <!-- 헤더 -->
-    <header>
-      <div class="header-inner">
-        <div class="header-left">
-          <div class="ham-btn">
-            <a href="#void">
-              <img src="./images/ham-btn.svg" alt="햄버거버튼" />
-            </a>
-            <div class="ham-nav-wrap snb">
-              <div class="close-btn"><button class="btn"></button></div>
-              <ul class="snb-list-wrap">
-                <li><a class="font20" href="#void">실사출력</a></li>
-                <li><a class="font20" href="#void">명함</a></li>
-                <li><a class="font20" href="#void">간판</a></li>
-                <li><a class="font20" href="#void">상패</a></li>
-                <li><a class="font20" href="#void">현수막</a></li>
-                <li><a class="font20" href="#void">흥보용품</a></li>
-                <li><a class="font20" href="#void">쿠폰</a></li>
-                <li><a class="font20" href="#void">쿠폰2</a></li>
-                <li><a class="font20" href="#void">쿠폰3</a></li>
-                <li><a class="font20" href="#void">쿠폰3</a></li>
-                <li><a class="font20" href="#void">쿠폰3</a></li>
-                <li><a class="font20" href="#void">쿠폰3</a></li>
-              </ul>
-              <div class="snb-banner">
-                <a href="">
-                  <img src="./images/sub-banner.png" alt="햄버거 네비 베너" />
-                </a>
-              </div>
-              <div class="bottom-btn">
-                <div class="info font16b"><a href="./support/notice.html">공지사항</a></div>
-                <div class="info font16b"><a href="#void">문의사항</a></div>
-              </div>
-            </div>
-          </div>
-          <h1 class="sub-logo">
-            <a href="#void"><img src="./images/sub-logo.png" alt="서브로고" /></a>
-          </h1>
-        </div>
-
-        <ul class="gnb hidden">
-          <li class="font16"><a href="#void">실사출력</a></li>
-          <li class="font16"><a href="#void">명함</a></li>
-          <li class="font16"><a href="#void">간판</a></li>
-          <li class="font16"><a href="#void">상패</a></li>
-          <li class="font16"><a href="#void">현수막</a></li>
-          <li class="font16"><a href="#void">흥보용품</a></li>
-          <li class="font16"><a href="#void">쿠폰</a></li>
-          <li class="font16"><a href="#void">카탈로그</a></li>
-          <li class="font16"><a href="#void">견적문의</a></li>
-        </ul>
-
-        <ul class="user-wrap">
-          <li class="search-wrap">
-            <a href="" class="search">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none">
-                <path
-                  d="M16.9284 17.5396L20.4016 20.8996M11.4016 7.69961C13.3898 7.69961 15.0016 9.31138 15.0016 11.2996M19.2816 11.9396C19.2816 16.2695 15.7715 19.7796 11.4416 19.7796C7.11165 19.7796 3.60156 16.2695 3.60156 11.9396C3.60156 7.6097 7.11165 4.09961 11.4416 4.09961C15.7715 4.09961 19.2816 7.6097 19.2816 11.9396Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round" />
-              </svg>
-            </a>
-            <div class="search-container">
-              <div class="inner">
-                <div class="search-input-wrap">
-                  <input type="text" placeholder="필요한 상품을 검색해 보세요" />
-                  <button class="search-icon"></button>
-                </div>
-                <div class="keyword-wrap">
-                  <b class="title font16b">인기검색어 :</b>
-                  <span class="font14b">단체티</span>
-                  <span class="font14b">고급명함</span>
-                  <span class="font14b">투명명함</span>
-                  <span class="font14b"></span>
-                  <span class="font14b">LED간판</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li><a href="" class="font16">로그인</a></li>
-          <li><a href="./support/all.html" class="font16">고객지원</a></li>
-        </ul>
-      </div>
-    </header>
+    <div data-include="../header.html"></div>
     <!-- 메인 -->
     <main>
       <!-- 탭베너 -->
@@ -1172,146 +1077,7 @@
       </section>
     </main>
     <!-- 푸터 -->
-    <footer>
-      <div class="inner">
-        <div class="left-container">
-          <h2 class="footer-logo">
-            <img src="./images/footer-logo.png" alt="푸터로고" />
-          </h2>
-          <address>
-            <p class="font14 company-info">
-              <span>회사명: (주) 오마이프린트</span>
-              <span>대표명:xxx</span>
-              <span>사업자 등록번호:123-45-6789</span>
-            </p>
-            <p class="font14">주소: 경기도 경기도 경기도 경기도 경기도</p>
-            <p class="font14">개인정보관리 책임자: xxx</p>
-            <p class="font14">통신판매업신고번호: 2020-xxxx-0505</p>
-          </address>
-        </div>
-        <div class="right-container">
-          <ul class="info-box">
-            <li class="font20b title">공지사항</li>
-            <li class="font14">
-              <a href="#void">개인정보처리방침 변경 안내(25년 3월 24일자로 시행)</a>
-            </li>
-            <li class="font14">
-              <a href="#void">개인정보처리방침 변경 안내(25년 3월 24일자로 시행)</a>
-            </li>
-            <li class="font14">
-              <a href="#void">개인정보처리방침 변경 안내(25년 3월 24일자로 시행)</a>
-            </li>
-          </ul>
-          <ul class="cs-box">
-            <li class="font20b title">고객만족센터: 000-0000-0000</li>
-            <li class="font14">점심시간: 오후 13:00~오후 14:00</li>
-            <li class="font14">영업시간: 평일 오전 09:00~오후 18:00</li>
-            <li class="font14">휴무안내: 토/일/공휴일 및 대체 공휴일</li>
-          </ul>
-        </div>
-      </div>
-      <div class="copy-wrap">
-        <div class="inner">
-          <ul>
-            <li>
-              <a href="#void">이용약관</a>
-            </li>
-            <li>
-              <a href="#void">개인정보 취급방침</a>
-            </li>
-            <li>
-              <a href="#void">이용안내</a>
-            </li>
-          </ul>
-          <p>COPYRIGHT © 2025 오마이프린트. ALL RIGHTS RESERVED.</p>
-        </div>
-      </div>
-    </footer>
-
-    <section class="privacy-policy hidden">
-      <div class="wrap">
-        <div class="inner">
-          <h2>개인정보 취급방침</h2>
-          <div class="text-box">
-            <div class="container">
-              <h3>1. 개인정보 수집 항목 및 방법</h3>
-              <ul>
-                <li>필수 항목: 이름, 연락처(휴대전화, 이메일), 서비스 요청 내용</li>
-                <li>선택 항목: 주소, 회사명, 직책 등</li>
-                <li>자동 수집 항목: 접속 IP, 쿠키, 접속 로그, 브라우저 정보</li>
-                <li>수집 방법: 홈페이지 회원가입, 견적문의 신청, 고객센터 상담 등</li>
-              </ul>
-
-              <h3>2. 개인정보 수집 및 이용 목적</h3>
-              <ul>
-                <li>견적 문의 응대 및 서비스 제공</li>
-                <li>고객 상담 및 민원 처리</li>
-                <li>계약 이행 및 서비스 관련 고지·안내</li>
-                <li>마케팅 및 프로모션 안내(동의 시)</li>
-                <li>서비스 개선 및 통계 분석</li>
-              </ul>
-
-              <h3>3. 개인정보의 보유 및 이용기간</h3>
-              <ul>
-                <li>견적문의 관련 정보: 서비스 제공 완료 후 3년간 보관</li>
-                <li>계약 및 결제 관련 정보: 5년간 보관</li>
-                <li>마케팅 및 광고 활용 동의 정보: 철회 시까지 보관</li>
-              </ul>
-
-              <h3>4. 개인정보의 제3자 제공</h3>
-              <ul>
-                <li>이용자가 사전에 동의한 경우</li>
-                <li>법령에 따라 제공이 요구되는 경우</li>
-                <li>서비스 이행을 위해 협력 업체에게 필요한 범위 내 제공</li>
-              </ul>
-
-              <h3>5. 개인정보의 처리 위탁</h3>
-              <p>전문 업체에 일부 업무 위탁 가능. 위탁 시 관리·감독 철저</p>
-              <ul>
-                <li>위탁 내용: 서버 운영, 고객 상담 지원, 문자/이메일 발송</li>
-                <li>위탁 업체: (업체명, 연락처, 위탁 업무)</li>
-              </ul>
-
-              <h3>6. 이용자의 권리와 행사 방법</h3>
-              <ul>
-                <li>개인정보 열람/수정: 마이페이지 또는 고객센터 문의</li>
-                <li>동의 철회 및 삭제 요청: 고객센터(이메일/전화)</li>
-              </ul>
-
-              <h3>7. 개인정보 파기 절차 및 방법</h3>
-              <ul>
-                <li>목적 달성 후 지체 없이 파기</li>
-                <li>전자 파일: 복구 불가 방식으로 삭제</li>
-                <li>종이 문서: 분쇄 또는 소각</li>
-              </ul>
-
-              <h3>8. 개인정보 보호를 위한 기술적/관리적 대책</h3>
-              <ul>
-                <li>개인정보 암호화 저장</li>
-                <li>보안 시스템 구축</li>
-                <li>접근 권한 최소화</li>
-                <li>정기 보안 교육 및 점검</li>
-              </ul>
-
-              <h3>9. 쿠키(Cookie)의 사용</h3>
-              <ul>
-                <li>맞춤형 서비스 제공을 위해 쿠키 사용. 브라우저 설정으로 거부 가능</li>
-              </ul>
-
-              <h3>10. 개인정보 보호책임자</h3>
-              <ul>
-                <li>개인정보 보호책임자: OOO</li>
-                <li>이메일: OOO@domain.com</li>
-                <li>전화번호: 000-0000-0000</li>
-              </ul>
-
-              <h3>11. 개인정보취급방침의 변경</h3>
-              <p>법령·정책 또는 보안 기술 변경 시 수정되며, 사이트 공지사항을 통해 고지</p>
-              <p><strong>시행일자: 2025년 8월 21일</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div data-include="../footer.html"></div>
+    <div data-include="./user/modal-privacy-policy.html"></div>
   </body>
 </html>
