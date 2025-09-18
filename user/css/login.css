@@ -94,11 +94,18 @@
 
   .user-data {
     display: flex;
-    gap: 24px;
+    gap: 4px;
     position: absolute;
     bottom: 25px;
   }
-  .user-data > a {
+  .user-data > .open-modal {
     color: var(--text-gray);
+    font-size: 1.2rem;
+    background-color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--text-black);
+    }
   }
 }
