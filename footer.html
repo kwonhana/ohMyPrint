@@ -6,6 +6,8 @@
     <!-- <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/footer.css" /> -->
+    <!-- <script src="./js/modal.js" defer></script> -->
+    <script src="./js/include.js" defer></script>
     <title>오마이프린트 푸터</title>
   </head>
   <body>
@@ -41,7 +43,7 @@
           </ul>
           <ul class="cs-box">
             <li class="font20b title">
-              <a href="./support/all.html">고객만족센터: 000-0000-0000</a>
+              <a href="/support/all.html">고객만족센터: 000-0000-0000</a>
             </li>
             <li class="font14">점심시간: 오후 13:00~오후 14:00</li>
             <li class="font14">영업시간: 평일 오전 09:00~오후 18:00</li>
@@ -51,17 +53,11 @@
       </div>
       <div class="copy-wrap">
         <div class="inner">
-          <ul>
-            <li>
-              <a href="#void">이용약관</a>
-            </li>
-            <li>
-              <a href="#void">개인정보 취급방침</a>
-            </li>
-            <li>
-              <a href="#void">이용안내</a>
-            </li>
-          </ul>
+          <div class="user-data">
+            <button class="open-modal" data-target=".terms-of-service">이용약관</button>
+            <button class="open-modal" data-target=".privacy-policy">개인정보처리방침</button>
+            <button class="open-modal" data-target=".user-guide">이용안내</button>
+          </div>
           <p>COPYRIGHT © 2025 오마이프린트. ALL RIGHTS RESERVED.</p>
         </div>
       </div>
