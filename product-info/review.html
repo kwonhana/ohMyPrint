@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- 헤더 -->
-    <div data-include="../header.html"></div>
+    <header id="header"></header>
     <main>
       <div class="review-wrap">
         <form action="#" method="post" class="review-form" enctype="multipart/form-data">
@@ -41,8 +41,7 @@
               id="review-title"
               name="review-title"
               required
-              placeholder="리뷰 제목을 써주세요."
-            />
+              placeholder="리뷰 제목을 써주세요." />
           </div>
           <div class="form-review font14">
             <label for="review-content" class="font20b">리뷰내용</label>
@@ -50,8 +49,7 @@
               id="review-content"
               name="review-content"
               required
-              placeholder="리뷰 내용을 작성해주세요."
-            ></textarea>
+              placeholder="리뷰 내용을 작성해주세요."></textarea>
           </div>
           <div class="form-review font14">
             <label for="review-upload" class="font20b">첨부파일</label>
@@ -62,7 +60,7 @@
       </div>
     </main>
     <!-- 푸터 -->
-    <div data-include="../footer.html"></div>
+    <footer id="footer"></footer>
     <script>
       let starIcon = document.querySelectorAll('.star-icon');
       starIcon.forEach((star) => {
