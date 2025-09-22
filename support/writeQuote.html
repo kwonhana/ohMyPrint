@@ -3,18 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="stylesheet" href="./css/write.css" />
-    <script src="../js/header.js" defer></script>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="./css/writeQuote.css" />
+
     <script src="../js/include.js" defer></script>
-    <title>견적문의 - 초원</title>
+    <script src="../js/header.js" defer></script>
+    <title>Document</title>
   </head>
   <body>
-    <header id="header"></header>
-    <h1>견적문의</h1>
+    <main>
+      <header id="header"></header>
+      <div class="inquiry-container font16">
+        <h2>
+          사용자 눈높이에 맞춘 최고의 디자인,
+          <span>맞춤형/견적</span>
+          받아보세요!
+        </h2>
+        <ul>
+          <li>1:1컨설팅</li>
+          <li>최적화된 제품 제안</li>
+          <li>유지보수</li>
+          <li>전국 배송</li>
+        </ul>
+
+        <form action="#" method="post" class="inquiry-form" enctype="multipart/form-data">
+          <div class="form-group font16">
+            <label for="username">성함/직함</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="홍길동/대표이사" />
+          </div>
+          <div class="form-group font16">
+            <label for="phone">연락처</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="010-xxxx-xxxx"
+              class="textinput" />
+          </div>
+          <div class="form-group font16">
+            <label for="email">업무용 이메일</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="1234112586970@gmail.com" />
+          </div>
+          <div class="form-group font16">
+            <label for="fileUpload">첨부파일 업로드</label>
+            <input type="file" id="fileUpload" name="uploadFile" />
+            <label for="fileUpload" class="upload-btn">파일 올리기</label>
+          </div>
+          <div class="form-group font16">
+            <label for="category">카테고리</label>
+            <select id="category" name="category">
+              <option value="print">실사출력</option>
+              <option value="business-card">명함</option>
+              <option value="sign">간판</option>
+              <option value="award">상패</option>
+              <option value="catalog">카탈로그</option>
+              <option value="coupon">쿠폰</option>
+              <option value="promotion">홍보용품</option>
+              <option value="banner">현수막</option>
+            </select>
+          </div>
+          <div class="form-group font16">
+            <label for="inquiry">문의내용</label>
+            <input
+              type="text"
+              id="inquiry"
+              name="inquiry"
+              required
+              placeholder="문의내용을 입력하세요." />
+          </div>
+        </form>
+        <div class="check-box">
+          <p>개인정보 처리방침</p>
+          <p>
+            <input type="checkbox" />
+            개인정보취급방침에 동의합니다.
+            <a href="#">[자세히 보기]</a>
+          </p>
+        </div>
+        <a href="" class="apply-btn">견적 신청하기</a>
+        <div class="inquiry-text-box">
+          <p>전화상담시 신속한 상담이 이루어집니다.</p>
+          <p class="number font28b">02-1234-5678</p>
+          <p>상담가능시간 : 09:00~18:00 (점심시간 12:00~13:30)</p>
+          <p class="ex">주말,공휴일 제외</p>
+        </div>
+      </div>
+    </main>
+    <!-- 푸터 -->
+
     <footer id="footer"></footer>
   </body>
 </html>
