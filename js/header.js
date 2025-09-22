@@ -1,18 +1,16 @@
-window.onload = () => {
-  const topBanner = document.querySelector('.top-banner');
-  const bannerBtn = topBanner.querySelector('.closeBtn');
+const topBanner = document.querySelector('.top-banner');
+const bannerBtn = topBanner.querySelector('.closeBtn');
 
-  bannerBtn.addEventListener('click', () => {
-    topBanner.remove();
-  });
+bannerBtn.addEventListener('click', () => {
+  topBanner.remove();
+});
 
-  const gnb = document.querySelector('.gnb');
+const gnb = document.querySelector('.gnb');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) {
-      gnb.classList.remove('hidden');
-    } else {
-      gnb.classList.add('hidden');
-    }
-  });
-};
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 150) {
+    gnb.classList.remove('hidden');
+  } else {
+    gnb.classList.add('hidden');
+  }
+});

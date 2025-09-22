@@ -374,7 +374,7 @@ h2 {
 .guide-wrap {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
   text-align: center;
 
   /* p {
@@ -383,19 +383,75 @@ h2 {
   } */
 }
 
-.guide-90x50 {
+.guide-left,
+.guide-right {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 36rem;
-  height: 20rem;
+  width: 100%;
+  max-width: 60rem;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.guide-90x50,
+.guide-86x52 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 40rem;
+  padding: 10px;
 }
 
 .guide-90x50-img {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  aspect-ratio: 9 / 5;
   border: 1px solid black;
   margin: 10px;
+}
+
+.guide-86x52-img {
+  width: 100%;
+  aspect-ratio: 86 / 52;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.guide-90x50-text,
+.guide-86x52-text {
+  display: flex;
+  justify-content: space-between;
+}
+.guide-90x50-text > span,
+.guide-86x52-text > span {
+  display: flex;
+  align-items: center;
+}
+
+.guide-90x50-text > span::after,
+.guide-86x52-text > span::after {
+  content: '';
+  display: inline-block;
+  width: 3rem;
+  height: 2px;
+  background: var(--text-black);
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+.guide-90x50-text .frame1::after,
+.guide-86x52-text .frame1::after {
+  background-color: var(--text-black);
+}
+
+.guide-90x50-text .frame2::after,
+.guide-86x52-text .frame2::after {
+  background-color: var(--main-pink);
+}
+
+.guide-90x50-text .frame3::after,
+.guide-86x52-text .frame3::after {
+  background-color: var(--main-blue);
 }
 
 /* item-buyinfo 유의사항 */

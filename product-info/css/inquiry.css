@@ -73,7 +73,7 @@ ul > li:nth-child(3)::after {
 }
 
 .textinput {
-  background-color: var(--color-bg);
+  background-color: var(--bg);
 }
 
 input[type='file'] {
@@ -99,7 +99,7 @@ input[type='file'] {
 
   input {
     margin: 0 10px 0 0;
-    color: var(--color-bg);
+    color: var(--bg);
   }
   a {
     margin: 0 0 0 2px;
