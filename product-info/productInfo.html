@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/productInfo.css" />
     <script src="../js/include.js" defer></script>
     <script src="../js/header.js" defer></script>
+    <script defer src="./js/main-img-slider.js"></script>
+    <script defer src="./js/nav-section-move.js"></script>
   </head>
   <body>
     <div data-include="../header.html"></div>
@@ -24,8 +26,8 @@
             <div class="item-slider-main">
               <img src="./images/item-img1.png" alt="메인이미지" />
               <div class="next-btn-wrap">
-                <a href="#" class="next-btn-left"></a>
-                <a href="#" class="next-btn-right"></a>
+                <a href="#void" class="next-btn-left"></a>
+                <a href="#void" class="next-btn-right"></a>
               </div>
             </div>
             <!-- 슬라이더 프리뷰 썸네일 -->
@@ -139,16 +141,16 @@
         <!-- 상세페이지 서브메뉴바 -->
         <nav class="item-detail-menubar-wrap">
           <ul class="item-detail-menubar">
-            <li class="font20b active"><a href="#detail">상품소개</a></li>
-            <li><a href="#size" class="font20b">사이즈</a></li>
-            <li><a href="#option" class="font20b">옵션</a></li>
-            <li><a href="#guide" class="font20b">작업가이드</a></li>
-            <li><a href="#buyinfo" class="font20b">유의사항</a></li>
-            <li><a href="#review" class="font20b">리뷰</a></li>
+            <li class="font20b active" data-target="detail"><a href="#void">상품소개</a></li>
+            <li class="font20b" data-target="size"><a href="#void">사이즈</a></li>
+            <li class="font20b" data-target="option"><a href="#void">옵션</a></li>
+            <li class="font20b" data-target="guide"><a href="#void">작업가이드</a></li>
+            <li class="font20b" data-target="buyinfo"><a href="#void">유의사항</a></li>
+            <li class="font20b" data-target="review"><a href="#void">리뷰</a></li>
           </ul>
         </nav>
         <!-- item-detail 상품소개 -->
-        <section class="sub-item-detail" id="detail">
+        <section class="navSection sub-item-detail" id="detail">
           <div class="detail-top">
             <h2 class="font20b">일반명함</h2>
             <img src="./images/item-detail-card.png" alt="일반명함" />
@@ -173,16 +175,18 @@
             </li>
           </ul>
         </section>
+
         <!-- item-size 사이즈 -->
-        <section class="sub-item-size" id="size">
+        <section class="navSection sub-item-size hidden" id="size">
           <h2 class="font20b">사이즈 안내</h2>
           <p class="pink-text-box font20b">신용카드 사이즈와 비교해보세요.</p>
           <div class="size-img-box">
             <img src="./images/item-detail-size.png" alt="사이즈" />
           </div>
         </section>
+
         <!-- item-option 옵션 -->
-        <section class="sub-item-option" id="option">
+        <section class="navSection sub-item-option hidden" id="option">
           <h2 class="font20b">디자인을 더욱 돋보이게 할 모서리 스타일을 만나보세요.</h2>
           <div class="option-sq-wrap">
             <div class="option-sq">
@@ -203,8 +207,9 @@
             </div>
           </div>
         </section>
+
         <!-- item-guide 작업가이드 -->
-        <section class="sub-item-guide" id="guide">
+        <section class="navSection sub-item-guide hidden" id="guide">
           <h2 class="font20b">따라 하기만 하면 쉽게 완성할 수 있는 작업가이드를 준비했어요.</h2>
           <a href="#" class="pink-text-box font20b">PDF 작업가이드 다운로드</a>
           <div class="guide-wrap">
@@ -213,26 +218,26 @@
               <div class="guide-90x50">
                 <p class="guide-90x50-img"></p>
                 <p class="guide-90x50-text">
-                  <span>작업 영역</span><span>재단 영역</span><span>안전 영역</span>
+                  <span class="frame1">작업 영역</span><span class="frame2">재단 영역</span
+                  ><span class="frame3">안전 영역</span>
                 </p>
               </div>
-              <img src="./images/item-detail-guide-90.png" alt="90X50" />
             </div>
             <div class="guide-right">
               <p class="font20b">86 X 52</p>
               <div class="guide-86x52">
                 <p class="guide-86x52-img"></p>
                 <p class="guide-86x52-text">
-                  <span>작업 영역</span><span>재단 영역</span><span>안전 영역</span>
+                  <span class="frame1">작업 영역</span><span class="frame2">재단 영역</span
+                  ><span class="frame3">안전 영역</span>
                 </p>
               </div>
-              <img src="./images/item-detail-guide-85.png" alt="85X50" />
             </div>
           </div>
         </section>
 
         <!-- item-buyinfo 유의사항 -->
-        <div class="sub-item-buyinfo" id="buyinfo">
+        <div class="navSection sub-item-buyinfo hidden" id="buyinfo">
           <!-- 배송 방법 및 안내 -->
           <div class="info-shipping">
             <div class="buyinfo-left">
@@ -356,8 +361,9 @@
             </div>
           </div>
         </div>
+
         <!-- item-review 리뷰 -->
-        <div class="sub-item-review" id="review"></div>
+        <div class="navSection sub-item-review hidden" id="review"></div>
       </div>
     </main>
     <!-- 푸터 -->
