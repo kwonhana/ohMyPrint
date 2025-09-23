@@ -59,7 +59,8 @@
       }
 
       .drop-menu-wrap {
-        .dropdown-toggle {
+        .email-dropdown-toggle,
+        .carrier-dropdown-toggle {
           height: 50px;
           border-radius: 4px;
           background-color: var(--bg);
@@ -117,7 +118,7 @@
       height: 50px;
     }
   }
-  .domain-wrap {
+  .drop-menu-wrap {
     .email-dropdown-toggle {
       width: 250px;
     }
@@ -130,8 +131,10 @@
 
 /* 연락처 */
 .phone-box {
-  .domain-wrap {
-    width: 200px;
+  .drop-menu-wrap {
+    .carrier-dropdown-toggle {
+      width: 200px;
+    }
 
     ul {
       width: 200px;

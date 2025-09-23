@@ -57,28 +57,21 @@
                 />
               </div>
 
-              <div class="domain-wrap drop-menu-wrap">
-                <div
-                  class="email-dropdown-toggle dropdown-toggle"
-                  tadindex="0"
-                  role="button"
-                  aria-haspopup="listbox"
-                  aria-expanded="false"
-                  aria-controls="email-domain-list"
-                >
+              <div class="drop-menu-wrap">
+                <div class="email-dropdown-toggle">
                   <a href="#">
                     <span class="font14">직접입력</span>
                     <img src="../images/sub-arrow.svg" alt="직접입력" />
                   </a>
                 </div>
-                <ul id="email-domain-list" role="listbox" hidden>
-                  <li role="option" data-value="gmail.com">
+                <ul id="email-domain-list" hidden>
+                  <li data-value="gmail.com">
                     <a href="#" class="font14">gmail.com</a>
                   </li>
-                  <li role="option" data-value="naver.com">
+                  <li data-value="naver.com">
                     <a href="#" class="font14">naver.com</a>
                   </li>
-                  <li role="option" data-value="daum.net">
+                  <li data-value="daum.net">
                     <a href="#" class="font14">daum.net</a>
                   </li>
                 </ul>
@@ -86,29 +79,22 @@
             </div>
 
             <div class="phone-box list">
-              <label class="font20b" for="phone">
+              <label class="font20b">
                 <span class="required">연락처</span>
               </label>
-              <div class="domain-wrap drop-menu-wrap">
-                <div
-                  class="carrier-dropdown-toggle dropdown-toggle"
-                  tabindex="0"
-                  role="button"
-                  aria-haspopup="listbox"
-                  aria-expanded="false"
-                  aria-controls="carrier-domain-list"
-                >
+              <div class="drop-menu-wrap">
+                <div class="carrier-dropdown-toggle">
                   <a href="#">
                     <span class="font14">통신사</span>
                     <img src="../images/sub-arrow.svg" alt="통신사" />
                   </a>
                 </div>
-                <ul id="carrier-domain-list" role="listbox" hidden>
-                  <li role="option" data-value="KT"><a href="#" class="font14">KT</a></li>
-                  <li role="option" data-value="SKT"><a href="#" class="font14">SKT</a></li>
-                  <li role="option" data-value="LG"><a href="#" class="font14">LG</a></li>
-                  <li role="option" data-value="KT-a"><a href="#" class="font14">KT 알뜰폰</a></li>
-                  <li role="option" data-value="SKT-a">
+                <ul id="carrier-domain-list" hidden>
+                  <li data-value="KT"><a href="#" class="font14">KT</a></li>
+                  <li data-value="SKT"><a href="#" class="font14">SKT</a></li>
+                  <li data-value="LG"><a href="#" class="font14">LG</a></li>
+                  <li data-value="KT-a"><a href="#" class="font14">KT 알뜰폰</a></li>
+                  <li data-value="SKT-a">
                     <a href="#" class="font14">SKT 알뜰폰</a>
                   </li>
                 </ul>
@@ -116,9 +102,9 @@
 
               <div class="input-wrap">
                 <input
-                  type="number"
+                  type="tel"
                   name="phone"
-                  id="phone"
+                  id="phone1"
                   class="font14b frist"
                   maxlength="4"
                   placeholder="010"
@@ -126,18 +112,18 @@
                 />
                 -
                 <input
-                  type="number"
+                  type="tel"
                   name="phone"
-                  id="phone"
+                  id="phone2"
                   class="font14b sec"
                   maxlength="4"
                   required
                 />
                 -
                 <input
-                  type="number"
+                  type="tel"
                   name="phone"
-                  id="phone"
+                  id="phone3"
                   class="font14b thi"
                   maxlength="4"
                   required

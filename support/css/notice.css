@@ -99,7 +99,7 @@
     width: 100%;
     align-items: center;
     margin: 18px 0 10px;
-    /* border: 3px solid rgba(255, 0, 0, 0.1); */
+    border: 3px solid rgba(255, 0, 0, 0.1);
 
     h2 {
       position: absolute;
@@ -160,7 +160,7 @@
   .post-list .first-title-line tr {
     height: 60px;
     display: flex;
-    background-color: var(--bg);
+    background-color: var(--color-bg);
     margin-bottom: 18px;
     justify-content: space-between;
 
@@ -228,87 +228,6 @@
     tr:last-child {
       td {
         border: none;
-      }
-    }
-  }
-
-  /* 문의 게시글 뱃지 */
-  .inquiry-list {
-    margin-top: 18px;
-
-    table {
-      tr {
-        td {
-          border-bottom: 0.5px solid var(--color-bg);
-          color: var(--border2);
-        }
-      }
-    }
-  }
-  .inquiry-list table tr > .title {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-  }
-  .answer-badge {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    span {
-      &.atmospher::after {
-        content: '답변대기';
-        padding: 2px 6px;
-        border-radius: 4px;
-        background: var(--main-blue);
-        color: var(--text-white);
-      }
-      &.complete::after {
-        content: '답변완료';
-        padding: 2px 6px;
-        border-radius: 4px;
-        background: var(--main-pink);
-        color: var(--text-white);
-      }
-    }
-  }
-
-  .post-type-badge {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    span {
-      &.type1::after {
-        content: '[주문/결제]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type2::after {
-        content: '[취소/교환/반품]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type3::after {
-        content: '[상품관련]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type4::after {
-        content: '[배송관련]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type5::after {
-        content: '[제작문의]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type6::after {
-        content: '[기타]';
-        padding: 2px 0;
-        color: var(--main-navy);
       }
     }
   }
