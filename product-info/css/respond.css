@@ -255,7 +255,7 @@
   }
 
   .guide-wrap {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 3rem;
     padding: 0 2rem;
   }
@@ -297,7 +297,7 @@
   }
 
   .buyinfo-left > img {
-    display: none;
+    /* display: none; */
     margin-bottom: 1rem;
   }
 
@@ -309,7 +309,8 @@
   .shipping li span {
     word-break: keep-all;
     margin-left: 1rem;
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-top: 0.5rem;
   }
 
@@ -317,6 +318,10 @@
     word-break: keep-all;
     margin-left: 0;
     margin-top: 1rem;
+  }
+
+  .info-refund > .buyinfo-right p {
+    word-break: keep-all;
   }
 
   .info-payment > .buyinfo-right p {
@@ -585,7 +590,7 @@
   }
 
   .buyinfo-left > img {
-    display: none;
+    /* display: none; */
     margin-bottom: 1rem;
   }
 
@@ -605,6 +610,10 @@
     word-break: keep-all;
     margin-left: 0;
     margin-top: 1rem;
+  }
+
+  .info-refund > .buyinfo-right p {
+    word-break: keep-all;
   }
 
   .info-payment > .buyinfo-right p {
