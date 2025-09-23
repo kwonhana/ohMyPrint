@@ -51,7 +51,7 @@
 
       .font20b {
         position: relative;
-        width: 200px;
+        max-width: 200px;
         color: #000;
       }
 
@@ -289,7 +289,7 @@
       .text-box {
         margin: 10px auto 0;
         height: 100px;
-        width: 780px;
+        max-width: 780px;
         max-height: 220px;
         padding: 8px;
         border: 1px solid var(--border3);
@@ -396,4 +396,132 @@ select {
 
 .pink {
   color: var(--main-pink);
+}
+
+@media (max-width: 1040px) {
+  form {
+  }
+  .user-inner {
+    padding: 20px;
+  }
+
+  .user-form-wrap > form {
+    width: 100%;
+  }
+
+  .label-tag,
+  .pw-check-label,
+  .birth-tag {
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    .font20b {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .databox,
+    .databox1,
+    .databox2,
+    .databox3,
+    .select-wrap {
+      width: 100%;
+      padding-left: 15px;
+    }
+  }
+
+  .check-box {
+    position: relative;
+    width: 100%;
+    right: auto;
+    transform: none;
+    a {
+      font-size: 17px;
+    }
+  }
+
+  .address-btn {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .year,
+  .month,
+  .day {
+    width: 30%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .end-btn-wrap {
+    width: 100%;
+    button[type='submit'] {
+      width: 100%;
+      right: 0;
+      transform: none;
+    }
+  }
+
+  .text-box {
+    width: 90%;
+  }
+  .label-tag {
+    flex-direction: row;
+    .font20b {
+      width: 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .label-tag,
+  .pw-check-label,
+  .birth-tag {
+    .databox,
+    .databox1,
+    .databox2,
+    .databox3,
+    .select-wrap {
+      font-size: 14px;
+      height: 45px;
+    }
+  }
+
+  .gender-tag {
+    .font20b {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    label {
+      margin-right: 5px;
+    }
+  }
+
+  .year,
+  .month,
+  .day {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .databox,
+  .databox1,
+  .databox2,
+  .databox3,
+  .select-wrap,
+  .address-btn,
+  .end-btn-wrap button {
+    font-size: 13px;
+    height: 40px;
+  }
+
+  .birth-tag {
+    flex-direction: column;
+  }
+
+  .user-agree-wrap .text-box {
+    font-size: 12px;
+  }
 }
