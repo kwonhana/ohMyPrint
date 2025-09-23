@@ -1,27 +1,31 @@
-function includeHTML() {
-  const includes = document.querySelectorAll('[data-include]');
+//header 불러오기
+fetch('/header.html')
+  .then((res) => res.text())
+  .then((data) => {
+    document.querySelector('#header').innerHTML = data;
 
-  includes.forEach(async (el) => {
-    const file = el.getAttribute('data-include');
-    try {
-      const response = await fetch(file);
-      if (!response.ok) throw new Error('파일 불러오기 실패');
-      const htmlText = await response.text();
+    const topBanner = document.querySelector('.top-banner');
+    const bannerBtn = topBanner.querySelector('.closeBtn');
 
-      // 💡 DOMParser를 이용해 HTML 파싱
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(htmlText, 'text/html');
+    bannerBtn.addEventListener('click', () => {
+      topBanner.remove();
+    });
 
-      // body 안의 내용만 가져오기
-      const bodyContent = doc.body.innerHTML;
+    const gnb = document.querySelector('.gnb');
 
-      // 요소에 삽입
-      el.innerHTML = bodyContent;
-      // console.log(bodyContent);
-    } catch (error) {
-      console.error('include 실패:', error);
-    }
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 150) {
+        gnb.classList.remove('hidden');
+      } else {
+        gnb.classList.add('hidden');
+      }
+    });
   });
-}
 
-window.addEventListener('DOMContentLoaded', includeHTML);
+//footer 불러오기
+fetch('/footer.html')
+  .then((res) => res.text())
+  .then((data) => {
+    document.querySelector('#footer').innerHTML = data;
+    //
+  });
