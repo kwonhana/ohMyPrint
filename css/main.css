@@ -336,7 +336,6 @@ main {
           .img-box {
             border-radius: 8px;
             overflow: hidden;
-            /* border: 1px solid red; */
             width: 100%;
             aspect-ratio: 1 / 1;
 
