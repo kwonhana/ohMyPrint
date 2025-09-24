@@ -223,6 +223,49 @@
     align-items: center;
     gap: 8px;
 
+    .hidden-check {
+      display: none;
+    }
+
+    .custom-label {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: var(--bg);
+      cursor: pointer;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: max-content;
+        display: inline-block;
+      }
+
+      &.terms::after {
+        content: '이용약관';
+        left: 60px;
+      }
+      &.privacy::after {
+        content: '개인정보 활용에 동의합니다.';
+        left: 130px;
+      }
+    }
+
+    .hidden-check:checked + .custom-label {
+      background: var(--bg) url(../../images/check-pink.png) no-repeat center;
+    }
+
+    &.terms-ckbox > .show {
+      margin-left: 70px;
+    }
+
+    &.privacy-ckbox > .show {
+      margin-left: 210px;
+    }
+
     .must {
       color: var(--main-pink);
     }

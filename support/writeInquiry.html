@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="./css/write.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
     <script src="../js/include.js" defer></script>
   </head>
   <body>
@@ -168,16 +169,20 @@
 
             <div class="chack-list">
               <div class="terms-ckbox">
-                <input type="checkbox" id="terms-ckbox" />
-                <label class="font18b" for="terms-ckbox">이용약관</label>
-                <span class="font16 show">[보기]</span>
+                <input type="checkbox" id="terms-ckbox" class="hidden-check" />
+                <label for="terms-ckbox" class="font18b terms custom-label"></label>
+                <!-- <span class="font18b">이용약관</span> -->
+                <a href="#" class="font16 show open-modal" data-target=".terms-of-service">
+                  [보기]
+                </a>
                 <span class="font16 must">(필수)</span>
               </div>
 
               <div class="privacy-ckbox">
-                <input type="checkbox" id="privacy-ckbox" />
-                <label class="font18b" for="privacy-ckbox">개인정보 활용에 동의합니다.</label>
-                <span class="font16 show">[보기]</span>
+                <input type="checkbox" id="privacy-ckbox" class="hidden-check" />
+                <label for="privacy-ckbox" class="font18b privacy custom-label"></label>
+                <!-- <span class="font18b"></span> -->
+                <a href="#" class="font16 show open-modal" data-target=".privacy-policy">[보기]</a>
                 <span class="font16 must">(필수)</span>
               </div>
             </div>
