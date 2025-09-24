@@ -332,7 +332,7 @@
           height: 0;
 
           &:checked + .custom-checkbox {
-            background-image: url('../images/check-pink.png');
+            background-image: url('/images/check-pink.png');
           }
         }
 
@@ -377,7 +377,7 @@
 /* select-box */
 select {
   appearance: none;
-  background: url(../images/selectbox-arrow-down.svg) no-repeat;
+  background: url(/images/selectbox-arrow-down.svg) no-repeat;
   background-position: right 20px center;
   cursor: pointer;
 }
