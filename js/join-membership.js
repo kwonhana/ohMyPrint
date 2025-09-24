@@ -30,9 +30,9 @@ console.log(pwComment);
 const pwCommentCheck = document.querySelector('.uPass-comment-check');
 
 function checkPasswordMatch() {
-  if (pw.value === '' || pwCheck.value === '') {
+  if (pw.value == '' || pwCheck.value == '') {
     pwComment.style.display = 'none';
-  } else if (pw.value === pwCheck.value) {
+  } else if (pw.value == pwCheck.value) {
     pwCommentCheck.style.display = 'block';
     pwComment.style.display = 'none';
   } else {
