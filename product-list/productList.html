@@ -30,26 +30,21 @@
             <li class="font20b"><a href="#">카탈로그</a></li>
             <li class="font20b"><a href="#">실사출력</a></li>
           </ul>
-          <ul class="sub-category">
-            <li class="font16b active"><a href="#">1</a></li>
-            <li class="font16b"><a href="#">2</a></li>
-            <li class="font16b"><a href="#">3</a></li>
-          </ul>
         </nav>
         <div class="item-wrap">
           <div class="filter-wrap">
             <div class="dropdown">
-              <label for="sort">정렬 기준:</label>
-              <select id="sort">
-                <option value="new">신상품순</option>
-                <option value="review">리뷰많은순</option>
-                <option value="asc">가나다순</option>
-                <option value="desc">역가나다순</option>
-              </select>
+              <div class="dropBox font16">정렬 기준</div>
+              <ul id="sort" class="sort-list">
+                <li class="new"><a class="font14" href="#void">신상품순</a></li>
+                <li class="review"><a class="font14" href="#void">리뷰많은순</a></li>
+                <li class="asc"><a class="font14" href="#void">가나다순</a></li>
+                <li class="desc"><a class="font14" href="#void">역가나다순</a></li>
+              </ul>
             </div>
             <div class="search-wrap">
-              <input type="text" />
-              <button></button>
+              <input type="text" class="font16" placeholder="필요한 상품을 검색해 보세요" />
+              <button class="search-icon"></button>
             </div>
           </div>
           <section class="item-container">

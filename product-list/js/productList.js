@@ -2903,3 +2903,10 @@ categoryNav.forEach((item) => {
     displayProducts(dataCategory);
   });
 });
+
+const dropBox = document.querySelector('.dropBox');
+const sortList = document.querySelector('.sort-list');
+
+dropBox.addEventListener('click', () => {
+  sortList.classList.toggle('active');
+});
