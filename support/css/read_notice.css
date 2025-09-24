@@ -40,15 +40,12 @@ main > .inner {
   height: 120px;
 
   .post-bar {
-    height: 60px;
     border-top: 1px solid var(--bg);
 
     a {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      height: 100%;
-      padding: 0 50px;
+      padding: 2.15rem 50px;
 
       .left-box {
         display: flex;

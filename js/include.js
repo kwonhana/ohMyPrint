@@ -12,13 +12,19 @@ fetch('/header.html')
     });
 
     const gnb = document.querySelector('.gnb');
-
     window.addEventListener('scroll', () => {
       if (window.scrollY > 150) {
         gnb.classList.remove('hidden');
       } else {
         gnb.classList.add('hidden');
       }
+    });
+
+    const searchIcon = document.querySelector('.search-wrap');
+    searchIcon.addEventListener('click', (e) => {
+      console.log('asd');
+      searchIcon.classList.toggle('active');
+      e.preventDefault();
     });
   });
 

@@ -230,7 +230,7 @@ header {
           }
         }
 
-        &:hover .search-container {
+        &.active .search-container {
           height: 100%;
         }
       }

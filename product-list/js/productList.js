@@ -2851,7 +2851,6 @@ function displayProducts(category) {
 // 그 카테고리에 맞는 상품들만 보여주는 코드예요.
 // 또한 주소(URL) 에 선택한 카테고리를 저장해서
 // 페이지를 다시 열어도 그 카테고리의 상품이 자동으로 보이게 해줘요.
-
 const categoryNav = document.querySelectorAll('.main-category > li');
 const cardWrap = document.querySelector('.card-wrap');
 
