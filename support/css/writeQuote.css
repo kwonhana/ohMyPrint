@@ -76,15 +76,14 @@ ul > li:nth-child(3)::after {
   background-color: var(--bg);
 }
 
-input[type='file'] {
+.upload-file {
   display: none;
 }
 
-.upload-btn {
-  display: flex;
-  width: 100%;
+label.upload-btn {
+  display: block;
   padding: 16px 20px;
-  background: var(--color-bg);
+  background: var(--bg);
   color: var(--text-gray);
   border: none;
   border-radius: 4px;

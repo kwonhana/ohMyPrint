@@ -40,7 +40,8 @@
               id="review-title"
               name="review-title"
               required
-              placeholder="리뷰 제목을 써주세요." />
+              placeholder="리뷰 제목을 써주세요."
+            />
           </div>
           <div class="form-review font14">
             <label for="review-content" class="font20b">리뷰내용</label>
@@ -48,11 +49,14 @@
               id="review-content"
               name="review-content"
               required
-              placeholder="리뷰 내용을 작성해주세요."></textarea>
+              placeholder="리뷰 내용을 작성해주세요."
+            ></textarea>
           </div>
           <div class="form-review font14">
             <label for="review-upload" class="font20b">첨부파일</label>
-            <input type="file" id="review-upload" name="review-upload" />
+            <input type="file" id="review-upload" name="review-upload" class="review-upload" />
+            <label for="review-upload" class="upload-btn font16">파일선택</label>
+            <span class="font14">선택된 파일 없음</span>
           </div>
         </form>
         <a href="#" class="write-btn font20b">리뷰작성</a>
@@ -60,13 +64,5 @@
     </main>
     <!-- 푸터 -->
     <footer id="footer"></footer>
-    <script>
-      let starIcon = document.querySelectorAll('.star-icon');
-      starIcon.forEach((star) => {
-        star.addEventListener('click', function () {
-          this.classList.toggle('active');
-        });
-      });
-    </script>
   </body>
 </html>
