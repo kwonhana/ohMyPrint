@@ -51,19 +51,39 @@
   width: 100%;
 }
 
+/* 미디어 쿼리 */
+/* 1040px */
+@media (max-width: 1040px) {
+  .end-text-box {
+  }
+  .end-text-box > strong {
+    font-size: 3.5rem;
+  }
+  .end-text-box > span:first-of-type {
+    text-align: center;
+    word-break: keep-all;
+    font-size: 2.5rem;
+  }
+  .log-in-btn {
+    max-width: 35rem;
+  }
+}
+
+/* 768px */
 @media (max-width: 768px) {
   .inner {
     max-width: 80%;
   }
 }
 
+/* 480px */
 @media (max-width: 480px) {
   .inner {
     max-width: 80%;
   }
   .end-text-box > span:first-of-type {
     font-size: 2.6rem;
-    width: 100%;
+    max-width: 37rem;
     max-width: 39rem;
     text-align: center;
   }
