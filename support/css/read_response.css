@@ -1,0 +1,154 @@
+main > .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.response {
+  display: block;
+  width: 100%;
+  height: 93px;
+  padding: 30px 20px;
+  color: var(--border2);
+}
+.title {
+  display: block;
+  width: 100%;
+  height: 111px;
+  padding: 30px;
+  border-bottom: 2px solid var(--border3);
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  div {
+    display: inline-flex;
+    color: var(--border2);
+    gap: 9px;
+  }
+}
+.response-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 20px;
+  color: var(--text-gray);
+}
+
+.answer-box {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  border: 1px dashed var(--border2);
+
+  .answer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+
+    .left-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      color: var(--border2);
+    }
+    .answer-date {
+      color: var(--border3);
+    }
+  }
+
+  &:hover {
+    border: 1px dashed var(--main-pink);
+  }
+}
+
+.post-list {
+  display: block;
+  width: 100%;
+  height: 120px;
+
+  .post-bar {
+    height: 60px;
+    border-top: 1px solid var(--bg);
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 0 50px;
+
+      .left-box {
+        display: flex;
+        align-items: center;
+        gap: 47px;
+
+        .left-inner {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+
+          .text {
+            color: var(--text-gray);
+          }
+
+          .tab {
+            color: var(--border3);
+          }
+        }
+
+        .title-box {
+          color: var(--text-gray);
+        }
+      }
+    }
+
+    .date-box {
+      color: var(--border3);
+    }
+
+    &:hover {
+      .left-box {
+        .left-inner {
+          .text {
+            color: var(--text-black);
+          }
+        }
+        .title-box {
+          color: var(--text-black);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.button-wrap {
+  width: 100%;
+  height: 55px;
+  padding-top: 30px;
+  position: relative;
+
+  button {
+    position: absolute;
+    display: block;
+    width: 125px;
+    height: 40px;
+    border: 1px solid var(--text-black);
+    border-radius: 4px;
+    background-color: var(--text-black);
+    color: var(--text-white);
+    cursor: pointer;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: var(--text-white);
+      border: 1px solid var(--text-gray);
+      color: var(--text-gray);
+    }
+  }
+}
