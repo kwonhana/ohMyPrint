@@ -243,6 +243,10 @@
   gap: 1rem;
 }
 
+.fileupload {
+  display: none;
+}
+
 .selectFile {
   width: 38.6rem;
   height: 4rem;
