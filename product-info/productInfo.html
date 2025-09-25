@@ -50,15 +50,19 @@
                     <li class="font14">HOT</li>
                   </ul>
                 </li>
-                <li class="item-main-title font20b">상품리스트</li>
-                <li class="item-main-price font18">5,900원 ~</li>
+                <li>
+                  <ul class="item-main-top-itemlist">
+                    <li class="item-main-title font20b">상품리스트</li>
+                    <li class="item-main-price font18">5,900원 ~</li>
+                  </ul>
+                </li>
               </ul>
               <div class="item-main-top-text-box">
-                <p class="font16b">
+                <p class="font16b period">
                   제작기간
                   <span>평균 1-2일 소요</span>
                 </p>
-                <p class="font16b">
+                <p class="font16b day">
                   당일제작
                   <span>당일신청 당일제작</span>
                 </p>
@@ -71,66 +75,77 @@
                   <span>신청 시 효과 선택 불가</span>
                 </p>
                 <ul>
-                  <li class="select-btn active font16"><a href="">미신청</a></li>
-                  <li class="select-btn font16"><a href="">신청</a></li>
+                  <li class="select-btn active font16"><button>미신청</button></li>
+                  <li class="select-btn font16"><button>신청</button></li>
                 </ul>
               </div>
               <div class="item-main-select">
                 <p class="font16b">사이즈</p>
                 <div class="select-size-wrap">
                   <ul>
-                    <li class="select-btn active font16"><a href="">90 x 50</a></li>
-                    <li class="select-btn font16"><a href="">50 x 90</a></li>
+                    <li class="select-btn active font16"><button>90 x 50</button></li>
+                    <li class="select-btn font16"><button>50 x 90</button></li>
                   </ul>
                   <ul>
-                    <li class="select-btn font16"><a href="">86 x 52</a></li>
-                    <li class="select-btn font16"><a href="">52 x 86</a></li>
+                    <li class="select-btn font16"><button>86 x 52</button></li>
+                    <li class="select-btn font16"><button>52 x 86</button></li>
                   </ul>
                 </div>
               </div>
               <div class="item-main-select">
                 <p class="font16b">양/단면</p>
                 <ul>
-                  <li class="select-btn active font16"><a href="">양면</a></li>
-                  <li class="select-btn font16"><a href="">단면</a></li>
+                  <li class="select-btn active font16"><button>양면</button></li>
+                  <li class="select-btn font16"><button>단면</button></li>
                 </ul>
               </div>
               <div class="item-main-select">
                 <p class="font16b">모서리</p>
                 <ul>
-                  <li class="select-btn active font16"><a href="">직각</a></li>
-                  <li class="select-btn font16"><a href="">라운드</a></li>
+                  <li class="select-btn active font16"><button>직각</button></li>
+                  <li class="select-btn font16"><button>라운드</button></li>
                 </ul>
               </div>
               <div class="item-main-select">
                 <p class="font16b">코팅</p>
                 <ul>
-                  <li class="select-btn active font16"><a href="">있음</a></li>
-                  <li class="select-btn font16"><a href="">없음</a></li>
+                  <li class="select-btn active font16"><button>있음</button></li>
+                  <li class="select-btn font16"><button>없음</button></li>
                 </ul>
               </div>
-              <div class="item-main-select">
+              <div class="item-main-select-file-wrap">
                 <p class="font16b">
                   디자인업로드
                   <input type="checkbox" />
                 </p>
-                <ul class="checkbox">
-                  <li class="checkbox-btn"><a href="#" class="font16">파일선택</a></li>
-                  <li class="font16">선택된 파일 없음</li>
-                </ul>
+                <p class="item-main-select-file">
+                  <!-- <label for="selectFile" class="selectFile"></label
+                  ><input type="file" id="selectFile" /> -->
+                  <!-- <button class="selectFile">
+                    <input type="file" id="selectFile" class="font16" />
+                  </button> -->
+                  <input type="file" id="fileUpload" hidden />
+                  <label for="fileUpload" class="custom-file-btn">파일 선택</label>
+                  <span class="file-name font16">선택된 파일 없음</span>
+                </p>
+                <!-- <ul class="checkbox"> -->
+                <!-- <li class="checkbox-btn"><a href="#" class="font16">파일선택</a></li>
+                  <li class="font16">선택된 파일 없음</li> -->
+                <!-- <li class="checkbox-btn"><input type="file" /></li>
+                </ul> -->
               </div>
             </div>
             <div class="count-buy-wrap">
               <ul class="item-main-buy">
                 <li>
-                  <button type="button" class="count-btn-min">
-                    <img src="./images/count-btn-min.png" alt="수량 감소" />
+                  <button type="button" class="count-btn-min font16">
+                    <!-- <img src="./images/count-btn-min.png" alt="수량 감소" /> -->
                   </button>
                 </li>
                 <li class="count-num font16b">0</li>
                 <li>
-                  <button type="button" class="count-btn-plus">
-                    <img src="./images/count-btn-plus.png" alt="수량 증가" />
+                  <button type="button" class="count-btn-plus font16">
+                    <!-- <img src="./images/count-btn-plus.png" alt="수량 증가" /> -->
                   </button>
                 </li>
               </ul>
@@ -216,11 +231,10 @@
             <div class="guide-left">
               <p class="font20b">90 X 50</p>
               <div class="guide-90x50">
-                <p class="guide-90x50-img">
+                <div class="guide-90x50-img">
                   <span class="guide-90x50-ver"></span>
                   <span class="guide-90x50-small"></span>
-                  <span class="guide-90x50-small-ver"></span>
-                </p>
+                </div>
                 <p class="guide-90x50-text">
                   <span class="frame1">작업 영역</span>
                   <span class="frame2">재단 영역</span>
@@ -234,7 +248,6 @@
                 <p class="guide-86x52-img">
                   <span class="guide-86x52-ver"></span>
                   <span class="guide-86x52-small"></span>
-                  <span class="guide-86x52-small-ver"></span>
                 </p>
                 <p class="guide-86x52-text">
                   <span class="frame1">작업 영역</span>
