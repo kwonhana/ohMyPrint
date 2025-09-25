@@ -1,12 +1,9 @@
-.end-wrap {
-  height: 600px;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-}
-
 .inner {
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .end-text-box {
@@ -14,7 +11,7 @@
   flex-direction: column;
   background-color: rgba(255, 0, 0, 0.2);
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .end-text-box {
@@ -22,26 +19,27 @@
 }
 
 .end-text-box > strong {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 600;
   color: var(--text-black);
 }
 
 .end-text-box > span:last-of-type {
-  margin-top: -12px;
+  margin-top: -1.2rem;
 }
 
 .log-in-btn {
-  margin: 130px auto 0;
+  margin: 13rem auto 0;
   display: block;
-  width: 400px;
-  height: 50px;
+  width: 100%;
+  max-width: 40rem;
+  max-height: 5rem;
   background: var(--main-blue);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   text-align: center;
-  line-height: 50px;
+  line-height: 5rem;
   color: white;
-  border: 1px solid var(--text-black);
+  border: 0.1rem solid var(--text-black);
 }
 
 .log-in-btn:hover {
