@@ -188,25 +188,24 @@
 }
 
 /* 첨부파일 */
+
 .atta-box {
-  .file-input {
-    display: none;
-  }
+  position: relative;
+  .atta-input {
+    width: 640px;
 
-  #fileName {
-    padding: 18px 30px;
-    color: var(--border2);
-    width: 645px;
-  }
-
-  .file-up-btn {
-    display: block;
-    width: 125px;
-    height: 50px;
-    background-color: var(--text-black);
-    color: var(--text-white);
-    border-radius: 4px;
-    cursor: pointer;
+    &::file-selector-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 12.5rem;
+      height: 100%;
+      font-size: 1.6rem;
+      background-color: var(--text-black);
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
   }
 }
 
