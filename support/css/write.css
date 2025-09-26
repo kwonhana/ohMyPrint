@@ -44,10 +44,15 @@
         display: flex;
         gap: 10px;
         align-items: center;
+        flex-grow: 1;
+
+        input {
+          width: 100%;
+        }
       }
 
       input {
-        background-color: var(--bg);
+        /* background-color: var(--bg); */
         border: none;
         outline: none;
         padding: 18px 30px;
@@ -175,7 +180,6 @@
     resize: none;
     height: 400px;
     width: 780px;
-    background-color: var(--bg);
     border: none;
     outline: none;
     padding: 18px 30px;

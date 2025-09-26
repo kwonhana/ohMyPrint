@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/write.css" />
     <link rel="stylesheet" href="../css/modal.css" />
     <script src="../js/include.js" defer></script>
+    <script src="/js/common.js" defer></script>
   </head>
   <body>
     <header id="header"></header>
@@ -45,34 +46,26 @@
               <label class="font20b" for="email">
                 <span class="required">이메일</span>
               </label>
+
               <div class="input-wrap">
                 <input type="text" id="email" name="email" class="font14b" required />
                 @
                 <input
                   type="text"
                   id="email-domain"
+                  class="font14b"
                   name="email-domain"
                   placeholder="직접입력"
                   required />
               </div>
 
-              <div class="drop-menu-wrap">
-                <div class="email-dropdown-toggle">
-                  <a href="#">
-                    <span class="font14">직접입력</span>
-                    <img src="../images/sub-arrow.svg" alt="직접입력" />
-                  </a>
-                </div>
-                <ul id="email-domain-list" hidden>
-                  <li data-value="gmail.com">
-                    <a href="#" class="font14">gmail.com</a>
-                  </li>
-                  <li data-value="naver.com">
-                    <a href="#" class="font14">naver.com</a>
-                  </li>
-                  <li data-value="daum.net">
-                    <a href="#" class="font14">daum.net</a>
-                  </li>
+              <div class="dropHeader">
+                <div class="dropBox font16">직접입력</div>
+                <ul id="sort" class="sort-list">
+                  <li class="naver"><a class="font14" href="#void">naver</a></li>
+                  <li class="google"><a class="font14" href="#void">google</a></li>
+                  <li class="kakao"><a class="font14" href="#void">kakao</a></li>
+                  <li class="hanmail"><a class="font14" href="#void">hanmail</a></li>
                 </ul>
               </div>
             </div>
@@ -81,21 +74,12 @@
               <label class="font20b">
                 <span class="required">연락처</span>
               </label>
-              <div class="drop-menu-wrap">
-                <div class="carrier-dropdown-toggle">
-                  <a href="#">
-                    <span class="font14">통신사</span>
-                    <img src="../images/sub-arrow.svg" alt="통신사" />
-                  </a>
-                </div>
-                <ul id="carrier-domain-list" hidden>
-                  <li data-value="KT"><a href="#" class="font14">KT</a></li>
-                  <li data-value="SKT"><a href="#" class="font14">SKT</a></li>
-                  <li data-value="LG"><a href="#" class="font14">LG</a></li>
-                  <li data-value="KT-a"><a href="#" class="font14">KT 알뜰폰</a></li>
-                  <li data-value="SKT-a">
-                    <a href="#" class="font14">SKT 알뜰폰</a>
-                  </li>
+              <div class="dropHeader">
+                <div class="dropBox telecom font16">통신사</div>
+                <ul id="sort" class="sort-list">
+                  <li class="SKT"><a class="font14" href="#void">SKT</a></li>
+                  <li class="KT"><a class="font14" href="#void">KT</a></li>
+                  <li class="LG"><a class="font14" href="#void">LG</a></li>
                 </ul>
               </div>
 
