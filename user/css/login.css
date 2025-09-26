@@ -1,26 +1,28 @@
 .log-in-wrap {
   height: 100vh;
   .log-inner {
-    height: 765px;
-    position: relative;
+    max-width: 48rem;
+    height: 76.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     margin: 0 auto;
-    gap: 20px;
+    gap: 2rem;
   }
 
   h2 {
+    /* border: 1px solid red; */
     color: var(--text-black);
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
-
+  .log-box {
+    width: 100%;
+  }
   /* input 공통사항 */
   .log-box input {
     border: none;
-    border-radius: 4px;
+    border-radius: 0.4rem;
     background: var(--bg);
     &:focus::placeholder {
       color: transparent;
@@ -29,12 +31,12 @@
   .log-box > form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
   }
   .log-box > form > input {
-    padding-left: 30px;
-    width: 480px;
-    height: 50px;
+    padding-left: 3rem;
+    max-width: 48rem;
+    height: 5rem;
   }
   .keep-box {
     margin-top: 20px;
@@ -67,7 +69,7 @@
 
       &.login::after {
         content: '로그인 상태 유지하기';
-        left: 90px;
+        left: 9rem;
         font-size: 1.4rem;
         color: var(--text-gray);
       }
@@ -78,11 +80,11 @@
   }
 
   .custom-checkbox {
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
+    max-width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 0.4rem;
     background-color: var(--bg);
-    background-size: 16px 16px;
+    background-size: 1.6rem 1.6rem;
   }
 
   input[type='checkbox'] {
@@ -93,11 +95,10 @@
   }
 
   .log-in-btn {
-    margin-top: 40px;
+    margin-top: 4rem;
     display: block;
-    width: 480px;
-    height: 40px;
-    border-radius: 4px;
+    height: 4rem;
+    border-radius: 0.4rem;
     background: var(--main-pink);
     color: var(--text-white);
     text-align: center;
@@ -105,26 +106,25 @@
   .log-in-btn > a {
     display: inline-block;
     /* border: 1px solid black; */
-    width: 100%;
-    line-height: 40px;
+    line-height: 4rem;
   }
   .log-in-btn:hover {
     background: #c22779;
   }
   .find-box {
-    margin-top: 20px;
+    margin-top: 2rem;
     display: flex;
-    gap: 24px;
+    gap: 2.4rem;
     color: var(--border2);
-    padding-right: 35px;
+    padding-right: 3.5rem;
     justify-content: center;
   }
 
   .user-data {
     display: flex;
-    gap: 4px;
+    gap: 0.4rem;
     position: absolute;
-    bottom: 25px;
+    bottom: 2.5rem;
   }
   .user-data > .open-modal {
     color: var(--text-gray);
@@ -134,6 +134,42 @@
 
     &:hover {
       color: var(--text-black);
+    }
+  }
+}
+
+/* ----------반응형---------- */
+/* 1020px */
+
+/* 768px */
+@media (max-width: 768px) {
+  .log-in-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .log-inner {
+      width: 100%;
+      max-width: 48rem;
+      height: auto;
+      margin: auto;
+    }
+  }
+}
+
+/* 420px */
+@media (max-width: 420px) {
+  .log-in-wrap {
+    .log-inner {
+      max-width: 40rem;
+    }
+  }
+}
+
+/* 350px */
+@media (max-width: 350px) {
+  .log-in-wrap {
+    .log-inner {
+      max-width: 33rem;
     }
   }
 }
