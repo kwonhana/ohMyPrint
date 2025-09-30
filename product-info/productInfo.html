@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png" />
     <title>상품 상세페이지 - 오마이프린트</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="./css/productInfo.css" />
     <link rel="stylesheet" href="./css/respond.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/include.js" defer></script>
     <script src="./js/productInfo.js" defer></script>
   </head>
@@ -23,22 +26,25 @@
           <!-- slider img -->
           <div class="item-main-left">
             <!-- 슬라이더 프리뷰 메인 -->
-            <div class="item-slider-main">
-              <img src="./images/item-img1.png" alt="메인이미지" />
-              <div class="next-btn-wrap">
-                <a href="#void" class="next-btn-left"></a>
-                <a href="#void" class="next-btn-right"></a>
+            <div class="swiper mySwiper2 item-slider-main">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/item-img1.png" alt="메인이미지" /></div>
+                <div class="swiper-slide"><img src="./images/item-img2.png" alt="메인이미지" /></div>
+                <div class="swiper-slide"><img src="./images/item-img3.png" alt="메인이미지" /></div>
+                <div class="swiper-slide"><img src="./images/item-img4.png" alt="메인이미지" /></div>
               </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
             <!-- 슬라이더 프리뷰 썸네일 -->
-            <ul class="item-slider">
-              <li class="slider active">
-                <img src="./images/item-img-small1.png" alt="미리보기1" />
-              </li>
-              <li class="slider"><img src="./images/item-img-small2.png" alt="미리보기2" /></li>
-              <li class="slider"><img src="./images/item-img-small3.png" alt="미리보기3" /></li>
-              <li class="slider"><img src="./images/item-img-small4.png" alt="미리보기4" /></li>
-            </ul>
+            <div thumbsSlider="" class="swiper mySwiper item-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/item-img-small1.png" alt="미리보기1" /></div>
+                <div class="swiper-slide"><img src="./images/item-img-small2.png" alt="미리보기2" /></div>
+                <div class="swiper-slide"><img src="./images/item-img-small3.png" alt="미리보기3" /></div>
+                <div class="swiper-slide"><img src="./images/item-img-small4.png" alt="미리보기4" /></div>
+              </div>
+            </div>
           </div>
           <!-- item select -->
           <div class="item-main-right">
@@ -75,7 +81,7 @@
                   <span>신청 시 효과 선택 불가</span>
                 </p>
                 <ul>
-                  <li class="select-btn active font16"><button>미신청</button></li>
+                  <li class="select-btn font16"><button>미신청</button></li>
                   <li class="select-btn font16"><button>신청</button></li>
                 </ul>
               </div>
@@ -83,7 +89,7 @@
                 <p class="font16b">사이즈</p>
                 <div class="select-size-wrap">
                   <ul>
-                    <li class="select-btn active font16"><button>90 x 50</button></li>
+                    <li class="select-btn font16"><button>90 x 50</button></li>
                     <li class="select-btn font16"><button>50 x 90</button></li>
                   </ul>
                   <ul>
@@ -95,26 +101,26 @@
               <div class="item-main-select">
                 <p class="font16b">양/단면</p>
                 <ul>
-                  <li class="select-btn active font16"><button>양면</button></li>
+                  <li class="select-btn font16"><button>양면</button></li>
                   <li class="select-btn font16"><button>단면</button></li>
                 </ul>
               </div>
               <div class="item-main-select">
                 <p class="font16b">모서리</p>
                 <ul>
-                  <li class="select-btn active font16"><button>직각</button></li>
+                  <li class="select-btn font16"><button>직각</button></li>
                   <li class="select-btn font16"><button>라운드</button></li>
                 </ul>
               </div>
               <div class="item-main-select">
                 <p class="font16b">코팅</p>
                 <ul>
-                  <li class="select-btn active font16"><button>있음</button></li>
+                  <li class="select-btn font16"><button>있음</button></li>
                   <li class="select-btn font16"><button>없음</button></li>
                 </ul>
               </div>
               <div class="item-main-select-file-wrap">
-                <p class="font16b">
+                <p class="font16b checkbox">
                   디자인업로드
                   <input type="checkbox" />
                 </p>

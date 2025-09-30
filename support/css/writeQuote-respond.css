@@ -61,6 +61,12 @@
     vertical-align: middle;
   }
 
+  .check-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 48rem;
+  }
   .check-box > p:last-child {
     display: flex;
     align-items: center;
@@ -92,7 +98,8 @@
     display: none;
   }
   .inquiry-form {
-    max-width: 30rem;
+    width: 30rem;
+    /* max-width: 60rem; */
     margin-top: 2rem;
   }
 
@@ -117,19 +124,10 @@
   }
 
   .check-box {
-    display: block;
-  }
-
-  .check-box > p:first-child {
-    padding-bottom: 2rem;
-  }
-
-  .check-box > p:last-child {
     display: flex;
-    align-items: center;
-
-    a {
-      font-size: 1.2rem;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30rem;
+    gap: 1rem;
   }
 }
