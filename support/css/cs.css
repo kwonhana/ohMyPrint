@@ -331,7 +331,7 @@
   gap: 8px;
 }
 
-.inner .pages-number > .active {
+.inner .pages-number > .now {
   border-bottom: 2px solid var(--border2);
 }
 
