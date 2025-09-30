@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png" />
+    <title>로그인 - 오마이프린트</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <script src="../js/include.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png" />
-  <title>로그인 - 오마이프린트</title>
-  <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="./css/login.css" />
-  <link rel="stylesheet" href="./css/modal.css" />
-  <script src="../js/include.js" defer></script>
-</head>
+  <body>
+    <!-- <header id="header"></header> -->
+    <div class="log-in-wrap">
+      <div class="log-inner">
+        <h2 class="font28b">LOGIN</h2>
 
-<body>
-  <div class="log-in-wrap">
-    <div class="log-inner">
-      <h2 class="font28b">LOGIN</h2>
-      <div class="log-box">
-        <form method="post" action="./">
-          <input required type="text" id="id" name="id" class="font14" placeholder="아이디 또는 전화번호" />
-          <input required type="text" id="password" name="password" class="font14" placeholder="비밀번호" />
-          <div class="keep-box">
-            <input type="checkbox" id="login-ckbox" class="hidden-check" />
-            <label for="login-ckbox" class="font18b login custom-label"></label>
+        <div class="log-box">
+          <form method="post" action="./">
+            <input
+              required
+              type="text"
+              id="id"
+              name="id"
+              class="font14"
+              placeholder="아이디 또는 전화번호" />
+            <input
+              required
+              type="text"
+              id="password"
+              name="password"
+              class="font14"
+              placeholder="비밀번호" />
+            <div class="keep-box">
+              <input type="checkbox" id="login-ckbox" class="hidden-check" />
+              <label for="login-ckbox" class="font18b login custom-label"></label>
+            </div>
+            <button type="submit" class="log-in-btn font16b">로그인</button>
+          </form>
+          <div class="find-box">
+            <a class="font14" href="#void">비밀번호 찾기</a>
+            <a class="font14" href="#void">아이디 찾기</a>
+            <a class="font14" href="join-membership.html">회원가입</a>
           </div>
-          <button type="submit" class="log-in-btn font16b">로그인</button>
-        </form>
-        <div class="find-box">
-          <a class="font14" href="#void">비밀번호 찾기</a>
-          <a class="font14" href="#void">아이디 찾기</a>
-          <a class="font14" href="join-membership.html">회원가입</a>
+        </div>
+
+        <div class="user-data">
+          <h1>
+            <a href="/index.html"><img src="../images/sub-logo.png" alt="" /></a>
+          </h1>
+          <div class="container">
+            <button class="open-modal font12" data-target=".terms-of-service">이용약관</button>
+            <button class="open-modal font12" data-target=".privacy-policy">
+              개인정보처리방침
+            </button>
+          </div>
         </div>
       </div>
-      <div class="user-data">
-        <button class="open-modal" data-target=".terms-of-service">이용약관</button>
-        <button class="open-modal" data-target=".privacy-policy">개인정보처리방침</button>
-      </div>
     </div>
-  </div>
-</body>
-
+    <!-- <footer id="footer"></footer> -->
+  </body>
 </html>
