@@ -22,7 +22,8 @@
 }
 
 .notice-title div {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   color: var(--border2);
   gap: 9px;
 }
