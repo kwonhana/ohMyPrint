@@ -11,11 +11,6 @@
     gap: 2rem;
   }
 
-  h2 {
-    /* border: 1px solid red; */
-    color: var(--text-black);
-    margin-bottom: 2rem;
-  }
   .log-box {
     width: 100%;
   }
@@ -122,9 +117,28 @@
 
   .user-data {
     display: flex;
-    gap: 0.4rem;
+    flex-direction: column;
     position: absolute;
     bottom: 2.5rem;
+    gap: 16px;
+
+    h1 {
+      width: 160px;
+      /* border: 1px solid red; */
+      margin-top: 20px;
+      /* filter: grayscale(1); */
+      opacity: 0.5;
+    }
+
+    .container {
+      display: flex;
+      gap: 0.4rem;
+      justify-content: center;
+
+      button {
+        background-color: inherit;
+      }
+    }
   }
   .user-data > .open-modal {
     color: var(--text-gray);
@@ -170,6 +184,13 @@
   .log-in-wrap {
     .log-inner {
       max-width: 33rem;
+    }
+    .keep-box {
+      margin-top: 4px;
+    }
+
+    .log-in-btn {
+      margin-top: 2rem;
     }
   }
 }
