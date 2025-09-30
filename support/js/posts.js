@@ -1712,3 +1712,87 @@ const posts = [
     답변글: '반품은 마이페이지 > 주문내역에서 신청 가능합니다.',
   },
 ];
+
+const supportist = document.querySelectorAll('.cs-nav li');
+
+// 게시글 렌더링 함수
+function renderPosts(filteredPosts) {
+  const listWrap = document.querySelector('.inquiry-list tbody');
+  listWrap.innerHTML = '';
+
+  filteredPosts.forEach((item, index) => {
+    let qCate = item.카테고리;
+    let qDate = item.작성일;
+    let qAnswered = item.답변여부;
+    let qTitle = item.제목;
+    let qViews = item.조회수;
+    let qContent = item.문의글;
+    let qAnswer = item.답변글;
+
+    listWrap.insertAdjacentHTML(
+      'beforeend',
+      `<tr class="post-row" data-index="${index}">
+        <td class="font16 number">${index + 1}</td>
+        <td class="title">
+          <div class="answer-badge">
+            <span class="font14 ${qAnswered}"></span>
+          </div>
+          <div class="post-type-badge">
+            <span class="font14">[${qCate}]</span>
+          </div>
+          <a href="#void" class="row-link"></a>
+          <p class="font16 row-title">${qTitle}</p>
+        </td>
+        <td class="font16 date">${qDate}</td>
+        <td class="font16 views">${qViews}</td>
+      </tr>`
+    );
+  });
+
+  // 클릭 이벤트 등록
+  document.querySelectorAll('.post-row').forEach((row, idx) => {
+    row.addEventListener('click', function (e) {
+      e.preventDefault();
+      const dataIndex = this.dataset.index;
+      const postData = filteredPosts[idx];
+
+      // localStorage에 데이터 저장
+      localStorage.setItem('currentPost', JSON.stringify(postData));
+      localStorage.setItem('currentIndex', idx);
+      localStorage.setItem('allPosts', JSON.stringify(filteredPosts));
+
+      // 상세 페이지로 이동
+      window.location.href = './readResponse.html';
+    });
+  });
+}
+
+// 페이지 로드 시 전체 글 표시
+window.addEventListener('DOMContentLoaded', () => {
+  renderPosts(posts);
+});
+
+// 카테고리 필터링
+supportist.forEach((nav) => {
+  nav.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // 활성화 상태 변경
+    supportist.forEach((el) => {
+      el.classList.remove('now');
+    });
+    nav.classList.add('now');
+
+    // 카테고리별 필터링
+    let navTitle = nav.firstElementChild.textContent.trim();
+    let filteredPosts;
+
+    if (navTitle === '전체') {
+      filteredPosts = posts;
+    } else {
+      filteredPosts = posts.filter((list) => list.카테고리 === navTitle);
+    }
+
+    renderPosts(filteredPosts);
+  });
+});

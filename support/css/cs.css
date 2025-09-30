@@ -12,21 +12,18 @@
     margin-top: 16px;
     height: fit-content;
 
-    li a {
-      padding: 10px 16px;
+    li {
       color: var(--border2);
-      display: inline-block;
 
       &.now {
         color: var(--main-pink);
-
-        &:hover {
-          color: var(--main-pink);
-        }
       }
-
       &:hover {
-        color: var(--text-gray);
+        color: var(--main-pink);
+      }
+      a {
+        padding: 10px 16px;
+        display: inline-block;
       }
     }
   }
@@ -254,14 +251,14 @@
     justify-content: flex-start;
 
     span {
-      &.atmospher::after {
+      &.false::after {
         content: '답변대기';
         padding: 2px 6px;
         border-radius: 4px;
         background: var(--main-blue);
         color: var(--text-white);
       }
-      &.complete::after {
+      &.true::after {
         content: '답변완료';
         padding: 2px 6px;
         border-radius: 4px;
@@ -277,36 +274,8 @@
     justify-content: flex-start;
 
     span {
-      &.type1::after {
-        content: '[주문/결제]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type2::after {
-        content: '[취소/교환/반품]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type3::after {
-        content: '[상품관련]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type4::after {
-        content: '[배송관련]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type5::after {
-        content: '[제작문의]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
-      &.type6::after {
-        content: '[기타]';
-        padding: 2px 0;
-        color: var(--main-navy);
-      }
+      padding: 2px 0;
+      color: var(--main-navy);
     }
   }
 
