@@ -1,14 +1,31 @@
-.inner {
-  height: 100vh;
+body:has(.top-banner) .end-wrap {
+  height: calc(100vh - 488px);
+  min-height: 400px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+  padding: 2rem;
+}
+
+body:not(:has(.top-banner)) .end-wrap {
+  height: calc(100vh - 456px);
+  min-height: 400px;
+  display: flex;
+
+  padding: 2rem;
+}
+
+.end-wrap {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 .end-text-box {
   display: flex;
   flex-direction: column;
-  /* background-color: rgba(255, 0, 0, 0.2); */
   align-items: center;
   gap: 2rem;
 }
@@ -28,8 +45,6 @@
 }
 
 .log-in-btn {
-  margin: 13rem auto 0;
-  display: block;
   width: 100%;
   max-width: 40rem;
   max-height: 5rem;
@@ -53,8 +68,6 @@
 /* 미디어 쿼리 */
 /* 1040px */
 @media (max-width: 1020px) {
-  .end-text-box {
-  }
   .end-text-box > strong {
     font-size: 3.5rem;
   }
@@ -68,18 +81,8 @@
   }
 }
 
-/* 768px */
-@media (max-width: 768px) {
-  .inner {
-    max-width: 80%;
-  }
-}
-
 /* 480px */
 @media (max-width: 480px) {
-  .inner {
-    max-width: 80%;
-  }
   .end-text-box > span:first-of-type {
     font-size: 2.7rem;
     max-width: 37rem;
