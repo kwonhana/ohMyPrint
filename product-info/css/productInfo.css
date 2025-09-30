@@ -1,34 +1,51 @@
 .item-main-wrap > .inner {
   display: flex;
+  justify-content: center;
   gap: 5.4rem;
 }
 
 /* 슬라이더 프리뷰 메인 */
 
-.item-slider-main {
-  position: relative;
+.item-main-wrap {
+  overflow-x: hidden;
 }
 
 .item-main-left {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  overflow: hidden;
 }
-.item-slider-main > .next-btn-wrap {
-  display: flex;
-  justify-content: space-between;
+
+.item-slider-main {
+  position: relative;
 }
-.item-slider-main a {
+
+.mySwiper2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
   width: 4.5rem;
   height: 4.5rem;
-  top: 50%;
-  transform: translateY(-50%);
   background: var(--main-navy);
   border-radius: 50%;
 }
 
-.next-btn-left {
+.swiper-button-prev {
+  left: 40px;
+}
+
+.swiper-button-next {
+  right: 40px;
+}
+
+/* .next-btn-left {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,40 +57,43 @@
   justify-content: center;
   align-items: center;
   right: 40px;
-}
+} */
 
-.next-btn-left::before {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   content: '';
   display: block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../images/arrow-left.png);
   background-size: cover;
 }
 
-.next-btn-right::before {
-  content: '';
-  display: block;
-  width: 2.4rem;
-  height: 2.4rem;
-  background: url(../images/arrow-right.png);
-  background-size: cover;
+.swiper-button-prev::after {
+  background-image: url(../images/arrow-left.png);
 }
-
-.item-slider-main a:hover {
-  background: var(--main-blue);
+.swiper-button-next::after {
+  background-image: url(../images/arrow-right.png);
 }
 
 /* 슬라이더 프리뷰 썸네일 */
 
 .item-slider {
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 2.4rem;
 }
 
-.item-slider img {
+.swiper-slide {
   width: 100%;
+}
+
+.item-slider .swiper-slide {
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
 }
 
 /* 아이템 상세 item-main-right */
@@ -84,19 +104,13 @@
   gap: 4rem;
 }
 
-/* item-main-top */
-
-/* .item-main-top-title {
-  margin-bottom: 3.2rem;
-} */
-
-.item-main-top-title > li {
-  margin-bottom: 1.2rem;
-}
-
 .item-main-top-wrap {
   border-bottom: 1px solid var(--border3);
   padding: 0 0 2rem 0;
+}
+
+.item-main-top-title > li {
+  margin-bottom: 1.2rem;
 }
 
 .item-main-top-wrap .item-main-badge > ul {
@@ -146,10 +160,6 @@
   font-weight: 500;
 }
 
-.item-main-top-bottom .item-main-top-bottom-detail {
-  font-size: 1.6rem;
-}
-
 /* item-main-select */
 
 .item-main-select-wrap {
@@ -188,9 +198,10 @@
   border: 0px var(--main-pink);
 }
 
-.item-main-select span {
-  margin-left: 4rem;
-  font-weight: 500;
+.select-btn .active {
+  background: var(--main-pink);
+  color: var(--text-white);
+  border: 0px var(--main-pink);
 }
 
 .select-size-wrap {
@@ -203,37 +214,15 @@
   margin-left: 1rem;
 }
 
-/* .checkbox {
-  color: var(--main-pink);
-} */
-
-/* .checkbox-btn a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 8px 0;
-  width: 183px;
-  height: 40px;
-  border: 1px solid var(--main-pink);
-  border-radius: 4px;
-  color: var(--main-pink);
-}
-
-.checkbox-btn a:hover {
-  background: var(--main-pink);
-  color: var(--text-white);
-} */
-
-/* .item-main-select-file-wrap {
-  display: flex;
-  gap: 6.5rem;
-} */
-
 .item-main-select-file-wrap {
   display: flex;
   flex-direction: column;
   margin: 1.6rem 0;
   gap: 1.6rem;
+}
+
+.checkbox {
+  color: var(--text-gray);
 }
 
 .item-main-select-file {
@@ -246,14 +235,19 @@
   display: none;
 }
 
-.selectFile {
+.item-main-select span {
+  margin-left: 4rem;
+  font-weight: 500;
+}
+
+/* .selectFile {
   width: 38.6rem;
   height: 4rem;
   background: var(--main-pink);
   border: 1px solid var(--border1);
   border-radius: 4px;
   color: var(--text-white);
-}
+} */
 
 .custom-file-btn {
   display: flex;
@@ -276,10 +270,6 @@
   width: 18.3rem;
   align-items: center;
 }
-
-/* .checkbox:last-child {
-  line-height: 2.5;
-} */
 
 /* count-buy */
 
@@ -363,6 +353,7 @@ h2 {
   color: var(--text-black);
   text-align: center;
 }
+
 /* sub-item-detail */
 
 .detail-top {
@@ -460,6 +451,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 60rem;
   background-color: var(--bg);

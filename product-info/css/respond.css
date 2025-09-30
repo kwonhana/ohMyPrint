@@ -2,6 +2,7 @@
   .item-main-wrap > .inner {
     max-width: 100%;
     padding: 0 2rem;
+    display: flex;
     flex-direction: column;
     gap: 3rem;
   }
@@ -11,6 +12,7 @@
   .item-slider-main,
   .item-slider {
     width: 100%;
+    margin: 0 auto;
   }
 
   .item-slider-main img,
@@ -20,14 +22,16 @@
   }
 
   .item-main-left {
+    max-width: 100%;
+    align-self: center;
     gap: 2rem;
   }
 
-  .next-btn-left {
+  .swiper-button-prev {
     left: 2rem;
   }
 
-  .next-btn-right {
+  .swiper-button-next {
     right: 2rem;
   }
 
@@ -93,9 +97,14 @@
     gap: 1.6rem;
   }
 
-  .checkbox-btn a {
-    width: 100%;
+  .checkbox {
+    display: flex;
+    align-items: center;
   }
+
+  /* .checkbox-btn a {
+    width: 100%;
+  } */
 
   /* 수량/구매 버튼 */
   .count-buy-wrap {
@@ -110,7 +119,6 @@
 
   .count-buy-wrap > a {
     height: auto;
-    font-size: 18px;
     font-weight: bold;
   }
 
@@ -348,17 +356,17 @@
     height: auto;
   }
 
-  .next-btn-left,
-  .next-btn-right {
-    width: 2.4rem;
-    height: 2.4rem;
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 3.6rem;
+    height: 3.6rem;
   }
 
-  .next-btn-left {
+  .swiper-button-prev {
     left: 2rem;
   }
 
-  .next-btn-right {
+  .swiper-button-next {
     right: 2rem;
   }
 
@@ -404,8 +412,16 @@
     justify-content: space-between;
   }
 
-  .checkbox-btn a {
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+  /* .checkbox-btn a {
     width: 100%;
+  } */
+
+  .custom-file-btn {
+    font-size: 1.6rem;
   }
 
   /* 수량/구매 버튼 */
@@ -421,18 +437,18 @@
 
   .count-buy-wrap > a {
     height: auto;
-    font-size: 18px;
     font-weight: bold;
   }
 
   /* 상세페이지 메뉴바 */
   .item-detail-menubar-wrap {
-    margin: 20px auto;
+    /* margin: 20px auto; */
   }
 
   .item-detail-menubar {
     gap: 4rem;
     justify-content: center;
+    padding: 3.2rem 0 1rem 0;
   }
 
   .item-detail-menubar li {
@@ -598,5 +614,52 @@
     margin: 0 0 1.5rem 0;
     line-height: 1.5;
     word-break: keep-all;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-main-select > p {
+    font-size: 1.4rem;
+  }
+  .swiper-button-prev {
+    transform: translateY(50%);
+    width: 2.4rem;
+    height: 2.4rem;
+    left: 1rem;
+  }
+  .swiper-button-next {
+    transform: translateY(50%);
+    width: 2.4rem;
+    height: 2.4rem;
+    right: 1rem;
+  }
+  .select-btn button {
+    width: 14rem;
+  }
+  .custom-file-btn {
+    width: 14rem;
+  }
+  .checkbox {
+    font-size: 1.4rem;
+  }
+  .file-name {
+    width: 14rem;
+  }
+
+  .custom-file-btn {
+    font-size: 1.4rem;
+  }
+
+  .item-detail-menubar {
+    padding: 2rem 0 0.8rem 0;
+    gap: 2rem;
+  }
+
+  .item-detail-menubar > li {
+    font-size: 1.4rem;
+  }
+
+  .item-main-select > ul button {
+    font-size: 1.4rem;
   }
 }
