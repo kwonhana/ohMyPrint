@@ -45,20 +45,11 @@
     gap: 2rem;
   }
 
-  .item-main-top-wrap {
-  }
-
-  .item-main-top-title {
-  }
-
   .item-main-top-itemlist {
     display: flex;
     align-items: center;
     gap: 2rem;
     color: var(--text-gray);
-  }
-
-  .item-main-price {
   }
 
   .item-main-top-text-box {

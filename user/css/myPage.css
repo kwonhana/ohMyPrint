@@ -3,9 +3,6 @@
   margin: 0 auto;
 
   .inner {
-    width: 1440px;
-    margin: 0 auto;
-
     .title-wrap {
       display: flex;
       justify-content: center;

@@ -1,6 +1,4 @@
 .item-main-wrap > .inner {
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
   gap: 5.4rem;
 }

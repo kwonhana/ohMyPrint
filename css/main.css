@@ -39,8 +39,6 @@ main {
     margin-bottom: 800px;
 
     .inner {
-      max-width: 1440px;
-      margin: 0 auto;
       position: relative;
 
       .tab-nav {
@@ -241,9 +239,7 @@ main {
 
     .inner {
       gap: 16px;
-      width: 1440px;
       display: flex;
-      margin: 0 auto;
     }
 
     .banner-left,
@@ -321,9 +317,6 @@ main {
     padding: 0 10px;
 
     .inner {
-      width: 1440px;
-      margin: 0 auto;
-
       .card-wrap {
         display: flex;
         flex-wrap: wrap;
@@ -482,7 +475,6 @@ main {
   .youtube-wrap-inner {
     /* common.css의 inner로 수정 예정 */
     width: 100%;
-    margin: 0 auto;
     margin-top: 100px;
     position: relative;
 
@@ -593,9 +585,7 @@ main {
   .best-review-wrap {
     > .best-review-inner {
       /* common.css의 inner로 수정 예정 */
-      max-width: 1440px;
       width: 100%;
-      margin: 0 auto;
       margin-top: 100px;
     }
 
