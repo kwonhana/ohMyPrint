@@ -171,5 +171,12 @@
     .log-inner {
       max-width: 33rem;
     }
+    .keep-box {
+      margin-top: 4px;
+    }
+
+    .log-in-btn {
+      margin-top: 2rem;
+    }
   }
 }
