@@ -249,6 +249,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 16%;
 }
 
 .inner .answer-badge span.false::after {
@@ -271,6 +272,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 24%;
 }
 
 .inner .post-type-badge span {
@@ -399,6 +401,7 @@
 
   .inner .list-search-wrap .input-wrap .list-search {
     right: 20px;
+    top: 20px;
   }
 
   .inner .list-search-wrap .inquiry {
@@ -579,6 +582,11 @@
   .inner figure table .title .row-title {
     font-size: 14px;
     line-height: 1.4;
+    width: 54%;
+  }
+
+  .inner figure table .title .row-title.info {
+    width: 100%;
   }
 
   /* 페이지네이션 간격 조정 */
