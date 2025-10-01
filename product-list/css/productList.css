@@ -148,12 +148,11 @@
       justify-content: start;
 
       .card {
-        width: 32%;
+        width: 23%;
 
         .img-box {
           border-radius: 8px;
           overflow: hidden;
-          /* border: 1px solid red; */
           width: 100%;
           aspect-ratio: 1 / 1;
 
@@ -166,11 +165,14 @@
         }
 
         .item-title {
-          margin-top: 20px;
+          margin-top: 12px;
+          padding: 0 0.8rem;
 
           .badge-wrap {
             display: flex;
             gap: 8px;
+            height: 30px;
+            margin-top: 8px;
 
             span {
               padding: 4px 0;
@@ -195,12 +197,14 @@
                 content: 'NEW';
                 border: 1px solid var(--main-pink);
                 color: var(--main-pink);
+                background: #fff;
               }
 
               &.md::after {
                 content: 'MD추천';
                 border: 1px solid var(--text-black);
                 color: var(--text-black);
+                background: #fff;
               }
 
               &.soldout::after {
@@ -213,7 +217,7 @@
           }
 
           .card-title {
-            margin: 8px 0 16px;
+            margin: 8px 0;
           }
 
           .price {
