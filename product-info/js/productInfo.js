@@ -105,3 +105,32 @@ navMenus.forEach((item) => {
     // document.getElementById(item.dataset.target).classList.remove("hidden");
   });
 });
+
+
+// 구매 수량 버튼
+let minusBtn = document.querySelector(".count-btn-min");
+let plusBtn = document.querySelector(".count-btn-plus");
+let baseCount = 0;
+
+//플러스 버튼 눌렀을 때
+plusBtn.addEventListener("click",()=>{
+  let plusGrand = plusBtn.closest("ul");
+  let plusActive = plusGrand.querySelector("span");
+  console.log(plusActive);
+  //클릭 숫자 카운팅
+  baseCount++;
+  console.log(baseCount);
+  plusActive.innerHTML = baseCount;
+})
+
+minusBtn.addEventListener("click",()=>{
+  let minusGrand = minusBtn.closest("ul");
+  let minusActive = minusGrand.querySelector("span");
+  console.log(minusActive);
+  if(baseCount > 0){
+  //클릭 숫자 카운팅
+  baseCount--;
+  console.log(baseCount);
+  minusActive.innerHTML = baseCount;
+  }
+})
