@@ -36,6 +36,13 @@
 .end-middle {
   margin-bottom: 4rem;
   color: var(--text-gray);
+
+  span {
+    display: inline-block;
+    animation: bounce 1s ease infinite;
+    color: var(--main-pink);
+    font-weight: 600;
+  }
 }
 
 .end-btn {
@@ -58,5 +65,15 @@
   }
   .end-img-box {
     width: 200px;
+  }
+}
+
+/* 애니메이션 */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
