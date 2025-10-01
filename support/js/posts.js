@@ -1775,7 +1775,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // 카테고리 필터링
 supportist.forEach((nav) => {
   nav.addEventListener('click', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     // 활성화 상태 변경
     supportist.forEach((el) => {
