@@ -237,3 +237,63 @@
     /* background-color: rgba(0, 200, 0, 0.1); */
   }
 }
+
+@media (max-width: 1480px) {
+  .inner {
+    max-width: 100%;
+    padding: 0 2%;
+
+    .filter-wrap {
+      max-width: 100%;
+      padding: 0 2%;
+    }
+    .item-container {
+      .card-wrap {
+        .card {
+          width: 32%;
+        }
+      }
+
+      .card-wrap {
+        max-width: 100%;
+        padding: 0 2%;
+      }
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .inner {
+    max-width: 100%;
+    padding: 0 1%;
+
+    .filter-wrap {
+      max-width: 100%;
+      padding: 0 1%;
+    }
+    .item-container {
+      .card-wrap {
+        .card {
+          width: 49%;
+
+          .item-title {
+            .card-title.font20 {
+              font-size: 14px;
+            }
+
+            .badge-wrap {
+              .font14.best {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .card-wrap {
+        max-width: 100%;
+        padding: 0 2%;
+      }
+    }
+  }
+}
