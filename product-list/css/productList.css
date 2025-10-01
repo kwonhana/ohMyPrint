@@ -267,6 +267,23 @@
     max-width: 100%;
     padding: 0 1%;
 
+    nav {
+      .main-category {
+        width: fit-content;
+        overflow: auto;
+        gap: 0.6rem;
+        justify-content: start;
+        border: 1px solid red;
+
+        li {
+          a {
+            text-wrap: nowrap;
+            padding: 1rem 1.2rem;
+          }
+        }
+      }
+    }
+
     .filter-wrap {
       max-width: 100%;
       padding: 0 1%;
