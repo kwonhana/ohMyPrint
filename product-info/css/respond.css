@@ -327,6 +327,33 @@
     line-height: 1.5;
     word-break: keep-all;
   }
+
+  .review-box-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .review-star-icon {
+    gap: 0.2rem;
+  }
+
+  .review-star-icon img {
+    width: 80%;
+    aspect-ratio: 1/1;
+  }
+
+  .review-text-title {
+    font-size: 1.8rem;
+  }
+
+  .review-text-middle {
+    font-size: 1.4rem;
+  }
+
+  .review-text-content {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -614,6 +641,22 @@
     margin: 0 0 1.5rem 0;
     line-height: 1.5;
     word-break: keep-all;
+  }
+
+  .review-box-wrap {
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .review-more-btn > .font16b {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .review-star-icon p {
+  }
+  .review-star-icon img {
+    width: 50%;
   }
 }
 
