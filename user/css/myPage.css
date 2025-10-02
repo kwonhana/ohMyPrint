@@ -176,9 +176,14 @@
               display: none;
             }
             .top {
+              /* border: 1px solid black; */
               display: flex;
               gap: 10px;
-              line-height: inherit;
+              align-items: center;
+              :first-child {
+                /* border: 1px solid black; */
+                margin-bottom: 0;
+              }
             }
           }
         }
