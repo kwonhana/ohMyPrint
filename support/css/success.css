@@ -12,29 +12,29 @@ body:not(:has(.top-banner)) .success-wrap {
   align-items: center;
   justify-content: center;
   gap: 12px;
+}
 
-  h1 {
-    width: 280px;
-    margin-bottom: 12px;
+.success-wrap h1 {
+  width: 280px;
+  margin-bottom: 12px;
+}
 
-    img {
-      width: 100%;
-    }
-  }
+.success-wrap h1 img {
+  width: 100%;
+}
 
-  p {
-    text-align: center;
+.success-wrap p {
+  text-align: center;
+}
 
-    span.review_span {
-      color: var(--main-pink);
-    }
-  }
+.success-wrap p span.review_span {
+  color: var(--main-pink);
+}
 
-  .home-btn {
-    padding: 10px 36px;
-    border-radius: 4px;
-    background: var(--main-navy);
-    color: #fff;
-    margin-top: 12px;
-  }
+.success-wrap .home-btn {
+  padding: 10px 36px;
+  border-radius: 4px;
+  background: var(--main-navy);
+  color: #fff;
+  margin-top: 12px;
 }

@@ -36,13 +36,13 @@
 .end-middle {
   margin-bottom: 4rem;
   color: var(--text-gray);
+}
 
-  span {
-    display: inline-block;
-    animation: bounce 1s ease infinite;
-    color: var(--main-pink);
-    font-weight: 600;
-  }
+.end-middle span {
+  display: inline-block;
+  animation: bounce 1s ease infinite;
+  color: var(--main-pink);
+  font-weight: 600;
 }
 
 .end-btn {

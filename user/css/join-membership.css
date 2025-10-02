@@ -25,23 +25,23 @@
   justify-content: space-between;
   gap: 6rem;
   margin-bottom: 1.5rem;
-  &:nth-child(9) {
-    /* background-color: red; */
-    justify-content: start;
-  }
+}
 
-  .form-label {
-    display: block;
-    font-weight: var(--fw-bold);
-    color: var(--text-black);
-    margin-bottom: 0.5rem;
-    min-width: 120px;
+.form-row:nth-child(9) {
+  justify-content: start;
+}
 
-    .required {
-      color: var(--main-pink);
-      margin-left: 0.2px;
-    }
-  }
+.form-row .form-label {
+  display: block;
+  font-weight: var(--fw-bold);
+  color: var(--text-black);
+  margin-bottom: 0.5rem;
+  min-width: 120px;
+}
+
+.form-row .form-label .required {
+  color: var(--main-pink);
+  margin-left: 0.2px;
 }
 
 .input-wrapper {
@@ -49,25 +49,26 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
 
-  .form-input {
-    width: calc(100% - 10rem);
-    padding: 1.6rem 2rem;
-    border: none;
-    border-radius: var(--border-radius);
-    background-color: var(--bg);
-    color: var(--text-black);
-    transition: all 0.2s;
-  }
+.input-wrapper .form-input {
+  width: calc(100% - 10rem);
+  padding: 1.6rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  /* background-color: var(--bg); */
+  color: var(--text-black);
+  transition: all 0.2s;
+}
 
-  .form-input:focus {
-    outline: none;
-    border-color: var(--main-blue);
-    box-shadow: 0 0 0 3px rgba(52, 94, 140, 0.1);
-    &::placeholder {
-      color: transparent;
-    }
-  }
+.input-wrapper .form-input:focus {
+  outline: none;
+  border-color: var(--main-blue);
+  box-shadow: 0 0 0 3px rgba(52, 94, 140, 0.1);
+}
+
+.input-wrapper .form-input:focus::placeholder {
+  color: transparent;
 }
 
 .checkIdBtn,
@@ -82,10 +83,12 @@
   transition: all 0.2s;
   min-width: 100px;
   height: -webkit-fill-available;
+}
 
-  &:hover {
-    background-color: var(--bg);
-  }
+.checkIdBtn:hover,
+.checkEmailBtn:hover,
+.btnAuth:hover {
+  background-color: var(--bg);
 }
 
 .addressAtn {
@@ -96,9 +99,10 @@
   color: #fff;
   display: inline-block;
   cursor: pointer;
-  &:hover {
-    background: var(--text-black);
-  }
+}
+
+.addressAtn:hover {
+  background: var(--text-black);
 }
 
 /* 이메일 */
@@ -106,29 +110,29 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
 
-  .email-local {
-    flex: 1;
-  }
+.email-inputs .email-local {
+  flex: 1;
+}
 
-  .email-at {
-    color: var(--text-gray);
-  }
+.email-inputs .email-at {
+  color: var(--text-gray);
+}
 
-  .email-domain {
-    flex: 1;
-  }
+.email-inputs .email-domain {
+  flex: 1;
 }
 
 /* 연락처 */
 .phone-inputs {
   display: flex;
   gap: 0.5rem;
+}
 
-  .phone-inputs .form-select,
-  .phone-inputs .form-input {
-    flex: 1;
-  }
+.phone-inputs .form-select,
+.phone-inputs .form-input {
+  flex: 1;
 }
 
 /* 성별 */
@@ -137,24 +141,24 @@
   display: flex;
   justify-content: left;
   gap: 2.4rem;
+}
 
-  .radio-item {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
+.radio-group .radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
 
-  .radio-input {
-    width: 1.6rem;
-    height: 1.6rem;
-    margin: 0;
-  }
+.radio-group .radio-input {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0;
+}
 
-  .radio-label {
-    color: var(--text-black);
-    cursor: pointer;
-    margin: 0;
-  }
+.radio-group .radio-label {
+  color: var(--text-black);
+  cursor: pointer;
+  margin: 0;
 }
 
 .date-inputs {
@@ -168,14 +172,14 @@
 
 .birthWrap {
   width: calc(100% - 10rem);
+}
 
-  .Sort.dropHeader {
-    flex-grow: 1;
+.birthWrap .Sort.dropHeader {
+  flex-grow: 1;
+}
 
-    .dropBox {
-      width: 100%;
-    }
-  }
+.birthWrap .Sort.dropHeader .dropBox {
+  width: 100%;
 }
 
 .birthYear,
@@ -207,108 +211,99 @@
   border-radius: var(--border-radius);
   border: 1px solid var(--text-beige);
   background-color: var(--border3);
+}
 
-  .keep-box {
-    margin: 10px 0;
-    display: inline-flex;
-    justify-content: start;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-  }
+.agreement-section .keep-box {
+  margin: 10px 0;
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
 
-  .hidden-check {
-    display: none;
-  }
+.agreement-section .hidden-check {
+  display: none;
+}
 
-  .custom-label {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--bg);
-    cursor: pointer;
-    position: relative;
+.agreement-section .custom-label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--bg);
+  cursor: pointer;
+  position: relative;
+}
 
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 30px;
-      transform: translate(0%, -50%);
-      width: max-content;
-      display: inline-block;
-    }
+.agreement-section .custom-label::before {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0%, -50%);
+  width: max-content;
+  display: inline-block;
+}
 
-    &::after {
-      content: '(필수)';
-      position: absolute;
-      top: 50%;
+.agreement-section .custom-label::after {
+  content: '(필수)';
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: max-content;
+  font-size: 1.4rem;
+  color: var(--main-pink);
+}
 
-      transform: translate(0%, -50%);
-      width: max-content;
-      font-size: 1.4rem;
-      color: var(--main-pink);
-    }
+.agreement-section .custom-label.agreeTerms::before {
+  content: '이용약관 동의';
+}
 
-    &.agreeTerms::before {
-      content: '이용약관 동의';
-    }
-    &.agreeTerms::after {
-      left: 135px;
-    }
+.agreement-section .custom-label.agreeTerms::after {
+  left: 135px;
+}
 
-    &.agreePrivacy::before {
-      content: '개인정보 수집 및 이용 동의';
-    }
+.agreement-section .custom-label.agreePrivacy::before {
+  content: '개인정보 수집 및 이용 동의';
+}
 
-    &.agreePrivacy::after {
-      left: 220px;
-    }
-  }
-  .hidden-check:checked + .custom-label {
-    background: var(--bg) url('/images/check-pink.png') no-repeat center;
-  }
+.agreement-section .custom-label.agreePrivacy::after {
+  left: 220px;
+}
 
-  .checkbox-input {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin: 0;
-  }
+.agreement-section .hidden-check:checked + .custom-label {
+  background: var(--bg) url('/images/check-pink.png') no-repeat center;
+}
 
-  .agreement-title {
-    font-weight: var(--fw-bold);
-  }
+.agreement-section .checkbox-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+}
 
-  .required-text {
-    color: var(--main-pink);
-  }
+.agreement-section .agreement-title {
+  font-weight: var(--fw-bold);
+}
 
-  .agreement-content {
-    max-height: 150px;
-    overflow-y: auto;
-    padding: 1rem;
-    border: 1px solid var(--border3);
-    border-radius: var(--border-radius);
-    background-color: var(--text-white);
-    color: var(--text-gray);
-    line-height: 1.6;
-  }
+.agreement-section .required-text {
+  color: var(--main-pink);
+}
+
+.agreement-section .agreement-content {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid var(--border3);
+  border-radius: var(--border-radius);
+  background-color: var(--text-white);
+  color: var(--text-gray);
+  line-height: 1.6;
 }
 
 .agreement-content::-webkit-scrollbar {
   width: 8px;
 }
-/* 
-.agreement-content::-webkit-scrollbar-track {
-  background: var(--bg);
-  border-radius: 4px;
-}
-
-.agreement-content::-webkit-scrollbar-thumb {
-  background: var(--border2);
-  border-radius: 4px;
-} */
 
 .form-actions {
   margin-top: 3rem;
@@ -364,6 +359,7 @@
   .input-wrapper {
     width: 90%;
   }
+
   .validation-message {
     padding-left: 0;
   }
@@ -374,14 +370,14 @@
 
   .date-inputs {
     width: 100%;
+  }
 
-    .dropHeader {
-      width: 100%;
+  .date-inputs .dropHeader {
+    width: 100%;
+  }
 
-      .dropBox {
-        width: 100%;
-      }
-    }
+  .date-inputs .dropHeader .dropBox {
+    width: 100%;
   }
 }
 
@@ -391,19 +387,13 @@
     width: 100%;
     flex-direction: column;
     gap: 6px;
-
-    .form-input {
-      padding: 2rem 1.2rem;
-      width: 100%;
-    }
-
-    /* .dropHeader {
-      .dropBox {
-        width: 12rem;
-        padding: 1.4rem 1.6rem;
-      }
-    } */
   }
+
+  .input-wrapper .form-input {
+    padding: 2rem 1.2rem;
+    width: 100%;
+  }
+
   .checkIdBtn,
   .checkEmailBtn,
   .btnAuth {
@@ -413,12 +403,14 @@
 
   .form-row {
     margin-bottom: 2.8rem;
-    .form-label {
-      font-size: 1.6rem;
-      width: 100%;
-      padding-left: 1rem;
-    }
   }
+
+  .form-row .form-label {
+    font-size: 1.6rem;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
   .input-wrapper.radio-input {
     align-items: start;
     padding-left: 8px;
@@ -427,6 +419,7 @@
   .radio-group {
     width: fit-content;
   }
+
   .addressAtn {
     width: 100%;
   }

@@ -8,9 +8,10 @@
 .inquiry-container h2 {
   margin: 60px 0 20px 0;
   text-align: center;
-  .quote-color {
-    color: var(--main-blue);
-  }
+}
+
+.inquiry-container h2 .quote-color {
+  color: var(--main-blue);
 }
 
 .inquiry-container .title {
@@ -109,13 +110,13 @@ label.upload-btn {
   display: flex;
   margin: 20px 0;
   gap: 40px;
+}
 
-  input {
-    margin: 0 10px 0 0;
-  }
-  a {
-    margin: 0 0 0 2px;
-  }
+.check-box input {
+  margin: 0 10px 0 0;
+}
+.check-box a {
+  margin: 0 0 0 2px;
 }
 
 .apply-btn {
@@ -132,10 +133,10 @@ label.upload-btn {
   margin: 40px 0;
   text-align: center;
   color: var(--text-gray);
+}
 
-  p {
-    margin: 2px;
-  }
+.inquiry-text-box p {
+  margin: 2px;
 }
 
 .number {
@@ -160,11 +161,11 @@ label.upload-btn {
 #fileUpload {
   width: 100%;
   /* background-color: var(--bg); */
+}
 
-  &::before {
-    content: '파일올리기  ';
-    margin-right: 12px;
-  }
+#fileUpload::before {
+  content: '파일올리기  ';
+  margin-right: 12px;
 }
 
 #fileUpload::file-selector-button {
@@ -187,55 +188,56 @@ label.upload-btn {
   padding: 3rem 0;
   justify-content: center;
   line-height: 1;
+}
 
-  .privacy-ckbox {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+.chack-list .privacy-ckbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
-    .hidden-check {
-      display: none;
-    }
+.chack-list .privacy-ckbox .hidden-check {
+  display: none;
+}
 
-    .custom-label {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: none;
-      border-radius: 4px;
-      background-color: var(--bg);
-      cursor: pointer;
-      position: relative;
-      &::after {
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: max-content;
-        display: inline-block;
-      }
+.chack-list .privacy-ckbox .custom-label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--bg);
+  cursor: pointer;
+  position: relative;
+}
 
-      &.privacy::after {
-        content: '개인정보 활용에 동의합니다.';
-        left: 114px;
-      }
-    }
+.chack-list .privacy-ckbox .custom-label::after {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  display: inline-block;
+}
 
-    .hidden-check:checked + .custom-label {
-      background: var(--bg) url(../../images/check-pink.png) no-repeat center;
-    }
+.chack-list .privacy-ckbox .custom-label.privacy::after {
+  content: '개인정보 활용에 동의합니다.';
+  left: 114px;
+}
 
-    &.terms-ckbox > .show {
-      margin-left: 70px;
-    }
+.chack-list .privacy-ckbox .hidden-check:checked + .custom-label {
+  background: var(--bg) url(../../images/check-pink.png) no-repeat center;
+}
 
-    &.privacy-ckbox > .show {
-      margin-left: 190px;
-    }
+.chack-list .privacy-ckbox.terms-ckbox > .show {
+  margin-left: 70px;
+}
 
-    .must {
-      color: var(--main-pink);
-    }
-  }
+.chack-list .privacy-ckbox.privacy-ckbox > .show {
+  margin-left: 190px;
+}
+
+.chack-list .privacy-ckbox .must {
+  color: var(--main-pink);
 }
 
 @media (max-width: 768px) {
@@ -314,10 +316,10 @@ label.upload-btn {
   .check-box > p:last-child {
     display: flex;
     align-items: center;
+  }
 
-    a {
-      font-size: 1.2rem;
-    }
+  .check-box > p:last-child a {
+    font-size: 1.2rem;
   }
   .dropHeader,
   .dropBox {
@@ -385,32 +387,27 @@ label.upload-btn {
     width: 30rem;
   }
 
-  .chack-list {
-    :first-child {
-      display: none;
-    }
-    .privacy-ckbox {
-      .custom-label {
-        &.privacy::after {
-          left: 94px;
-        }
-      }
+  .chack-list :first-child {
+    display: none;
+  }
 
-      .hidden-check:checked + .custom-label {
-        background: var(--bg) url(../../images/check-pink.png) no-repeat center;
-      }
+  .chack-list .privacy-ckbox .custom-label.privacy::after {
+    left: 94px;
+  }
 
-      &.terms-ckbox > .show {
-        margin-left: 70px;
-      }
+  .chack-list .privacy-ckbox .hidden-check:checked + .custom-label {
+    background: var(--bg) url(../../images/check-pink.png) no-repeat center;
+  }
 
-      &.privacy-ckbox > .show {
-        margin-left: 150px;
-      }
+  .chack-list .privacy-ckbox.terms-ckbox > .show {
+    margin-left: 70px;
+  }
 
-      .must {
-        color: var(--main-pink);
-      }
-    }
+  .chack-list .privacy-ckbox.privacy-ckbox > .show {
+    margin-left: 150px;
+  }
+
+  .chack-list .privacy-ckbox .must {
+    color: var(--main-pink);
   }
 }
