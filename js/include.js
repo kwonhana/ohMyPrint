@@ -20,11 +20,25 @@ fetch('/header.html')
       }
     });
 
-    const searchIcon = document.querySelector('.search-wrap');
+    const searchIcon = document.querySelector('.search-wrap .search svg');
+    const searchWrap = document.querySelector('.search-wrap');
     searchIcon.addEventListener('click', (e) => {
       console.log('asd');
-      searchIcon.classList.toggle('active');
+      searchWrap.classList.toggle('active');
       e.preventDefault();
+    });
+
+    // ham-btn관련
+    const hamBtn = document.querySelector('.ham-btn > a');
+    const hamNavWrap = document.querySelector('.snb');
+    hamBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hamNavWrap.style['display'] = 'block';
+    });
+    const closeBtn = document.querySelector('.close-btn .btn');
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hamNavWrap.style['display'] = 'none';
     });
   });
 
