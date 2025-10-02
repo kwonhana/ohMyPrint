@@ -185,6 +185,7 @@ body {
   background: var(--bg);
   display: none;
   z-index: 1;
+  border: 1px solid var(--border1);
 
   &.active {
     display: block;

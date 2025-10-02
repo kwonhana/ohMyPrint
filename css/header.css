@@ -64,9 +64,11 @@ header {
 
       /* 햄버거 버튼 및 메뉴 */
       .ham-btn {
-        &:hover .snb {
+        width: 32px;
+        aspect-ratio: 1/1;
+        /* &:hover .snb {
           display: block;
-        }
+        } */
 
         .ham-nav-wrap {
           width: 600px;

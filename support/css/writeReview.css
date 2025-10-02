@@ -67,7 +67,6 @@ form {
 
 textarea,
 .label-tag input[type='text'] {
-  background-color: var(--bg);
   border: none;
   border-radius: 0.4rem;
   height: 40rem;
