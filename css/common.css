@@ -117,14 +117,14 @@ body {
   display: none !important;
 }
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar {
   height: 12px;
-  width: 8px;
+  width: 6px;
   background-color: var(--bg);
   border-radius: 25px;
 }
 
-::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: var(--main-blue);
   border-radius: 25px;
 }
@@ -139,40 +139,41 @@ body {
 .dropHeader {
   position: relative;
   min-width: fit-content;
-
-  .dropBox {
-    padding: 1.6rem 2rem;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--bg);
-    color: var(--text-gray);
-    cursor: pointer;
-    width: 14rem;
-
-    &::after {
-      content: '';
-      width: 1.6rem;
-      aspect-ratio: 1/1;
-      display: inline-block;
-      margin-left: 1rem;
-      background: url(/images/arrow-down.png) no-repeat center;
-      background-size: contain;
-      filter: invert();
-    }
-
-    &:hover {
-      color: var(--text-black);
-      background: var(--border3);
-    }
-
-    &.active::after {
-      background: url(/images/arrow-up.png) no-repeat center;
-      background-size: contain;
-    }
-  }
 }
+
+.dropHeader .dropBox {
+  padding: 1.6rem 2rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg);
+  color: var(--text-gray);
+  cursor: pointer;
+  width: 14rem;
+}
+
+.dropHeader .dropBox::after {
+  content: '';
+  width: 1.6rem;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  margin-left: 1rem;
+  background: url(/images/arrow-down.png) no-repeat center;
+  background-size: contain;
+  filter: invert();
+}
+
+.dropHeader .dropBox:hover {
+  color: var(--text-black);
+  background: var(--border3);
+}
+
+.dropHeader .dropBox.active::after {
+  background: url(/images/arrow-up.png) no-repeat center;
+  background-size: contain;
+}
+
 .sort-list {
   position: absolute;
   left: 50%;
@@ -185,23 +186,24 @@ body {
   background: var(--bg);
   display: none;
   z-index: 1;
+  border: 1px solid var(--border1);
+}
 
-  &.active {
-    display: block;
-  }
+.sort-list li a {
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: var(--text-gray);
+  width: 100%;
+  border-radius: 0.4rem;
+}
 
-  li a {
-    padding: 1rem 2rem;
-    display: inline-block;
-    color: var(--text-gray);
-    width: 100%;
-    border-radius: 0.4rem;
+.sort-list li a:hover {
+  color: var(--text-black);
+  background: var(--border3);
+}
 
-    &:hover {
-      color: var(--text-black);
-      background: var(--border3);
-    }
-  }
+.sort-list.active {
+  display: block;
 }
 
 input:invalid {
