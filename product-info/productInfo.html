@@ -28,21 +28,37 @@
             <!-- 슬라이더 프리뷰 메인 -->
             <div class="swiper mySwiper2 item-slider-main">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./images/item-img1.png" alt="메인이미지" /></div>
-                <div class="swiper-slide"><img src="./images/item-img2.png" alt="메인이미지" /></div>
-                <div class="swiper-slide"><img src="./images/item-img3.png" alt="메인이미지" /></div>
-                <div class="swiper-slide"><img src="./images/item-img4.png" alt="메인이미지" /></div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img1.png" alt="메인이미지" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img2.png" alt="메인이미지" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img3.png" alt="메인이미지" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img4.png" alt="메인이미지" />
+                </div>
               </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
             <!-- 슬라이더 프리뷰 썸네일 -->
-            <div thumbsSlider="" class="swiper mySwiper item-slider">
+            <div data-thumbsslider class="swiper mySwiper item-slider">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./images/item-img-small1.png" alt="미리보기1" /></div>
-                <div class="swiper-slide"><img src="./images/item-img-small2.png" alt="미리보기2" /></div>
-                <div class="swiper-slide"><img src="./images/item-img-small3.png" alt="미리보기3" /></div>
-                <div class="swiper-slide"><img src="./images/item-img-small4.png" alt="미리보기4" /></div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small1.png" alt="미리보기1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small2.png" alt="미리보기2" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small3.png" alt="미리보기3" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small4.png" alt="미리보기4" />
+                </div>
               </div>
             </div>
           </div>
@@ -120,9 +136,9 @@
                 </ul>
               </div>
               <div class="item-main-select-file-wrap">
-                <p class="font16b checkbox">
-                  디자인업로드
-                  <input type="checkbox" />
+                <p class="font16b">
+                  <label class="checkbox">디자인 업로드</label>
+                  <!-- <input type="checkbox" id="designCheck" /> -->
                 </p>
                 <p class="item-main-select-file">
                   <!-- <label for="selectFile" class="selectFile"></label
@@ -130,8 +146,9 @@
                   <!-- <button class="selectFile">
                     <input type="file" id="selectFile" class="font16" />
                   </button> -->
-                  <input type="file" id="fileUpload" class="fileupload" />
-                  <label for="fileUpload" class="custom-file-btn">파일 선택</label>
+
+                  <input type="file" id="fileupload" class="fileupload" />
+                  <label for="fileupload" class="custom-file-btn">파일 선택</label>
                   <span class="file-name font16">선택된 파일 없음</span>
                 </p>
                 <!-- <ul class="checkbox"> -->
@@ -357,8 +374,9 @@
                   소비자의 사전 동의를 얻은 경우
                 </p>
                 <p class="font16">
-                  디지털 콘텐츠의 제공이 개시된 경우, <br>(다만, 가분적 용역 또는 가분적 디지털콘텐츠로
-                  구성된 계약의 경우 제공이 개시되지 아니한 부분은 청약철회를 할 수 있습니다.)</br>
+                  디지털 콘텐츠의 제공이 개시된 경우 <br />(다만, 가분적 용역 또는 가분적
+                  디지털콘텐츠로 구성된 계약의 경우 제공이 개시되지 아니한 부분은 청약철회를 할 수
+                  있습니다.)<br />
                 </p>
                 <p class="font16">
                   <strong>
@@ -393,74 +411,79 @@
 
         <!-- item-review 리뷰 -->
         <div class="navSection sub-item-review hidden" id="review">
-          
           <div class="review-box-wrap">
             <div class="review-more-btn">
-            <a href="#" class="font16b">글쓰기</a>
+              <a href="#" class="font16b">글쓰기</a>
             </div>
             <div class="review-box-inner">
               <div class="review-box">
-              <div class="review-img-text-wrap">
-                <div class="review-img-box"><img src="./images/reviewimg.png" alt="미리보기이미지"></div>
-                <div class="review-text-box">
-                  <p class="review-text-title font20b">상품명</p>
-                  <p class="review-text-middle font16">빳빳하고 좋습니다</p>
-                <div class="review-text-content">
-                  <p class="font14">빳빳하고 좋습니다.</p>
-                  <p class="font14">빳빳하고 좋습니다.</p>
+                <div class="review-img-text-wrap">
+                  <div class="review-img-box">
+                    <img src="./images/reviewimg.png" alt="미리보기이미지" />
+                  </div>
+                  <div class="review-text-box">
+                    <p class="review-text-title font20b">상품명</p>
+                    <p class="review-text-middle font16">빳빳하고 좋습니다</p>
+                    <div class="review-text-content">
+                      <p class="font14">빳빳하고 좋습니다.</p>
+                      <p class="font14">빳빳하고 좋습니다.</p>
+                    </div>
+                    <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                  </div>
                 </div>
-                <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                <div class="review-star-icon">
+                  <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
                 </div>
-              </div>
-            <div class="review-star-icon">
-              <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-            </div>
               </div>
               <div class="review-box">
-              <div class="review-img-text-wrap">
-                <div class="review-img-box"><img src="./images/reviewimg.png" alt="미리보기이미지"></div>
-                <div class="review-text-box">
-                  <p class="review-text-title font20b">상품명</p>
-                  <p class="review-text-middle font16">빳빳하고 좋습니다</p>
-                <div class="review-text-content">
-                  <p class="font14">빳빳하고 좋습니다.</p>
-                  <p class="font14">빳빳하고 좋습니다.</p>
+                <div class="review-img-text-wrap">
+                  <div class="review-img-box">
+                    <img src="./images/reviewimg.png" alt="미리보기이미지" />
+                  </div>
+                  <div class="review-text-box">
+                    <p class="review-text-title font20b">상품명</p>
+                    <p class="review-text-middle font16">빳빳하고 좋습니다</p>
+                    <div class="review-text-content">
+                      <p class="font14">빳빳하고 좋습니다.</p>
+                      <p class="font14">빳빳하고 좋습니다.</p>
+                    </div>
+                    <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                  </div>
                 </div>
-                <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                <div class="review-star-icon">
+                  <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
                 </div>
-              </div>
-            <div class="review-star-icon">
-              <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-            </div>
               </div>
               <div class="review-box">
-              <div class="review-img-text-wrap">
-                <div class="review-img-box"><img src="./images/reviewimg.png" alt="미리보기이미지"></div>
-                <div class="review-text-box">
-                  <p class="review-text-title font20b">상품명</p>
-                  <p class="review-text-middle font16">빳빳하고 좋습니다</p>
-                <div class="review-text-content">
-                  <p class="font14">빳빳하고 좋습니다.</p>
-                  <p class="font14">빳빳하고 좋습니다.</p>
+                <div class="review-img-text-wrap">
+                  <div class="review-img-box">
+                    <img src="./images/reviewimg.png" alt="미리보기이미지" />
+                  </div>
+                  <div class="review-text-box">
+                    <p class="review-text-title font20b">상품명</p>
+                    <p class="review-text-middle font16">빳빳하고 좋습니다</p>
+                    <div class="review-text-content">
+                      <p class="font14">빳빳하고 좋습니다.</p>
+                      <p class="font14">빳빳하고 좋습니다.</p>
+                    </div>
+                    <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                  </div>
                 </div>
-                <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                <div class="review-star-icon">
+                  <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
+                  <p><img src="./images/icon-review-grade.png" alt="리뷰이미지" /></p>
                 </div>
-              </div>
-            <div class="review-star-icon">
-              <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade-yellow.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-              <p><img src="./images/icon-review-grade.png" alt="리뷰이미지"></p>
-            </div>
               </div>
             </div>
           </div>

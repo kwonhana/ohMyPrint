@@ -147,7 +147,7 @@
     display: block !important;
   } */
 
-  h2 {
+  .item-main-wrap h2 {
     margin: 6rem 0;
     font-size: 1.6rem;
   }
@@ -503,7 +503,7 @@
     display: block !important;
   } */
 
-  h2 {
+  .item-main-wrap h2 {
     margin: 6rem 0;
     font-size: 1.6rem;
   }
@@ -698,6 +698,9 @@
 }
 
 @media (max-width: 480px) {
+  .item-main-wrap h2 {
+    font-size: 1.4rem;
+  }
   .item-main-select > p {
     font-size: 1.4rem;
   }
