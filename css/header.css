@@ -85,6 +85,10 @@ header .header-inner .header-left .ham-btn .ham-nav-wrap {
   display: none;
 }
 
+header .header-inner .header-left .ham-btn.active .ham-nav-wrap {
+  display: block;
+}
+
 header .header-inner .header-left .ham-btn .ham-nav-wrap .close-btn {
   display: flex;
   justify-content: end;
@@ -244,6 +248,7 @@ header .header-inner .user-wrap .search-container {
   height: 0%;
   position: fixed;
   right: 0;
+  top: 112px;
   overflow: hidden;
   background: #00000083;
   transition: ease 0.5s;
@@ -271,7 +276,7 @@ header .header-inner .user-wrap .search-container .search-input-wrap input {
   width: 600px;
   background-color: var(--bg);
   border-radius: 8px;
-  padding: 16px 60px 16px 40px;
+  padding: 20px 60px 16px 40px;
   border: none;
   text-align: center;
 }
