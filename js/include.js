@@ -20,11 +20,26 @@ fetch('/header.html')
       }
     });
 
-    const searchIcon = document.querySelector('.search-wrap');
+    const searchIcon = document.querySelector('.search-wrap .search');
     searchIcon.addEventListener('click', (e) => {
       console.log('asd');
       searchIcon.classList.toggle('active');
       e.preventDefault();
+    });
+
+    const closeBtn = document.querySelector('.search-container .close-icon');
+    closeBtn.addEventListener('click', (e) => {
+      if (searchIcon.classList.contains('active')) {
+        searchIcon.classList.remove('active');
+      }
+    });
+
+    const container = document.querySelector('.search-container');
+    const inner = document.querySelector('.search-container .inner');
+    container.addEventListener('click', (e) => {
+      if (!inner.contains(e.target) && searchIcon.classList.contains('active')) {
+        searchIcon.classList.remove('active');
+      }
     });
   });
 
