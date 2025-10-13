@@ -20,6 +20,7 @@ fetch('/header.html')
       }
     });
 
+    //상단 검색 기능
     const searchIcon = document.querySelector('.search-wrap .search');
     searchIcon.addEventListener('click', (e) => {
       console.log('asd');
@@ -40,6 +41,19 @@ fetch('/header.html')
       if (!inner.contains(e.target) && searchIcon.classList.contains('active')) {
         searchIcon.classList.remove('active');
       }
+    });
+
+    //햄버거 메뉴
+    const hamBtn = document.querySelector('.ham-btn');
+    hamBtn.addEventListener('click', function () {
+      hamBtn.classList.add('active');
+    });
+
+    const hamBtnClose = document.querySelector('.ham-nav-wrap .close-btn');
+    hamBtnClose.addEventListener('click', (e) => {
+      console.log('zzz');
+      hamBtn.classList.remove('active');
+      e.stopPropagation();
     });
   });
 
