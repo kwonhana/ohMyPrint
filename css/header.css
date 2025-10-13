@@ -231,7 +231,7 @@ header .header-inner .user-wrap .search-wrap .search:hover path {
   stroke: var(--main-pink);
 }
 
-header .header-inner .user-wrap .search-wrap.active .search-container {
+header .header-inner .user-wrap .search-wrap .search.active + .search-container {
   height: 100%;
 }
 
@@ -265,11 +265,35 @@ header .header-inner .user-wrap .search-container .inner {
   gap: 28px;
   height: 500px;
   box-shadow: 2px 4px 6px black;
+  position: relative;
 }
 
 header .header-inner .user-wrap .search-container .search-input-wrap {
   max-width: 600px;
   position: relative;
+}
+
+header .header-inner .search-container .close-icon {
+  width: 80px;
+  height: 3.6rem;
+  position: absolute;
+  bottom: -3.6rem;
+  right: 0rem;
+  cursor: pointer;
+  background: #333;
+}
+
+header .header-inner .search-container .close-icon:hover {
+  background-color: #111;
+}
+
+header .header-inner .search-container .close-icon::before {
+  content: 'close';
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  display: block;
+  line-height: 3.6rem;
 }
 
 header .header-inner .user-wrap .search-container .search-input-wrap input {
@@ -279,6 +303,7 @@ header .header-inner .user-wrap .search-container .search-input-wrap input {
   padding: 20px 60px 16px 40px;
   border: none;
   text-align: center;
+  font-size: 16px;
 }
 
 header .header-inner .user-wrap .search-container .search-input-wrap input::placeholder {
