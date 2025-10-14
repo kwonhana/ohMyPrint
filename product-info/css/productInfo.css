@@ -74,6 +74,9 @@
 .swiper-button-next::after {
   background-image: url(../images/arrow-right.png);
 }
+.swiper-button-disabled {
+  display: none;
+}
 
 /* 슬라이더 프리뷰 썸네일 */
 
@@ -90,10 +93,20 @@
 
 .item-slider .swiper-slide {
   opacity: 0.4;
+
+  img {
+    width: 100%;
+  }
 }
 
 .mySwiper .swiper-slide-thumb-active {
   opacity: 1;
+  border: 2px solid var(--main-pink);
+  border-radius: 4px;
+
+  img {
+    width: 100%;
+  }
 }
 
 /* 아이템 상세 item-main-right */
@@ -293,6 +306,7 @@
     border: none;
     background: var(--bg);
     border-radius: 4px;
+    cursor: pointer;
   }
 
   .count-btn-min::after {
@@ -693,16 +707,18 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid var(--border3);
-  border-radius: 4px;
-  margin: 2rem 0;
+  width: 100%;
+  border-bottom: 1px solid var(--border3);
+  margin: 4rem 0;
   color: var(--text-black);
   width: 100%;
+  padding: 0 1rem 2rem;
 }
 
 .review-img-text-wrap {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  flex-grow: 1;
 }
 
 .review-img-box {
@@ -713,20 +729,45 @@ h2 {
   width: 100%;
 }
 
-.review-text-title {
-  padding: 0 0 1.6rem 0;
+.review-text-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 0;
+
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.6rem;
+  }
 }
 
 .review-text-middle {
   padding: 0 0 1.6rem 0;
+  color: var(--text-gray);
 }
 
 .review-text-content {
   padding: 0 0 1.6rem 0;
+
+  .font14 {
+    word-break: keep-all;
+  }
+}
+
+.resName {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  align-items: end;
 }
 
 .review-star-icon {
   display: flex;
   gap: 0.8rem;
-  padding: 1rem;
+
+  .star {
+    width: 2rem;
+  }
 }
