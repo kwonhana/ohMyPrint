@@ -93,6 +93,7 @@
 
 .item-slider .swiper-slide {
   opacity: 0.4;
+  cursor: pointer;
 
   img {
     width: 100%;
@@ -697,81 +698,5 @@ h2 {
 
   &:hover {
     background-color: var(--text-black);
-  }
-}
-
-.review-box-wrap {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-.review-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 1px solid var(--border3);
-  margin: 4rem 0;
-  color: var(--text-black);
-  width: 100%;
-  padding: 0 1rem 2rem;
-}
-
-.review-img-text-wrap {
-  display: flex;
-  align-items: stretch;
-  flex-grow: 1;
-}
-
-.review-img-box {
-  padding: 1rem;
-}
-
-.review-img-box > img {
-  width: 100%;
-}
-
-.review-text-box {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 1.6rem 0;
-
-  .top {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 1.6rem;
-  }
-}
-
-.review-text-middle {
-  padding: 0 0 1.6rem 0;
-  color: var(--text-gray);
-}
-
-.review-text-content {
-  padding: 0 0 1.6rem 0;
-
-  .font14 {
-    word-break: keep-all;
-  }
-}
-
-.resName {
-  flex: 1;
-  display: flex;
-  gap: 1rem;
-  align-items: end;
-}
-
-.review-star-icon {
-  display: flex;
-  gap: 0.8rem;
-
-  .star {
-    width: 2rem;
   }
 }
