@@ -133,6 +133,9 @@ label.upload-btn {
   margin: 40px 0;
   text-align: center;
   color: var(--text-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .inquiry-text-box p {
