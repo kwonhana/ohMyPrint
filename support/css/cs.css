@@ -116,47 +116,31 @@
   width: 100%;
 }
 
-.inner .post-list form figure {
+.inner .post-list form {
   width: 100%;
 }
 
-.inner .post-list form figure table {
+.inner .post-list form table {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
 
-.inner .post-list form figure table tr {
+.inner .post-list form table tr {
   width: 100%;
   display: flex;
   gap: 10px;
   position: relative;
 }
 
-.inner .post-list form figure table tr td.number {
-  width: 111px;
-}
-
-.inner .post-list form figure table tr td.title {
-  width: 836px;
-}
-
-.inner .post-list form figure table tr td.title .row-link {
+.inner .post-list form table tr td.title .row-link {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-}
-
-.inner .post-list form figure table tr td.date {
-  width: 352px;
-}
-
-.inner .post-list form figure table tr td.views {
-  width: 111px;
 }
 
 /* ==================== 테이블 헤더 ==================== */
@@ -177,19 +161,22 @@
 }
 
 .inner .post-list .first-title-line tr th.number {
-  width: 111px;
+  width: 4%;
+  min-width: 6rem;
 }
 
 .inner .post-list .first-title-line tr th.title {
-  width: 836px;
+  width: 100%;
 }
 
 .inner .post-list .first-title-line tr th.date {
-  width: 352px;
+  width: 10%;
+  min-width: 12rem;
 }
 
 .inner .post-list .first-title-line tr th.views {
-  width: 111px;
+  width: 10%;
+  min-width: 12rem;
 }
 
 .inner .post-list .post-first-line {
@@ -197,9 +184,9 @@
 }
 
 /* ==================== 테이블 셀 ==================== */
-.inner figure table td.number,
-.inner figure table td.date,
-.inner figure table td.views {
+.inner table td.number,
+.inner table td.date,
+.inner table td.views {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -207,13 +194,33 @@
   height: 50px;
 }
 
-.inner figure table td.title {
+.inner table td.number {
+  width: 4%;
+  min-width: 6rem;
+}
+
+.inner table td.title {
   display: flex;
+  width: 100%;
   padding: 10px 60px;
 }
 
-.inner figure table .title .row-title {
+.inner table td.date {
+  width: 10%;
+  min-width: 12rem;
+}
+
+.inner table td.views {
+  width: 10%;
+  min-width: 12rem;
+}
+
+.inner table .title .row-title {
   display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ==================== 공지사항 테이블 ==================== */
@@ -253,6 +260,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 16%;
+  min-width: fit-content;
 }
 
 .inner .answer-badge span.false::after {
@@ -276,6 +284,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 24%;
+  min-width: 8rem;
 }
 
 .inner .post-type-badge span {
@@ -360,28 +369,28 @@
   }
 
   /* 테이블 너비 조정 */
-  .inner .post-list form figure table tr td.number,
+  .inner .post-list form table tr td.number,
   .inner .post-list .first-title-line tr th.number {
     width: 80px;
   }
 
-  .inner .post-list form figure table tr td.title,
+  .inner .post-list form table tr td.title,
   .inner .post-list .first-title-line tr th.title {
     width: calc(100% - 80px - 250px - 80px - 30px);
     flex: 1;
   }
 
-  .inner .post-list form figure table tr td.date,
+  .inner .post-list form table tr td.date,
   .inner .post-list .first-title-line tr th.date {
     width: 250px;
   }
 
-  .inner .post-list form figure table tr td.views,
+  .inner .post-list form table tr td.views,
   .inner .post-list .first-title-line tr th.views {
     width: 80px;
   }
 
-  .inner figure table td.title {
+  .inner table td.title {
     padding: 10px 30px;
   }
 }
@@ -419,22 +428,22 @@
   }
 
   /* 테이블 조회수 숨기기 */
-  .inner .post-list form figure table tr td.views,
+  .inner .post-list form table tr td.views,
   .inner .post-list .first-title-line tr th.views {
     display: none;
   }
 
-  .inner .post-list form figure table tr td.title,
+  .inner .post-list form table tr td.title,
   .inner .post-list .first-title-line tr th.title {
     width: calc(100% - 80px - 200px - 20px);
   }
 
-  .inner .post-list form figure table tr td.date,
+  .inner .post-list form table tr td.date,
   .inner .post-list .first-title-line tr th.date {
     width: 200px;
   }
 
-  .inner figure table td.title {
+  .inner table td.title {
     padding: 10px 20px;
   }
 }
@@ -479,28 +488,28 @@
   }
 
   /* 번호 숨기기 */
-  .inner .post-list form figure table tr td.number,
+  .inner .post-list form table tr td.number,
   .inner .post-list .first-title-line tr th.number {
     display: none;
   }
 
   /* 날짜 숨기기 */
-  .inner .post-list form figure table tr td.date,
+  .inner .post-list form table tr td.date,
   .inner .post-list .first-title-line tr th.date {
     display: none;
   }
 
-  .inner .post-list form figure table tr td.title,
+  .inner .post-list form table tr td.title,
   .inner .post-list .first-title-line tr th.title {
     width: 100%;
   }
 
-  .inner figure table td.title {
+  .inner table td.title {
     padding: 10px 15px;
   }
 
-  .inner figure table td.number,
-  .inner figure table td.date {
+  .inner table td.number,
+  .inner table td.date {
     height: auto;
     padding: 8px 0;
   }
@@ -578,17 +587,17 @@
     font-size: 14px;
   }
 
-  .inner figure table td.title {
+  .inner table td.title {
     padding: 8px 10px;
   }
 
-  .inner figure table .title .row-title {
+  .inner table .title .row-title {
     font-size: 14px;
     line-height: 1.4;
     width: 54%;
   }
 
-  .inner figure table .title .row-title.info {
+  .inner table .title .row-title.info {
     width: 100%;
   }
 
