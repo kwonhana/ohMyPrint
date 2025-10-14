@@ -41,12 +41,12 @@ form {
   display: inline-block;
   width: 36px;
   height: 36px;
-  background: url('/product-info/images/icon-review-grade.png') no-repeat center;
+  background: url('../../images/review/icon-review-grade.png') no-repeat center;
   background-size: contain;
 }
 
 .stars span.active {
-  background: url('/product-info/images/icon-review-grade-yellow.png') no-repeat center;
+  background: url('../../images/review/icon-review-grade-yellow.png') no-repeat center;
   background-size: contain;
 }
 
