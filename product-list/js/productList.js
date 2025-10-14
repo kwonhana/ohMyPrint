@@ -2825,7 +2825,7 @@ function displayProducts(category) {
       'beforeend',
       `
     <div class="card">
-      <a href="#void">
+      <a href="../../product-info/productInfo.html">
         <div class="img-box">
           <img src="${pdImg}" />
         </div>
