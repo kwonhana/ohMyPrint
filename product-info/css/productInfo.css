@@ -691,9 +691,13 @@ h2 {
 .review-more-btn > a {
   display: inline-block;
   background-color: var(--main-navy);
-  padding: 0.4rem 1rem;
+  padding: 0.8rem 1.6rem;
   color: var(--text-white);
   border-radius: 4px;
+
+  &:hover {
+    background-color: var(--text-black);
+  }
 }
 
 .review-box-wrap {
