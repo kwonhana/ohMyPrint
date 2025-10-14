@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="./css/productInfo.css" />
     <link rel="stylesheet" href="./css/respond.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/include.js" defer></script>
     <script src="./js/productInfo.js" defer></script>
@@ -292,49 +293,31 @@
             </div>
             <ul class="buyinfo-right shipping">
               <li>
-                <strong class="font16b">배송방법</strong>
+                <span class="font16b">배송방법</span>
                 <span class="font16">택배</span>
               </li>
               <li>
-                <strong class="font16b">배송비용</strong>
+                <span class="font16b">배송비용</span>
                 <span class="font16">3,500원</span>
               </li>
               <li>
-                <strong class="font16b">배송기간</strong>
+                <span class="font16b">배송기간</span>
                 <span class="font16">3일 ~ 7일</span>
               </li>
               <li class="shipping-text-long">
-                <strong class="font16b">배송안내</strong>
-                <span class="font16">
-                  산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.
-                </span>
-                <p class="font16">
-                  주문하신 상품은 입금 확인 후 배송해드립니다. 다만, 상품 종류에 따라서 상품의
-                  배송이 다소 지연될 수 있습니다.
-                </p>
+                <span class="font16b">배송안내</span>
+                <div class="text-box">
+                  <p class="font16">
+                    산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.
+                  </p>
+                  <p class="font16">
+                    주문하신 상품은 입금 확인 후 배송해드립니다. 다만, 상품 종류에 따라서 상품의
+                    배송이 다소 지연될 수 있습니다.
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
-          <!-- <div class="shipping-left">
-          <img src="./images/item-detail-icon-shipping.png" alt="배송 안내 아이콘" />
-          <p>배송 방법 및 안내</p>
-        </div>
-        <dl class="shipping-right">
-          <dt>배송방법</dt>
-          <dd>택배</dd>
-          <dt>배송비용</dt>
-          <dd>3,500원</dd>
-          <dt>배송기간</dt>
-          <dd>3일 ~ 7일</dd>
-          <dt>배송안내</dt>
-          <dd>
-            <p>산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.</p>
-            <p>
-              주문하신 상품은 입금 확인 후 배송해드립니다. 다만, 상품 종류에 따라서 상품의 배송이
-              다소 지연될 수 있습니다.
-            </p>
-          </dd>
-        </dl> -->
 
           <!-- 교환 및 반품 정보 -->
           <div class="info-refund">
@@ -358,9 +341,9 @@
               <li>
                 <strong class="refund font16b">교환 및 반품이 불가능한 경우</strong>
                 <p class="font16">이용자에게 책임 있는 사유로 재화 등이 멸실 또는 훼손된 경우</p>
-                <p class="font16">
-                  (다만, 재화 등의 내용을 확인하기 위하여 포장 등을 훼손한 경우에는 청약철회를 할 수
-                  있습니다)
+                <p class="font14">
+                  (다만, 재화 등의 내용을 확인하기 위하여 포장 등을 훼손한 경우에는 청약 철회를 할
+                  수 있습니다)
                 </p>
                 <p class="font16">
                   이용자의 사용 또는 일부 소비에 의하여 재화 등의 가치가 현저히 감소한 경우
@@ -373,10 +356,10 @@
                   개별 주문 생산되는 재화 등 청약철회시 판매자에게 회복할 수 없는 피해가 예상되어
                   소비자의 사전 동의를 얻은 경우
                 </p>
-                <p class="font16">
-                  디지털 콘텐츠의 제공이 개시된 경우 <br />(다만, 가분적 용역 또는 가분적
-                  디지털콘텐츠로 구성된 계약의 경우 제공이 개시되지 아니한 부분은 청약철회를 할 수
-                  있습니다.)<br />
+                <p class="font16">디지털 콘텐츠의 제공이 개시된 경우,</p>
+                <p class="font14">
+                  (다만, 가분적 용역 또는 가분적 디지털콘텐츠로 구성된 계약의 경우 제공이 개시되지
+                  아니한 부분은 청약 철회를 할 수 있습니다.)
                 </p>
                 <p class="font16">
                   <strong>
@@ -395,15 +378,20 @@
               <p class="font20b">상품 결제 정보</p>
             </div>
             <div class="buyinfo-right">
-              <p class="font16">
-                고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. 확인과정에서
-                도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될 경우 임의로
-                주문을 보류 또는 취소할 수 있습니다.  
+              <p class="font16b">
+                고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다.
               </p>
               <p class="font16">
+                확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될
+                경우 임의로 주문을 보류 또는 취소할 수 있습니다.  
+              </p>
+              <p class="font16b">
                 무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서
-                직접 입금하시면 됩니다.  주문시 입력한 입금자명과 실제입금자의 성명이 반드시
-                일치하여야 하며, 7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.
+                직접 입금하시면 됩니다.
+              </p>
+              <p class="font16">
+                 주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 7일 이내로
+                입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.
               </p>
             </div>
           </div>
@@ -428,7 +416,10 @@
                       <p class="font14">빳빳하고 좋습니다.</p>
                       <p class="font14">빳빳하고 좋습니다.</p>
                     </div>
-                    <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                    <p class="rfont12">
+                      2025.08.21
+                      <span>김*원</span>
+                    </p>
                   </div>
                 </div>
                 <div class="review-star-icon">
@@ -451,7 +442,10 @@
                       <p class="font14">빳빳하고 좋습니다.</p>
                       <p class="font14">빳빳하고 좋습니다.</p>
                     </div>
-                    <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                    <p class="rfont12">
+                      2025.08.21
+                      <span>김*원</span>
+                    </p>
                   </div>
                 </div>
                 <div class="review-star-icon">
@@ -474,7 +468,10 @@
                       <p class="font14">빳빳하고 좋습니다.</p>
                       <p class="font14">빳빳하고 좋습니다.</p>
                     </div>
-                    <p class="rfont12">2025.08.21 <span>김*원</span></p>
+                    <p class="rfont12">
+                      2025.08.21
+                      <span>김*원</span>
+                    </p>
                   </div>
                 </div>
                 <div class="review-star-icon">

@@ -20,11 +20,40 @@ fetch('/header.html')
       }
     });
 
-    const searchIcon = document.querySelector('.search-wrap');
+    //상단 검색 기능
+    const searchIcon = document.querySelector('.search-wrap .search');
     searchIcon.addEventListener('click', (e) => {
       console.log('asd');
       searchIcon.classList.toggle('active');
       e.preventDefault();
+    });
+
+    const closeBtn = document.querySelector('.search-container .close-icon');
+    closeBtn.addEventListener('click', (e) => {
+      if (searchIcon.classList.contains('active')) {
+        searchIcon.classList.remove('active');
+      }
+    });
+
+    const container = document.querySelector('.search-container');
+    const inner = document.querySelector('.search-container .inner');
+    container.addEventListener('click', (e) => {
+      if (!inner.contains(e.target) && searchIcon.classList.contains('active')) {
+        searchIcon.classList.remove('active');
+      }
+    });
+
+    //햄버거 메뉴
+    const hamBtn = document.querySelector('.ham-btn');
+    hamBtn.addEventListener('click', function () {
+      hamBtn.classList.add('active');
+    });
+
+    const hamBtnClose = document.querySelector('.ham-nav-wrap .close-btn');
+    hamBtnClose.addEventListener('click', (e) => {
+      console.log('zzz');
+      hamBtn.classList.remove('active');
+      e.stopPropagation();
     });
   });
 

@@ -234,6 +234,14 @@ body:not(:has(.top-banner)) main {
   min-height: calc(100% - 454px);
 }
 
+body:has(.top-banner) header .header-inner .user-wrap .search-container {
+  top: 112px;
+}
+
+body:not(:has(.top-banner)) header .header-inner .user-wrap .search-container {
+  top: 68px;
+}
+
 @media (max-width: 1024px) {
   body:has(.top-banner) header .header-inner .header-left .ham-btn .ham-nav-wrap .snb-list-wrap {
     max-height: calc(100% - 45rem);
