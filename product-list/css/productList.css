@@ -253,15 +253,17 @@
 @media (max-width: 840px) {
   .inner {
     max-width: 100%;
-    padding: 0 1%;
+    /* padding: 0 1%; */
   }
 
   .inner nav .main-category {
     width: fit-content;
     overflow: auto;
     gap: 0.6rem;
-    justify-content: start;
-    border: 1px solid red;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 1rem;
   }
 
   .inner nav .main-category li a {
