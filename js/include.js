@@ -3,7 +3,6 @@ fetch('/header.html')
   .then((res) => res.text())
   .then((data) => {
     document.querySelector('#header').innerHTML = data;
-
     const topBanner = document.querySelector('.top-banner');
     const bannerBtn = topBanner.querySelector('.closeBtn');
 
@@ -51,7 +50,6 @@ fetch('/header.html')
 
     const hamBtnClose = document.querySelector('.ham-nav-wrap .close-btn');
     hamBtnClose.addEventListener('click', (e) => {
-      console.log('zzz');
       hamBtn.classList.remove('active');
       e.stopPropagation();
     });
@@ -59,21 +57,30 @@ fetch('/header.html')
     //마이페이지 변경
     // const loginStatus = localStorage.getItem('logIned');
     // console.log(loginStatus);
-    let loginLink = document.querySelector('.mypage-trigger');
+    let loginLink = document.querySelector('.login');
+    let mypageLink = document.querySelector('.mypage');
+    let logoutLink = document.querySelector('.logout');
+    let nameLink = document.querySelector('.name');
+    let userName = document.querySelector('.name span');
 
     function updateLoginLink() {
+      userName.textContent = `${localStorage.getItem('userName')}님`;
       let loginStatus = localStorage.getItem('logIned');
+      console.log('loginStatus');
       if (loginStatus == 'true') {
-        loginLink.textContent = '마이페이지';
-        loginLink.href = './user/myPage.html';
+        console.log('로그인 완료');
+        loginLink.classList.add('hidden');
+      } else {
+        console.log('로그인 안됨');
+        mypageLink.classList.add('hidden');
+        logoutLink.classList.add('hidden');
+        nameLink.classList.add('hidden');
       }
     }
     updateLoginLink();
 
-    loginLink.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
+    logoutLink.addEventListener('click', () => {
       localStorage.removeItem('logIned');
-      // localStorage.removeItem('userName');
       window.location.reload();
     });
   });

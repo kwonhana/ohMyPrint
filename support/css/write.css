@@ -288,10 +288,13 @@
   border-radius: 4px;
   color: var(--text-white);
   cursor: pointer;
-  background-color: var(--border3);
-}
-
-.button-wrap button:hover {
-  background-color: var(--text-black);
+  background-color: var(--main-navy);
   transition: 0.3s;
+
+  &:hover {
+    background-color: var(--text-black);
+  }
+  &:disabled {
+    background-color: var(--border3);
+  }
 }
