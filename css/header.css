@@ -371,7 +371,7 @@ header .header-inner .user-wrap .search-container .keyword-wrap span:empty {
 
 @media (max-width: 1024px) {
   header .header-inner .header-left .ham-btn:hover .snb {
-    display: block;
+    /* display: block; */
   }
 
   header .header-inner .header-left .ham-btn .ham-nav-wrap {
@@ -418,7 +418,7 @@ header .header-inner .user-wrap .search-container .keyword-wrap span:empty {
   }
 
   header .header-inner .header-left .ham-btn:hover .snb {
-    display: block;
+    /* display: block; */
   }
 
   header .header-inner .header-left .ham-btn .ham-nav-wrap {

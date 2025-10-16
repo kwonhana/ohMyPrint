@@ -24,7 +24,7 @@ fetch('/header.html')
     const searchIcon = document.querySelector('.search-wrap .search');
     searchIcon.addEventListener('click', (e) => {
       console.log('asd');
-      searchIcon.classList.toggle('active');
+      searchWrap.classList.toggle('active');
       e.preventDefault();
     });
 
