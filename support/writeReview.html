@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/writeReview.css" />
     <link rel="stylesheet" href="/css/modal.css" />
     <script src="../js/include.js" defer></script>
-    <script src="./js/WriteReview.js" defer></script>
+    <script type="module" src="./js/WriteReview.js" defer></script>
   </head>
 
   <body>
@@ -26,14 +26,14 @@
             <span class="font28b">리뷰작성</span>
           </a>
         </div>
-        <form method="get" action="../user/review-end.html">
+        <form>
           <div class="label-tag review-product">
             <span class="font20b">상품명</span>
             <span class="font20">일반명함</span>
           </div>
 
           <div class="label-tag star-grade">
-            <p class="font20b">별점</p>
+            <p class="font20b essential">별점</p>
             <div class="stars">
               <span></span>
               <span></span>
@@ -70,7 +70,7 @@
           </div>
 
           <div class="review-end-btn">
-            <button type="submit" class="font20b">리뷰작성</button>
+            <button disabled class="font20b">리뷰작성</button>
           </div>
         </form>
       </div>

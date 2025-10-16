@@ -1,8 +1,8 @@
 // read_response.js
 document.addEventListener('DOMContentLoaded', () => {
-  const currentPost = JSON.parse(localStorage.getItem('currentPost'));
-  const currentIndex = parseInt(localStorage.getItem('currentIndex'));
-  const allPosts = JSON.parse(localStorage.getItem('allPosts'));
+  const currentPost = JSON.parse(sessionStorage.getItem('currentPost'));
+  const currentIndex = parseInt(sessionStorage.getItem('currentIndex'));
+  const allPosts = JSON.parse(sessionStorage.getItem('allPosts'));
 
   if (!currentPost) {
     alert('게시글 정보를 찾을 수 없습니다.');
@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     postBars[0].querySelector('.date-box').textContent = prevPost.작성일;
     postBars[0].querySelector('a').addEventListener('click', (e) => {
       e.preventDefault();
-      localStorage.setItem('currentPost', JSON.stringify(prevPost));
-      localStorage.setItem('currentIndex', currentIndex - 1);
+      sessionStorage.setItem('currentPost', JSON.stringify(prevPost));
+      sessionStorage.setItem('currentIndex', currentIndex - 1);
       location.reload();
     });
   } else {
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
     postBars[1].querySelector('.date-box').textContent = nextPost.작성일;
     postBars[1].querySelector('a').addEventListener('click', (e) => {
       e.preventDefault();
-      localStorage.setItem('currentPost', JSON.stringify(nextPost));
-      localStorage.setItem('currentIndex', currentIndex + 1);
+      sessionStorage.setItem('currentPost', JSON.stringify(nextPost));
+      sessionStorage.setItem('currentIndex', currentIndex + 1);
       location.reload();
     });
   } else {

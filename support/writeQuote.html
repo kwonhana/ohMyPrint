@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/modal.css" />
     <script src="../js/common.js" defer></script>
     <script src="../js/include.js" defer></script>
+    <script type="module" src="./js/writeQuote.js" defer></script>
   </head>
   <body>
     <main>
@@ -35,16 +36,16 @@
         <div class="input-wrap">
           <form action="#" method="post" class="inquiry-form" enctype="multipart/form-data">
             <div class="form-group font16">
-              <label for="username">성함/직함</label>
+              <label class="required" for="username">성함/직함</label>
               <input
                 type="text"
                 id="username"
                 name="username"
                 required
-                placeholder="홍길동/대표이사" />
+                placeholder="이름을 입력해주세요." />
             </div>
             <div class="form-group font16">
-              <label for="phone">연락처</label>
+              <label class="required" for="phone">연락처</label>
               <input
                 type="tel"
                 id="phone"
@@ -54,22 +55,22 @@
                 class="textinput" />
             </div>
             <div class="form-group font16">
-              <label for="email">업무용 이메일</label>
+              <label class="required" for="email">업무용 이메일</label>
               <input
                 type="text"
                 id="email"
                 name="email"
                 required
-                placeholder="1234112586970@gmail.com" />
+                placeholder="이메일을 입력해주세요." />
             </div>
 
             <div class="form-group font16">
               <label for="fileUpload">첨부파일</label>
-              <input required type="file" id="fileUpload" class="fileUpload" name="reviewFile" />
+              <input type="file" id="fileUpload" class="fileUpload" name="reviewFile" />
             </div>
 
             <div class="form-group font16">
-              <label for="category">카테고리</label>
+              <label class="required" for="category">카테고리</label>
               <div class="dropHeader">
                 <div class="dropBox category font16">카테고리</div>
                 <ul id="sort" class="sort-list">
@@ -85,7 +86,7 @@
               </div>
             </div>
             <div class="form-group font16">
-              <label for="inquiry">문의내용</label>
+              <label class="required" for="inquiry">문의내용</label>
               <textarea required class="textarea" placeholder="문의내용을 입력하세요."></textarea>
             </div>
           </form>
@@ -100,7 +101,7 @@
               <span class="font16 must">(필수)</span>
             </div>
           </div>
-          <a href="./writeQuote-end.html" class="apply-btn">견적 신청하기</a>
+          <button disabled href="./writeQuote-end.html" class="apply-btn">견적 신청하기</button>
           <div class="inquiry-text-box">
             <p>전화상담시 신속한 상담이 이루어집니다.</p>
             <a href="#" class="number font28b">02-1234-5678</a>

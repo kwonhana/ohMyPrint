@@ -19,8 +19,8 @@ dropList.forEach((item) => {
   item.addEventListener('click', (e) => {
     dropList.forEach((li) => li.classList.remove('active'));
     item.classList.add('active');
-
     const textList = item.querySelector('a').textContent;
+    item.parentElement.previousElementSibling.classList.add('checked');
     item.parentElement.previousElementSibling.textContent = textList;
     closeAllDropdowns();
   });

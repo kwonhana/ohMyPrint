@@ -1,5 +1,5 @@
 let myUserName = document.querySelector('.user-name');
-let savedName = localStorage.getItem('userName');
+let savedName = sessionStorage.getItem('userName');
 
 myUserName.textContent = savedName;
 

@@ -114,15 +114,19 @@
   background: var(--main-pink);
   color: var(--text-white);
   text-align: center;
+
+  &:hover {
+    background: #c22779;
+  }
+}
+
+.log-in-wrap .log-in-btn:disabled {
+  background-color: var(--border2);
 }
 
 .log-in-wrap .log-in-btn > a {
   display: inline-block;
   line-height: 4rem;
-}
-
-.log-in-wrap .log-in-btn:hover {
-  background: #c22779;
 }
 
 .log-in-wrap .find-box {

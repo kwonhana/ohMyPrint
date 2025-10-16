@@ -55,7 +55,7 @@ fetch('/header.html')
     });
 
     //마이페이지 변경
-    // const loginStatus = localStorage.getItem('logIned');
+    // const loginStatus = sessionStorage.getItem('logIned');
     // console.log(loginStatus);
     let loginLink = document.querySelector('.login');
     let mypageLink = document.querySelector('.mypage');
@@ -64,8 +64,8 @@ fetch('/header.html')
     let userName = document.querySelector('.name span');
 
     function updateLoginLink() {
-      userName.textContent = `${localStorage.getItem('userName')}님`;
-      let loginStatus = localStorage.getItem('logIned');
+      userName.textContent = `${sessionStorage.getItem('userName')}님`;
+      let loginStatus = sessionStorage.getItem('logIned');
       console.log('loginStatus');
       if (loginStatus == 'true') {
         console.log('로그인 완료');
@@ -80,7 +80,7 @@ fetch('/header.html')
     updateLoginLink();
 
     logoutLink.addEventListener('click', () => {
-      localStorage.removeItem('logIned');
+      sessionStorage.removeItem('logIned');
       window.location.reload();
     });
   });

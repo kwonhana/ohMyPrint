@@ -1756,10 +1756,10 @@ function renderPosts(filteredPosts) {
       const dataIndex = this.dataset.index;
       const postData = filteredPosts[idx];
 
-      // localStorage에 데이터 저장
-      localStorage.setItem('currentPost', JSON.stringify(postData));
-      localStorage.setItem('currentIndex', idx);
-      localStorage.setItem('allPosts', JSON.stringify(filteredPosts));
+      // sessionStorage에 데이터 저장
+      sessionStorage.setItem('currentPost', JSON.stringify(postData));
+      sessionStorage.setItem('currentIndex', idx);
+      sessionStorage.setItem('allPosts', JSON.stringify(filteredPosts));
 
       // 상세 페이지로 이동
       window.location.href = './readResponse.html';

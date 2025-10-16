@@ -120,11 +120,18 @@ input[type='file']::file-selector-button {
   height: 100%;
   color: var(--text-white);
   padding: 0 16.5rem 0;
-}
 
-input[type='file']::file-selector-button:hover,
-.review-end-btn:hover button {
-  background: var(--text-black);
+  &:disabled {
+    background: var(--border2);
+
+    &:hover {
+      background: var(--border2);
+    }
+  }
+
+  &:hover {
+    background: var(--text-black);
+  }
 }
 
 /*---------------------- 반응형------------------------ */

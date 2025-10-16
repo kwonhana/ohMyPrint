@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="./css/login.css" />
-    <link rel="stylesheet" href="./css/modal.css" />
-    <!-- <script src="../js/include.js" defer></script> -->
-    <script src="./js/login.js" defer></script>
+    <script type="module" src="./js/login.js" defer></script>
   </head>
 
   <body>
@@ -32,7 +30,7 @@
               placeholder="아이디 또는 전화번호" />
             <input
               required
-              type="text"
+              type="password"
               id="password"
               name="password"
               class="font14"
@@ -41,7 +39,7 @@
               <input type="checkbox" id="login-ckbox" class="hidden-check" />
               <label for="login-ckbox" class="font18b login custom-label"></label>
             </div>
-            <button type="submit" class="log-in-btn font16b">로그인</button>
+            <button type="submit" disabled class="log-in-btn font16b">로그인</button>
           </form>
           <div class="find-box">
             <a class="font14" href="#void">비밀번호 찾기</a>
@@ -54,12 +52,6 @@
           <h1>
             <a href="/index.html"><img src="../images/sub-logo.png" alt="" /></a>
           </h1>
-          <div class="container">
-            <button class="open-modal font12" data-target=".terms-of-service">이용약관</button>
-            <button class="open-modal font12" data-target=".privacy-policy">
-              개인정보처리방침
-            </button>
-          </div>
         </div>
       </div>
     </div>
