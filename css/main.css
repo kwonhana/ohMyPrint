@@ -482,7 +482,6 @@ main .youtube-wrap-inner .youtube-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  border: 1px solid dodgerblue;
 }
 
 main .youtube-wrap-inner .youtube-title .title-left span {
@@ -491,9 +490,7 @@ main .youtube-wrap-inner .youtube-title .title-left span {
   font-weight: 700;
 }
 main .youtube-wrap {
-  max-width: 1920px;
-  background-color: rgba(255, 0, 0, 0.2);
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
   flex-shrink: 0;
 }
 
@@ -505,7 +502,7 @@ main .youtube-list .swiper-slide {
 main .youtube-list .swiper-slide .youtube-icon-box {
   position: absolute;
   width: 30%;
-  top: 40%;
+  top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
