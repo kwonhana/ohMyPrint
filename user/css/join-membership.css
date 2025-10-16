@@ -124,6 +124,10 @@
   flex: 1;
 }
 
+.sort-list.active {
+  display: block;
+}
+
 /* 연락처 */
 .phone-inputs {
   display: flex;
@@ -178,9 +182,9 @@
   flex-grow: 1;
 }
 
-.birthWrap .Sort.dropHeader .dropBox {
+/* .birthWrap .Sort.dropHeader .dropBox {
   width: 100%;
-}
+} */
 
 .birthYear,
 .birthMonth,
@@ -204,6 +208,9 @@
   color: var(--sub-blue);
 }
 
+.dropBox {
+  width: 15rem !important;
+}
 /* 이용약관동의 */
 .agreement-section {
   margin-top: 2rem;

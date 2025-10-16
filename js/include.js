@@ -23,9 +23,9 @@ fetch('/header.html')
     //상단 검색 기능
     const searchIcon = document.querySelector('.search-wrap .search');
     searchIcon.addEventListener('click', (e) => {
-      console.log('asd');
-      searchWrap.classList.toggle('active');
       e.preventDefault();
+      console.log('asd');
+      searchIcon.classList.toggle('active');
     });
 
     const closeBtn = document.querySelector('.search-container .close-icon');
@@ -54,6 +54,27 @@ fetch('/header.html')
       console.log('zzz');
       hamBtn.classList.remove('active');
       e.stopPropagation();
+    });
+
+    //마이페이지 변경
+    // const loginStatus = localStorage.getItem('logIned');
+    // console.log(loginStatus);
+    let loginLink = document.querySelector('.mypage-trigger');
+
+    function updateLoginLink() {
+      let loginStatus = localStorage.getItem('logIned');
+      if (loginStatus == 'true') {
+        loginLink.textContent = '마이페이지';
+        loginLink.href = './user/myPage.html';
+      }
+    }
+    updateLoginLink();
+
+    loginLink.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      localStorage.removeItem('logIned');
+      // localStorage.removeItem('userName');
+      window.location.reload();
     });
   });
 

@@ -52,3 +52,60 @@ form.addEventListener('submit', function (e) {
   // ✅ 모든 검사 통과 → 완료 페이지로 이동
   window.location.href = '/user/join-membership-end.html';
 });
+
+//dropBox
+let dropBox = document.querySelectorAll('.dropBox');
+let sortList = document.querySelectorAll('.sort-list');
+let emailInput = document.querySelector('.email-domain');
+
+// dropBox 클릭 시 해당 리스트 토글
+dropBox.forEach((box, id) => {
+  box.addEventListener('click', () => {
+    sortList[id].classList.toggle('active');
+  });
+});
+
+// sort-list 안 a 클릭 시 dropBox 텍스트 변경
+sortList.forEach((list, id) => {
+  let links = list.querySelectorAll('a');
+  let box = dropBox[id];
+
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      let name = link.textContent;
+
+      box.textContent = name;
+
+      let domain = '';
+      if (name == 'hanmail') {
+        domain = '.net';
+      } else if (name == 'kakao' || name == 'google' || name == 'naver') {
+        domain = '.com';
+      }
+
+      if (emailInput && domain) {
+        emailInput.value = name + domain;
+      }
+
+      list.classList.remove('active');
+    });
+  });
+});
+
+//아이디저장
+let submitBtn = document.querySelector('.btn-submit');
+let userInput = document.querySelector('#userName');
+let userId = document.querySelector('#userId');
+let userPw = document.querySelector('#password');
+
+submitBtn.addEventListener('click', (e) => {
+  let name = userInput.value.trim();
+  let uId = userId.value.trim();
+  let uPw = userPw.value.trim();
+  // 하나의 키에 하나의 값만 저장가능 중복걱정 ㄴㄴ
+  localStorage.setItem('userName', name);
+  localStorage.setItem('userId', uId);
+  localStorage.setItem('userPw', uPw);
+});

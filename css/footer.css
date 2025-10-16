@@ -37,21 +37,6 @@
   background-size: contain;
 }
 
-.sort-list {
-  position: absolute;
-  left: 50%;
-  top: 5.4rem;
-  transform: translateX(-50%);
-  width: 100%;
-  max-height: 16rem;
-  overflow: auto;
-  border-radius: 0.4rem;
-  background: var(--bg);
-  display: none;
-  z-index: 1;
-  border: 1px solid var(--border1);
-}
-
 .sort-list.active {
   display: block;
 }
