@@ -76,6 +76,7 @@ fetch('/header.html')
         console.log('로그인 안됨');
         mypageLink.classList.add('hidden');
         logoutLink.classList.add('hidden');
+        userName2.classList.add('hidden');
         nameLink.classList.add('hidden');
       }
     }
