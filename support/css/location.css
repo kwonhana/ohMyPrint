@@ -55,7 +55,6 @@
 }
 .map-wrap ul,
 .map-wrap div {
-  /* border: 1px solid red; */
   width: 50%;
 }
 
@@ -93,13 +92,9 @@
   .map-text-box {
     display: none;
   }
-  /* .cs-nav {
-    align-items: center;
-    flex-direction: column;
-  } */
+
   .map-wrap ul,
   .map-wrap div {
-    /* border: 1px solid red; */
     width: 100%;
   }
 

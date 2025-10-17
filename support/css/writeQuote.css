@@ -277,7 +277,6 @@ label.upload-btn {
   .input-wrap {
     width: 70%;
     min-width: 50rem;
-    border: 1px solid red;
   }
 
   .quote-title-wrap {
@@ -364,7 +363,6 @@ label.upload-btn {
   .input-wrap {
     width: 100%;
     min-width: inherit;
-    border: 1px solid red;
   }
 
   .inquiry-container {
