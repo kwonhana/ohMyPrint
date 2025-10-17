@@ -75,7 +75,6 @@
 @media (max-width: 750px) {
   .map-wrap {
     flex-direction: column;
-    background-color: pink;
     align-items: center;
     gap: 40px;
     padding-left: 10px;
@@ -94,13 +93,21 @@
   .map-text-box {
     display: none;
   }
-  .cs-nav {
+  /* .cs-nav {
     align-items: center;
     flex-direction: column;
-  }
+  } */
   .map-wrap ul,
   .map-wrap div {
     /* border: 1px solid red; */
     width: 100%;
+  }
+
+  .location-title-wrap {
+    margin-top: 5rem;
+  }
+
+  .map-wrap {
+    margin-top: 2rem;
   }
 }
