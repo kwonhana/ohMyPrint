@@ -242,6 +242,40 @@ body:not(:has(.top-banner)) header .header-inner .user-wrap .search-container {
   top: 68px;
 }
 
+.toast-modal {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  border-radius: 8px;
+  padding: 1.2rem 4rem;
+  background-color: #ed51a4f5;
+  color: #fff;
+  font-weight: 800;
+  opacity: 0;
+  animation: toastInOut 3s ease forwards;
+}
+@keyframes toastInOut {
+  0% {
+    bottom: 0%;
+    opacity: 0;
+  }
+  20% {
+    bottom: 16%;
+    opacity: 1;
+  }
+  80% {
+    bottom: 16%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0%;
+    opacity: 0;
+  }
+}
+
 @media (max-width: 1024px) {
   body:has(.top-banner) header .header-inner .header-left .ham-btn .ham-nav-wrap .snb-list-wrap {
     max-height: calc(100% - 45rem);
