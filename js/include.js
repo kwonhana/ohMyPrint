@@ -62,9 +62,11 @@ fetch('/header.html')
     let logoutLink = document.querySelector('.logout');
     let nameLink = document.querySelector('.name');
     let userName = document.querySelector('.name span');
+    let userName2 = document.querySelector('.hamName span');
 
     function updateLoginLink() {
       userName.textContent = `${sessionStorage.getItem('userName')}님`;
+      userName2.textContent = `${sessionStorage.getItem('userName')}님`;
       let loginStatus = sessionStorage.getItem('logIned');
       console.log('loginStatus');
       if (loginStatus == 'true') {
